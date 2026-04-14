@@ -4,20 +4,29 @@
   <div class="absolute -top-[40%] -right-[20%] w-[700px] h-[700px] bg-[radial-gradient(circle,rgba(196,145,60,0.08)_0%,transparent_70%)] pointer-events-none"></div>
   <div class="max-w-[1100px] mx-auto grid md:grid-cols-[1fr_280px] gap-16 items-center">
     <div>
+      <!-- Mobile headshot -->
+      <div class="md:hidden mb-8 flex justify-center">
+        <div class="w-[140px] h-[140px] rounded-full overflow-hidden border-[3px] border-gold/30">
+          <img src="/images/headshot.png" alt="Adam Duran" width="140" height="140" class="w-full h-full object-cover" />
+        </div>
+      </div>
       <h1 class="font-serif text-white text-5xl md:text-[2.8rem] font-bold leading-tight mb-2">Adam Duran</h1>
-      <div class="text-gold text-sm font-medium tracking-widest mb-6">PE &bull; PMP &bull; PhD Candidate</div>
+      <div class="text-gold text-sm font-medium tracking-widest mb-6">
+        PE (Colorado, #PE.0061606) &bull; PMP &bull; PhD Candidate
+      </div>
       <p class="font-serif text-mist text-xl md:text-[1.35rem] font-light leading-relaxed mb-8 max-w-[560px]">
         I build and scale experiential, industry-connected engineering education programs that didn't exist before I arrived.
       </p>
       <div class="flex gap-4 flex-wrap">
         <a href="mailto:aduran@mines.edu" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">aduran@mines.edu</a>
-        <a href="https://www.linkedin.com/in/adam-duran-pe-pmp-097642a3/" target="_blank" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">Google Scholar</a>
-        <a href="https://github.com/professor-duran" target="_blank" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/adam-duran-pe-pmp-097642a3/" target="_blank" rel="noopener" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank" rel="noopener" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">Google Scholar</a>
+        <a href="https://github.com/professor-duran" target="_blank" rel="noopener" class="text-mist text-sm font-medium border border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">GitHub</a>
       </div>
     </div>
+    <!-- Desktop headshot -->
     <div class="hidden md:block w-[280px] h-[320px] rounded-md overflow-hidden border-[3px] border-gold/30">
-      <img src="/images/headshot.png" alt="Adam Duran" class="w-full h-full object-cover" />
+      <img src="/images/headshot.png" alt="Adam Duran" width="280" height="320" class="w-full h-full object-cover" loading="eager" />
     </div>
   </div>
 </div>

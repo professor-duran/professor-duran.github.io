@@ -7,9 +7,18 @@ interface Props {
   title: string;
   description?: string;
   activePage?: string;
+  ogImage?: string;
 }
 
-const { title, description = 'Adam Duran, PE, PMP — Engineering Educator & Program Builder at Colorado School of Mines', activePage = 'home' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+  title,
+  description = 'Adam Duran, PE, PMP -- Engineering Educator & Program Builder at Colorado School of Mines. $10M+ in funded research, 252 students in programs built from scratch, 30+ publications.',
+  activePage = 'home',
+  ogImage = '/images/headshot.png',
+} = Astro.props;
+
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +27,22 @@ const { title, description = 'Adam Duran, PE, PMP — Engineering Educator & Pro
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:site_name" content="Adam Duran" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -34,7 +59,9 @@ const { title, description = 'Adam Duran, PE, PMP — Engineering Educator & Pro
 </head>
 <body class="text-body dark:text-body bg-white dark:bg-navy leading-relaxed">
   <Nav activePage={activePage} />
-  <slot />
+  <main id="main-content">
+    <slot />
+  </main>
   <Footer />
 </body>
 </html>

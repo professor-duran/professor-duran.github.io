@@ -1,12 +1,52 @@
 ---
+const year = new Date().getFullYear();
 ---
-<footer class="bg-slate dark:bg-navy py-10 px-8 text-center">
-  <p class="text-mist text-sm max-w-[1100px] mx-auto">
-    Adam Duran &bull; Assistant Teaching Professor, Mechanical Engineering &bull;
-    <a href="https://mines.edu" class="text-gold no-underline hover:underline">Colorado School of Mines</a> &bull; Golden, CO
-    <br />
-    <a href="mailto:aduran@mines.edu" class="text-gold no-underline hover:underline">aduran@mines.edu</a> &bull;
-    <a href="https://www.linkedin.com/in/adam-duran-pe-pmp-097642a3/" class="text-gold no-underline hover:underline">LinkedIn</a> &bull;
-    <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" class="text-gold no-underline hover:underline">Google Scholar</a>
-  </p>
+<footer class="bg-slate dark:bg-navy py-12 px-8 border-t border-steel/20">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Contact -->
+      <div>
+        <div class="font-serif text-white text-sm font-semibold mb-3">Contact</div>
+        <div class="space-y-1.5 text-sm text-mist">
+          <p><a href="mailto:aduran@mines.edu" class="text-gold no-underline hover:underline">aduran@mines.edu</a></p>
+          <p>Department of Mechanical Engineering</p>
+          <p><a href="https://mines.edu" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Colorado School of Mines</a></p>
+          <p>1500 Illinois Street, Golden, CO 80401</p>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <div class="font-serif text-white text-sm font-semibold mb-3">Links</div>
+        <div class="space-y-1.5 text-sm">
+          <p><a href="https://www.linkedin.com/in/adam-duran-pe-pmp-097642a3/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">LinkedIn</a></p>
+          <p><a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Google Scholar</a></p>
+          <p><a href="https://github.com/professor-duran" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">GitHub</a></p>
+          <p><a href="https://www.researchgate.net/profile/Adam-Duran-2" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">ResearchGate</a></p>
+          <p><a href="https://orcid.org/0000-0002-7776-3896" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">ORCID</a></p>
+        </div>
+      </div>
+
+      <!-- CV -->
+      <div>
+        <div class="font-serif text-white text-sm font-semibold mb-3">Curriculum Vitae</div>
+        <p class="text-sm text-mist mb-3">Full academic CV including publications, grants, service, and credentials.</p>
+        <a href="https://github.com/professor-duran/academic-cv/raw/main/cv.pdf" target="_blank"
+          class="inline-block text-sm text-gold font-semibold border border-gold px-4 py-2 rounded hover:bg-gold hover:text-white transition-all no-underline">
+          Download CV (PDF)
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-steel/30 mb-6" />
+
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-mist/60">
+      <p>&copy; {year} Adam W. Duran. All rights reserved.</p>
+      <p>
+        <a href="https://me.mines.edu" target="_blank" rel="noopener" class="text-mist/60 no-underline hover:text-gold transition-colors">
+          Mines ME Department
+        </a>
+      </p>
+    </div>
+  </div>
 </footer>

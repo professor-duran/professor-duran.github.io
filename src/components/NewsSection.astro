@@ -1,0 +1,42 @@
+---
+const news = [
+  {
+    date: 'Spring 2026',
+    text: 'Selected for DOE EcoCAR Innovation Challenge as Lead PI, one of a limited number of institutions nationwide. Approximately $520K over four years.',
+  },
+  {
+    date: 'Spring 2026',
+    text: 'Selected as one of five national members for the KEEN Crescendo Program at University of the Pacific.',
+  },
+  {
+    date: 'Spring 2026',
+    text: 'New course launch: EBGN 599A Financial Engineering for Engineers, a 16-week graduate course in quantitative finance with Python.',
+  },
+  {
+    date: '2025',
+    text: 'Named Mines Trefny Center Engineering Learning Fellow and Kern Family Foundation Community Catalyst, Cohort 13.',
+  },
+  {
+    date: '2025',
+    text: 'Co-authored paper in ACS Energy Letters on decarbonizing off-road vehicles.',
+  },
+  {
+    date: '2024',
+    text: 'DOE Battery Workforce Challenge: 1st place nationally with $10K+ in prize money to the student team.',
+  },
+];
+---
+<div class="bg-cloud dark:bg-slate/20">
+  <section id="news" class="max-w-[1100px] mx-auto py-20 px-8">
+    <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Recent & Upcoming</h2>
+    <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+    <div class="max-w-[720px]">
+      {news.map(item => (
+        <div class="flex gap-4 py-3 border-b border-mist dark:border-steel/30 last:border-b-0">
+          <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap min-w-[100px] pt-0.5">{item.date}</span>
+          <p class="text-sm leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</div>

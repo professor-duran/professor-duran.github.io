@@ -7,6 +7,9 @@ import CourseCard from '../components/CourseCard.astro';
 import MaterialCard from '../components/MaterialCard.astro';
 import FrameworkCard from '../components/FrameworkCard.astro';
 import CVSection from '../components/CVSection.astro';
+import StudentsSection from '../components/StudentsSection.astro';
+import NewsSection from '../components/NewsSection.astro';
+import BeyondTheLab from '../components/BeyondTheLab.astro';
 import { courses } from '../data/courses';
 import { frameworks } from '../data/frameworks';
 
@@ -37,6 +40,12 @@ const materials = [
   },
 ];
 
+const programProjectLinks: Record<string, string> = {
+  'Automotive Engineering Program': '/projects/automotive-program',
+  'DOE Battery Workforce Challenge': '/projects/ecocar',
+  'GCxN Clean Energy Accelerator': '/projects/gcxn',
+};
+
 const programs = [
   {
     label: 'Automotive Engineering Program',
@@ -46,12 +55,12 @@ const programs = [
   {
     label: 'DOE Battery Workforce Challenge',
     role: 'Faculty Advisor & PI',
-    desc: "Lead the Mines team in the U.S. Department of Energy's national Battery Workforce Challenge. Secured EcoCAR Innovation Challenge funding (~$520K over four years). Fourth-place national finish in BWC Year 2 competition.",
+    desc: "Lead the Mines team in the U.S. Department of Energy's national Battery Workforce Challenge. Secured EcoCAR Innovation Challenge funding (~$520K over four years). First-place national finish in BWC Year 1; fourth place in Year 2.",
   },
   {
     label: 'GCxN Clean Energy Accelerator',
     role: 'Co-Founder & Program Director',
-    desc: "Co-launched NREL's cleantech startup accelerator in partnership with Shell, advancing and de-risking early-stage energy technology companies. Directed over $10.5 million in funded work as PI across advanced vehicle technologies and fuels initiatives.",
+    desc: "Co-launched NREL's cleantech startup accelerator in partnership with Shell. Directed a $6.3M program with portfolio outcomes including $551M+ raised by cohort companies, 528 new hires, and a $96:1 leverage ratio on startup funding.",
   },
   {
     label: 'Capstone Design Program',
@@ -65,7 +74,7 @@ const programs = [
   },
 ];
 ---
-<BaseLayout title="Adam Duran, PE, PMP — Engineering Educator & Program Builder">
+<BaseLayout title="Adam Duran, PE, PMP -- Engineering Educator & Program Builder">
 
   <Hero />
 
@@ -77,8 +86,24 @@ const programs = [
       I am an Assistant Teaching Professor of Mechanical Engineering at Colorado School of Mines and a PhD candidate researching mastery-based engineering education frameworks. Before joining Mines, I served as Program Director and Research Engineer at the National Renewable Energy Laboratory, where I led major initiatives in advanced vehicle technologies and co-launched the GCxN clean energy accelerator in partnership with Shell.
     </p>
     <p class="max-w-[720px] text-base mb-4">
-      My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up — connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
+      My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up, connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
     </p>
+
+    <!-- Partners -->
+    <div class="mt-8 pt-6 border-t border-mist dark:border-steel/30">
+      <p class="text-xs text-caption uppercase tracking-widest mb-4">Institutional & Industry Partners</p>
+      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-medium text-steel dark:text-mist/70">
+        <span>Colorado School of Mines</span>
+        <span>NREL</span>
+        <span>U.S. Department of Energy</span>
+        <span>Shell</span>
+        <span>Stellantis</span>
+        <span>KEEN</span>
+        <span>SAE International</span>
+        <span>Chevron</span>
+      </div>
+    </div>
+
     <ImpactGrid />
   </section>
 
@@ -96,6 +121,12 @@ const programs = [
             <div>
               <div class="font-serif text-lg font-semibold text-navy dark:text-white">{program.label}</div>
               <div class="text-xs text-gold font-semibold uppercase tracking-wider mt-1">{program.role}</div>
+              {programProjectLinks[program.label] && (
+                <a href={programProjectLinks[program.label]}
+                  class="inline-block text-xs text-gold mt-3 no-underline hover:underline">
+                  Learn more &rarr;
+                </a>
+              )}
             </div>
             <div class="text-sm leading-relaxed">{program.desc}</div>
           </div>
@@ -112,7 +143,7 @@ const programs = [
       <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Teaching</h2>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
       <p class="max-w-[720px] text-base mb-8">
-        My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate — developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
+        My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate, developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {courses.map(course => (
@@ -146,6 +177,12 @@ const programs = [
       ))}
     </div>
   </section>
+
+  <NewsSection />
+
+  <StudentsSection />
+
+  <BeyondTheLab />
 
   <CVSection />
 
