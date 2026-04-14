@@ -1,9 +1,16 @@
 ---
 const stats = [
-  { number: '$10M+', label: 'Competitive funding secured across career' },
-  { number: '252', label: 'Declared automotive engineering students (built from zero)' },
-  { number: '30+', label: 'Peer-reviewed publications' },
-  { number: '1,000+', label: 'Google Scholar citations' },
+  { number: '$10.5M+', label: 'Competitive funding as PI / Proposal Lead' },
+  { number: '252', label: 'Declared auto engineering students (built from zero)' },
+  { number: '14', label: 'Distinct courses taught, 8 developed or co-developed' },
+  { number: '18+', label: 'Independent study students supervised since 2022' },
+];
+
+const scholarlyStats = [
+  { number: '30+', label: 'Peer-reviewed publications and technical reports', link: 'https://scholar.google.com/citations?user=BQ404mAAAAAJ' },
+  { number: '1,000+', label: 'Google Scholar citations', link: 'https://scholar.google.com/citations?user=BQ404mAAAAAJ' },
+  { number: '3', label: 'National competition wins led (BWC 1st, Capstone 1st & 2nd)' },
+  { number: '30+', label: 'Capstone teams mentored as Client, Advisor, or Technical Advisor' },
 ];
 ---
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
@@ -13,4 +20,25 @@ const stats = [
       <div class="text-sm text-steel dark:text-mist/70 leading-snug">{stat.label}</div>
     </div>
   ))}
+</div>
+
+<div class="mt-4">
+  <p class="text-xs text-caption uppercase tracking-widest mb-3 mt-8">Scholarly & Student Impact</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {scholarlyStats.map(stat => (
+      <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-steel/30 dark:border-mist/20">
+        {stat.link ? (
+          <a href={stat.link} target="_blank" rel="noopener" class="no-underline">
+            <div class="font-serif text-3xl font-bold text-navy dark:text-white leading-none mb-1">{stat.number}</div>
+            <div class="text-sm text-steel dark:text-mist/70 leading-snug">{stat.label}</div>
+          </a>
+        ) : (
+          <>
+            <div class="font-serif text-3xl font-bold text-navy dark:text-white leading-none mb-1">{stat.number}</div>
+            <div class="text-sm text-steel dark:text-mist/70 leading-snug">{stat.label}</div>
+          </>
+        )}
+      </div>
+    ))}
+  </div>
 </div>

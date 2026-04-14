@@ -113,15 +113,8 @@ export const worksInProgress: Publication[] = [
   {
     year: 2026,
     authors: 'Duran, A.',
-    title: 'The Teaching Workload Index: A Composite Metric for Equitable Faculty Load Assessment.',
-    venue: 'Target: Journal of Engineering Education.',
-    status: 'in_preparation',
-  },
-  {
-    year: 2026,
-    authors: 'Duran, A.',
     title: 'Book chapter on Engineering Ethics.',
-    venue: '',
+    venue: 'Forthcoming, 2026.',
     status: 'in_press',
   },
 ];

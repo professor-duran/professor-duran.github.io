@@ -16,23 +16,23 @@ import { frameworks } from '../data/frameworks';
 const materials = [
   {
     code: 'MEGN 300',
-    title: 'Intro to ME: Programming & Hardware Interface',
-    description: 'Introductory programming and hardware interface for mechanical engineers. Covers Python fundamentals, sensor integration, data acquisition, and embedded systems basics.',
+    title: 'Instrumentation & Automation',
+    description: 'Measurement systems, signal processing, data acquisition, and actuator control for mechanical engineers. Covers sensor integration, automation protocols, and system-level instrumentation.',
     samples: ['Course Syllabus', 'Lab 3: Sensor Data Acquisition', 'Lecture Slides: Control Systems Intro'],
     repoUrl: 'https://github.com/professor-duran/megn300',
     releaseUrl: 'https://github.com/professor-duran/megn300/releases/latest',
   },
   {
     code: 'MEGN 301',
-    title: 'Automation & Instrumentation',
-    description: 'Advanced instrumentation, automation, and measurement systems. Covers signal processing, actuator control, industrial automation protocols, and system integration projects.',
-    samples: ['Course Syllabus', 'Lab 5: PID Control Implementation', 'Project Brief: Automation Challenge'],
+    title: 'Mechanical Integration & Design',
+    description: 'Integrated design projects connecting thermodynamics, fluids, and mechanics of materials into cohesive mechanical systems with hands-on prototyping.',
+    samples: ['Course Syllabus', 'Design Project Brief', 'Integration Challenge Rubric'],
     repoUrl: 'https://github.com/professor-duran/megn301',
     releaseUrl: 'https://github.com/professor-duran/megn301/releases/latest',
   },
   {
-    code: 'EDNS 491/492',
-    title: 'Capstone Design',
+    code: 'EDS 491/492',
+    title: 'Senior Capstone Design',
     description: 'Year-long senior design sequence. Industry-sponsored projects with emphasis on professional practice, engineering character, and authentic assessment aligned with the EMBL framework.',
     samples: ['Course Syllabus & Project Charter', 'Design Review Rubric', 'Team Formation & Norming Guide'],
     repoUrl: 'https://github.com/professor-duran/capstone',
@@ -83,10 +83,13 @@ const programs = [
     <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">About</h2>
     <hr class="w-12 h-[3px] bg-gold border-none my-4" />
     <p class="max-w-[720px] text-base mb-4">
-      I am an Assistant Teaching Professor of Mechanical Engineering at Colorado School of Mines and a PhD candidate researching mastery-based engineering education frameworks. Before joining Mines, I served as Program Director and Research Engineer at the National Renewable Energy Laboratory, where I led major initiatives in advanced vehicle technologies and co-launched the GCxN clean energy accelerator in partnership with Shell.
+      I am an Assistant Teaching Professor of Mechanical Engineering (with an active research agenda in engineering education) at Colorado School of Mines and a PhD candidate studying mastery-based education frameworks. With nearly two decades of combined industry and academic leadership, I bring a perspective shaped by both large-scale R&D program management and frontline teaching.
     </p>
     <p class="max-w-[720px] text-base mb-4">
-      My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up, connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
+      Before joining Mines full-time, I spent nine years at the National Renewable Energy Laboratory as a Senior Research Engineer and Program Manager, where I led technical development of the Fleet DNA commercial vehicle database, directed the $6.3M GCxN clean energy accelerator in partnership with Shell, and served as PI on multiple DOE-funded vehicle technology projects.
+    </p>
+    <p class="max-w-[720px] text-base mb-4">
+      My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up: connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
     </p>
 
     <!-- Partners -->
@@ -147,9 +150,10 @@ const programs = [
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {courses.map(course => (
-          <CourseCard code={course.code} name={course.name} description={course.description} />
+          <CourseCard code={course.code} name={course.name} description={course.description} crossList={course.crossList} semesters={course.semesters} developed={course.developed} />
         ))}
       </div>
+      <p class="text-xs text-caption mt-3">* Course developed or co-developed by instructor</p>
 
       <!-- Course Materials -->
       <div class="mt-14 mb-8">
@@ -168,8 +172,11 @@ const programs = [
   <section id="frameworks" class="max-w-[1100px] mx-auto py-20 px-8">
     <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Research & Scholarly Frameworks</h2>
     <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+    <p class="max-w-[720px] text-base mb-4">
+      My research addresses a core challenge in engineering education: how do we design, assess, and sustain high-quality experiential programs at institutional scale without burning out the faculty who build them?
+    </p>
     <p class="max-w-[720px] text-base mb-8">
-      My scholarship focuses on creating practical, evidence-based frameworks that improve how engineering education is delivered, assessed, and sustained.
+      Each framework below represents an original contribution grounded in my doctoral research and classroom practice. Together, they form an integrated system for building, measuring, and scaling mastery-based engineering education.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {frameworks.map(fw => (
