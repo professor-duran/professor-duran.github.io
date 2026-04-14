@@ -47,8 +47,8 @@ export const courses: Course[] = [
   {
     code: 'MEGN 300',
     name: 'Instrumentation & Automation',
-    description: 'Measurement systems, signal processing, actuator control, and data acquisition for mechanical engineers. Course Coordinator, Spring 2025.',
-    semesters: 'S25 (Coordinator)',
+    description: 'Measurement systems, signal processing, actuator control, and data acquisition for mechanical engineers.',
+    semesters: 'S23, S24; Coordinator S25',
   },
   {
     code: 'MEGN 200',

@@ -5,13 +5,11 @@ import ImpactGrid from '../components/ImpactGrid.astro';
 import PublicationList from '../components/PublicationList.astro';
 import CourseCard from '../components/CourseCard.astro';
 import MaterialCard from '../components/MaterialCard.astro';
-import FrameworkCard from '../components/FrameworkCard.astro';
 import CVSection from '../components/CVSection.astro';
 import StudentsSection from '../components/StudentsSection.astro';
 import NewsSection from '../components/NewsSection.astro';
 import BeyondTheLab from '../components/BeyondTheLab.astro';
 import { courses } from '../data/courses';
-import { frameworks } from '../data/frameworks';
 
 const materials = [
   {
@@ -53,9 +51,9 @@ const programs = [
     desc: "Built Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects.",
   },
   {
-    label: 'DOE Battery Workforce Challenge',
-    role: 'Faculty Advisor & PI',
-    desc: "Lead the Mines team in the U.S. Department of Energy's national Battery Workforce Challenge. Secured EcoCAR Innovation Challenge funding (~$520K over four years). First-place national finish in BWC Year 1; fourth place in Year 2.",
+    label: 'DOE Battery Workforce Challenge & EcoCAR',
+    role: 'Lead PI',
+    desc: "Lead the Mines team in the U.S. Department of Energy's Battery Workforce Challenge ($255K total program value over three years, including DOE base grant, Chevron sponsorship, student stipends, and competition prizes). First-place national finish in Year 1 (2023-24); fourth place in Year 2 (2024-25). Also awarded the DOE EcoCAR Innovation Challenge (approximately $520K over four years, starting Fall 2026). Co-PI: Prof. P. Brodsky.",
   },
   {
     label: 'GCxN Clean Energy Accelerator',
@@ -64,13 +62,13 @@ const programs = [
   },
   {
     label: 'Capstone Design Program',
-    role: 'Leadership Team',
-    desc: 'Member of the Mines Capstone Leadership Team guiding curriculum development and instruction for annual cohorts of 700+ engineering students. Redesigning the capstone experience to emphasize authentic assessment, industry connection, and engineering character development.',
+    role: 'Leadership Team (Fall 2025-Present)',
+    desc: 'Member of the Mines Capstone Leadership Team as ME co-representative, contributing to program-level planning, delivery standards, and coordination with the Industry Partnership Board Steering Committee. Served as Client for approximately 22 projects, Project Advisor for 5 projects, and Technical Advisor for 6 projects across 30+ teams over 8 semesters (F22-S26).',
   },
   {
     label: 'KEEN Engineering Unleashed',
     role: 'National Contributor',
-    desc: 'Developed 15+ published Engineering Unleashed cards with standardized five-deliverable packages covering topics from authentic assessment to engineering character to AI-enhanced engineering mindset. Invited workshop facilitator for national KEEN events.',
+    desc: 'Published four Engineering Unleashed activity cards through the KEEN EML Mini-Workshop and KERN Making with AI Workshop. Selected as one of five national members for the KEEN Crescendo Program (Spring 2026). Active contributor to the KERN Community Catalysts program and EMxAI Working Group.',
   },
 ];
 ---
@@ -83,10 +81,10 @@ const programs = [
     <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">About</h2>
     <hr class="w-12 h-[3px] bg-gold border-none my-4" />
     <p class="max-w-[720px] text-base mb-4">
-      I am an Assistant Teaching Professor of Mechanical Engineering (with an active research agenda in engineering education) at Colorado School of Mines and a PhD candidate studying mastery-based education frameworks. With nearly two decades of combined industry and academic leadership, I bring a perspective shaped by both large-scale R&D program management and frontline teaching.
+      I am an Assistant Teaching Professor of Mechanical Engineering at Colorado School of Mines. With nearly two decades of combined industry and academic leadership, I bring a perspective shaped by both large-scale R&D program management and frontline teaching.
     </p>
     <p class="max-w-[720px] text-base mb-4">
-      Before joining Mines full-time, I spent nine years at the National Renewable Energy Laboratory as a Senior Research Engineer and Program Manager, where I led technical development of the Fleet DNA commercial vehicle database, directed the $6.3M GCxN clean energy accelerator in partnership with Shell, and served as PI on multiple DOE-funded vehicle technology projects.
+      Before joining Mines full-time, I spent over a decade at the National Renewable Energy Laboratory (2008-2020) progressing from Student Research Assistant to Senior Research Engineer to Program Manager, where I led technical development of the Fleet DNA commercial vehicle database, directed the $6.3M GCxN clean energy accelerator in partnership with Shell, and served as PI on multiple DOE-funded vehicle technology projects. I then served as Senior Engineer at QS-2 (2020-2022) leading research on automated driving systems.
     </p>
     <p class="max-w-[720px] text-base mb-4">
       My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up: connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
@@ -167,23 +165,6 @@ const programs = [
       </div>
     </section>
   </div>
-
-  <!-- Frameworks -->
-  <section id="frameworks" class="max-w-[1100px] mx-auto py-20 px-8">
-    <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Research & Scholarly Frameworks</h2>
-    <hr class="w-12 h-[3px] bg-gold border-none my-4" />
-    <p class="max-w-[720px] text-base mb-4">
-      My research addresses a core challenge in engineering education: how do we design, assess, and sustain high-quality experiential programs at institutional scale without burning out the faculty who build them?
-    </p>
-    <p class="max-w-[720px] text-base mb-8">
-      Each framework below represents an original contribution grounded in my doctoral research and classroom practice. Together, they form an integrated system for building, measuring, and scaling mastery-based engineering education.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {frameworks.map(fw => (
-        <FrameworkCard name={fw.name} acronym={fw.acronym} description={fw.description} />
-      ))}
-    </div>
-  </section>
 
   <NewsSection />
 
