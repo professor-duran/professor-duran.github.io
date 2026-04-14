@@ -1,0 +1,65 @@
+name: Sync Course Materials
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [course-materials-updated]
+  schedule:
+    - cron: '0 8 1 */3 *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-materials:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        course:
+          - repo: professor-duran/megn300
+            dir: public/materials/megn300
+            name: MEGN 300
+          - repo: professor-duran/megn301
+            dir: public/materials/megn301
+            name: MEGN 301
+          - repo: professor-duran/capstone
+            dir: public/materials/capstone
+            name: Capstone
+
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+
+      - name: Create materials directory
+        run: mkdir -p ${{ matrix.course.dir }}
+
+      - name: Fetch latest release assets from ${{ matrix.course.name }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Fetching latest release from ${{ matrix.course.repo }}..."
+
+          RELEASE_JSON=$(gh api repos/${{ matrix.course.repo }}/releases/latest 2>/dev/null || echo "NONE")
+
+          if [ "$RELEASE_JSON" = "NONE" ]; then
+            echo "No releases found for ${{ matrix.course.repo }} — skipping."
+            exit 0
+          fi
+
+          echo "$RELEASE_JSON" | jq -r '.assets[] | select(.name | endswith(".pdf")) | .browser_download_url' | while read url; do
+            filename=$(basename "$url")
+            echo "  Downloading: $filename"
+            curl -sL -o "${{ matrix.course.dir }}/$filename" "$url"
+          done
+
+          COUNT=$(ls -1 ${{ matrix.course.dir }}/*.pdf 2>/dev/null | wc -l)
+          echo "Downloaded $COUNT PDF(s) for ${{ matrix.course.name }}"
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ matrix.course.dir }}/
+          git diff --staged --quiet && echo "No changes for ${{ matrix.course.name }}" || \
+            (git commit -m "Sync ${{ matrix.course.name }} materials $(date +%Y-%m-%d)" && git push)

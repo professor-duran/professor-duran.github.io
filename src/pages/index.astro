@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ImpactGrid from '../components/ImpactGrid.astro';
+import PublicationList from '../components/PublicationList.astro';
+import CourseCard from '../components/CourseCard.astro';
+import MaterialCard from '../components/MaterialCard.astro';
+import FrameworkCard from '../components/FrameworkCard.astro';
+import CVSection from '../components/CVSection.astro';
+import { courses } from '../data/courses';
+import { frameworks } from '../data/frameworks';
+
+const materials = [
+  {
+    code: 'MEGN 300',
+    title: 'Intro to ME: Programming & Hardware Interface',
+    description: 'Introductory programming and hardware interface for mechanical engineers. Covers Python fundamentals, sensor integration, data acquisition, and embedded systems basics.',
+    samples: ['Course Syllabus', 'Lab 3: Sensor Data Acquisition', 'Lecture Slides: Control Systems Intro'],
+    repoUrl: 'https://github.com/professor-duran/megn300',
+    releaseUrl: 'https://github.com/professor-duran/megn300/releases/latest',
+  },
+  {
+    code: 'MEGN 301',
+    title: 'Automation & Instrumentation',
+    description: 'Advanced instrumentation, automation, and measurement systems. Covers signal processing, actuator control, industrial automation protocols, and system integration projects.',
+    samples: ['Course Syllabus', 'Lab 5: PID Control Implementation', 'Project Brief: Automation Challenge'],
+    repoUrl: 'https://github.com/professor-duran/megn301',
+    releaseUrl: 'https://github.com/professor-duran/megn301/releases/latest',
+  },
+  {
+    code: 'EDNS 491/492',
+    title: 'Capstone Design',
+    description: 'Year-long senior design sequence. Industry-sponsored projects with emphasis on professional practice, engineering character, and authentic assessment aligned with the EMBL framework.',
+    samples: ['Course Syllabus & Project Charter', 'Design Review Rubric', 'Team Formation & Norming Guide'],
+    repoUrl: 'https://github.com/professor-duran/capstone',
+    releaseUrl: 'https://github.com/professor-duran/capstone/releases/latest',
+  },
+];
+
+const programs = [
+  {
+    label: 'Automotive Engineering Program',
+    role: 'Co-Founder & Director',
+    desc: "Built Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects.",
+  },
+  {
+    label: 'DOE Battery Workforce Challenge',
+    role: 'Faculty Advisor & PI',
+    desc: "Lead the Mines team in the U.S. Department of Energy's national Battery Workforce Challenge. Secured EcoCAR Innovation Challenge funding (~$520K over four years). Fourth-place national finish in BWC Year 2 competition.",
+  },
+  {
+    label: 'GCxN Clean Energy Accelerator',
+    role: 'Co-Founder & Program Director',
+    desc: "Co-launched NREL's cleantech startup accelerator in partnership with Shell, advancing and de-risking early-stage energy technology companies. Directed over $10.5 million in funded work as PI across advanced vehicle technologies and fuels initiatives.",
+  },
+  {
+    label: 'Capstone Design Program',
+    role: 'Leadership Team',
+    desc: 'Member of the Mines Capstone Leadership Team guiding curriculum development and instruction for annual cohorts of 700+ engineering students. Redesigning the capstone experience to emphasize authentic assessment, industry connection, and engineering character development.',
+  },
+  {
+    label: 'KEEN Engineering Unleashed',
+    role: 'National Contributor',
+    desc: 'Developed 15+ published Engineering Unleashed cards with standardized five-deliverable packages covering topics from authentic assessment to engineering character to AI-enhanced engineering mindset. Invited workshop facilitator for national KEEN events.',
+  },
+];
+---
+<BaseLayout title="Adam Duran, PE, PMP — Engineering Educator & Program Builder">
+
+  <Hero />
+
+  <!-- About -->
+  <section id="about" class="max-w-[1100px] mx-auto py-20 px-8">
+    <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">About</h2>
+    <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+    <p class="max-w-[720px] text-base mb-4">
+      I am an Assistant Teaching Professor of Mechanical Engineering at Colorado School of Mines and a PhD candidate researching mastery-based engineering education frameworks. Before joining Mines, I served as Program Director and Research Engineer at the National Renewable Energy Laboratory, where I led major initiatives in advanced vehicle technologies and co-launched the GCxN clean energy accelerator in partnership with Shell.
+    </p>
+    <p class="max-w-[720px] text-base mb-4">
+      My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up — connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
+    </p>
+    <ImpactGrid />
+  </section>
+
+  <!-- Programs -->
+  <div class="bg-cloud dark:bg-slate/20">
+    <section id="programs" class="max-w-[1100px] mx-auto py-20 px-8">
+      <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Programs Built</h2>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="max-w-[720px] text-base mb-8">
+        I believe the highest-leverage work in engineering is shaping how the next generation of engineers is educated. These are programs I've built or led that connect academic rigor to real-world impact.
+      </p>
+      <div class="space-y-5">
+        {programs.map(program => (
+          <div class="bg-white dark:bg-slate/40 rounded-md p-8 border border-mist dark:border-steel/30 grid md:grid-cols-[200px_1fr] gap-8">
+            <div>
+              <div class="font-serif text-lg font-semibold text-navy dark:text-white">{program.label}</div>
+              <div class="text-xs text-gold font-semibold uppercase tracking-wider mt-1">{program.role}</div>
+            </div>
+            <div class="text-sm leading-relaxed">{program.desc}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <PublicationList />
+
+  <!-- Teaching -->
+  <div class="bg-cloud dark:bg-slate/20">
+    <section id="teaching" class="max-w-[1100px] mx-auto py-20 px-8">
+      <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Teaching</h2>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="max-w-[720px] text-base mb-8">
+        My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate — developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {courses.map(course => (
+          <CourseCard code={course.code} name={course.name} description={course.description} />
+        ))}
+      </div>
+
+      <!-- Course Materials -->
+      <div class="mt-14 mb-8">
+        <h3 class="font-serif text-xl font-semibold text-navy dark:text-white mb-1">Open Course Materials</h3>
+        <p class="text-sm text-caption">Sample materials from courses I've developed, freely available for adoption and adaptation. Full course packages are hosted on GitHub with automated build pipelines.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {materials.map(mat => (
+          <MaterialCard {...mat} />
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <!-- Frameworks -->
+  <section id="frameworks" class="max-w-[1100px] mx-auto py-20 px-8">
+    <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Research & Scholarly Frameworks</h2>
+    <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+    <p class="max-w-[720px] text-base mb-8">
+      My scholarship focuses on creating practical, evidence-based frameworks that improve how engineering education is delivered, assessed, and sustained.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {frameworks.map(fw => (
+        <FrameworkCard name={fw.name} acronym={fw.acronym} description={fw.description} />
+      ))}
+    </div>
+  </section>
+
+  <CVSection />
+
+</BaseLayout>

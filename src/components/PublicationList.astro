@@ -1,0 +1,40 @@
+---
+import { publications, pubStats } from '../data/publications';
+---
+<section id="publications" class="max-w-[1100px] mx-auto py-20 px-8 border-b border-mist dark:border-steel/30">
+  <div class="flex justify-between items-baseline flex-wrap gap-4 mb-8">
+    <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Publications</h2>
+    <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank"
+      class="text-sm text-gold font-semibold border border-gold px-4 py-2 rounded hover:bg-gold hover:text-white transition-all no-underline">
+      View Full Record on Google Scholar &rarr;
+    </a>
+  </div>
+  <hr class="w-12 h-[3px] bg-gold border-none mb-8" />
+
+  <div class="flex gap-12 mb-10 flex-wrap">
+    <div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.publications}</div>
+      <div class="text-xs text-caption uppercase tracking-widest">Peer-Reviewed Publications</div>
+    </div>
+    <div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.citations}</div>
+      <div class="text-xs text-caption uppercase tracking-widest">Citations</div>
+    </div>
+    <div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.yearsActive}</div>
+      <div class="text-xs text-caption uppercase tracking-widest">Years Active</div>
+    </div>
+  </div>
+
+  <h3 class="text-xs text-steel dark:text-mist/60 uppercase tracking-widest mb-4">Selected Publications</h3>
+  <div>
+    {publications.map(pub => (
+      <div class="py-3 border-b border-mist dark:border-steel/30 last:border-b-0 text-sm leading-relaxed">
+        <span class="text-gold font-semibold text-xs">{pub.year}</span> &mdash;
+        <span set:html={pub.authors.replace(/Duran, A\./g, '<strong>Duran, A.</strong>')} />
+        &ldquo;{pub.title}&rdquo;
+        <span class="text-caption italic">{pub.venue}</span>
+      </div>
+    ))}
+  </div>
+</section>

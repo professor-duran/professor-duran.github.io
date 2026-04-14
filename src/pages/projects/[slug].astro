@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+<BaseLayout title={`${project.data.title} — Adam Duran`} activePage="projects">
+  <div class="pt-28 pb-20 px-8">
+    <div class="max-w-[800px] mx-auto">
+      <a href="/projects" class="text-sm text-gold font-medium no-underline hover:underline mb-6 inline-block">&larr; All Projects</a>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        {project.data.tags.map(tag => (
+          <span class="text-[0.65rem] text-caption bg-cloud dark:bg-slate/50 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">{tag}</span>
+        ))}
+      </div>
+
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">{project.data.title}</h1>
+      <div class="text-sm text-gold font-semibold uppercase tracking-wider mb-8">{project.data.role} &bull; {project.data.dates}</div>
+
+      <article class="prose prose-lg dark:prose-invert max-w-none
+        prose-headings:font-serif prose-headings:text-navy dark:prose-headings:text-white
+        prose-a:text-gold prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-navy dark:prose-strong:text-white">
+        <Content />
+      </article>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = 'home' } = Astro.props;
+---
+<nav class="fixed top-0 left-0 right-0 z-50 bg-navy/[.97] backdrop-blur-sm border-b border-gold/20">
+  <div class="max-w-[1100px] mx-auto px-8 flex items-center justify-between h-[60px]">
+    <a href="/" class="font-serif text-white text-lg font-semibold tracking-wide no-underline">
+      Adam <span class="text-gold">Duran</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <div class="hidden md:flex gap-7">
+        <a href="/#about" class="text-mist text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline">About</a>
+        <a href="/#programs" class="text-mist text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline">Programs</a>
+        <a href="/#publications" class="text-mist text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline">Publications</a>
+        <a href="/#teaching" class="text-mist text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline">Teaching</a>
+        <a href="/projects" class:list={["text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline", activePage === 'projects' ? 'text-gold' : 'text-mist']}>Projects</a>
+      </div>
+      <ThemeToggle />
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-mist hover:text-gold cursor-pointer" aria-label="Open menu">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-gold/20 px-8 py-4 space-y-3">
+    <a href="/#about" class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline">About</a>
+    <a href="/#programs" class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline">Programs</a>
+    <a href="/#publications" class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline">Publications</a>
+    <a href="/#teaching" class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline">Teaching</a>
+    <a href="/projects" class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline">Projects</a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

@@ -1,0 +1,16 @@
+---
+const stats = [
+  { number: '$10M+', label: 'Competitive funding secured across career' },
+  { number: '252', label: 'Declared automotive engineering students (built from zero)' },
+  { number: '30+', label: 'Peer-reviewed publications' },
+  { number: '1,000+', label: 'Google Scholar citations' },
+];
+---
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+  {stats.map(stat => (
+    <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-gold">
+      <div class="font-serif text-4xl font-bold text-navy dark:text-white leading-none mb-1">{stat.number}</div>
+      <div class="text-sm text-steel dark:text-mist/70 leading-snug">{stat.label}</div>
+    </div>
+  ))}
+</div>
