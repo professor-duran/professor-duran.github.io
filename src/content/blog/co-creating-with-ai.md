@@ -1,7 +1,7 @@
 ---
 title: "Co-Creating with AI in Engineering Classrooms"
 description: "AI is in your students' workflow whether you want it there or not. The interesting question is not how to detect it, but how to teach engineering judgment when AI handles the easy parts."
-pubDate: 2026-04-15
+pubDate: 2026-04-14
 tags: [ai, pedagogy, engineering-education, keen, generative-ai]
 readingTime: "9 min read"
 heroImage: /images/adam-lecturing.jpg

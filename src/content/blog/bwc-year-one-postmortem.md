@@ -1,7 +1,7 @@
 ---
 title: "Winning the Inaugural DOE Battery Workforce Challenge: A Postmortem"
 description: "In May 2024, the Mines/ACC team won the inaugural DOE Battery Workforce Challenge. A year later, we placed 4th. Here is what the standings did and did not capture about a year of student-led EV battery integration."
-pubDate: 2026-04-15
+pubDate: 2025-06-18
 tags: [doe, battery-workforce-challenge, competitions, capstone, mentoring]
 readingTime: "9 min read"
 heroImage: /images/bwc-year-1-awards.webp
@@ -66,7 +66,7 @@ The 4th-place finish is, in many ways, a more honest reflection of where we are 
 
 ## What this means for other faculty considering BWC or similar
 
-If you are thinking about taking on a multi-year DOE Advanced Vehicle Technology Competition (AVTC) program, including the new EcoCAR Innovation Challenge that we are now also leading at Mines, here is what I would tell you:
+If you are thinking about taking on a multi-year DOE Advanced Vehicle Technology Competition (AVTC) program, here is what I would tell you:
 
 1. **Start small.** The temptation to give 30 students "a chance" will produce worse outcomes for everyone.
 2. **Divide faculty advising along a clean line.** Decide who owns technical risk and who owns operational risk before the year starts.
@@ -74,6 +74,6 @@ If you are thinking about taking on a multi-year DOE Advanced Vehicle Technology
 4. **Build the team's failure tolerance early.** They have to know what missing a gate feels like before the gates start counting.
 5. **Plan for relative ranking to drop in Year 2.** Other teams learn. Be prepared for stakeholders who treat 1st place as the floor.
 
-The full BWC program value at Mines was $255,100 across three years, plus significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and a vehicle donation from Stellantis (Dodge RAM ProMaster Van). The DOE EcoCAR Innovation Challenge that we are now also leading is approximately $520K over four years beginning Fall 2026. The same lessons will apply.
+The full BWC program value at Mines was $255,100 across three years, plus significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and a vehicle donation from Stellantis (Dodge RAM ProMaster Van). As we head into BWC Year 3, we are looking at what comes next. The same lessons will apply.
 
 If you are running or considering an AVTC program, reach out. I am happy to share the project plans, gate review templates, and budget structures we use.

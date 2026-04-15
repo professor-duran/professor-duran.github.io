@@ -1,7 +1,7 @@
 ---
 title: "Adopting Open Course Materials: A Practical Guide for Engineering Faculty"
 description: "A short practical guide on how to adopt open course materials in your engineering course without doing the unhelpful kind of work that usually accompanies textbook adoption."
-pubDate: 2026-04-15
+pubDate: 2026-04-02
 tags: [open-educational-resources, pedagogy, course-design, ztc]
 readingTime: "7 min read"
 heroImage: /images/adam-lecturing.jpg

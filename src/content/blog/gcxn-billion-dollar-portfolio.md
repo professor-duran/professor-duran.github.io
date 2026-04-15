@@ -1,7 +1,7 @@
 ---
 title: "What the GCxN $1.048B Portfolio Actually Taught Me About Running an Accelerator"
 description: "Five years after I co-founded the Shell GameChanger Accelerator at NREL, the portfolio has crossed a billion dollars in cohort fundraising. Here is what worked, what did not, and what I would tell anyone running an accelerator inside a national lab."
-pubDate: 2026-04-15
+pubDate: 2026-02-11
 tags: [cleantech, accelerators, nrel, program-building, shell]
 readingTime: "11 min read"
 heroImage: /images/gcxn-cohort-outdoor.jpg

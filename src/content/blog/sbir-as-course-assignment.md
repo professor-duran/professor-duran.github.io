@@ -1,7 +1,7 @@
 ---
 title: "SBIR Phase I as a Course Assignment Format"
 description: "Most engineering students will eventually write a federal proposal. Almost none of them learn how. Here is the assignment structure I use in MEGN 455 Aerospace Systems Engineering to put students through a real federal proposal cycle in a single semester."
-pubDate: 2026-04-15
+pubDate: 2025-01-20
 tags: [pedagogy, aerospace, megn455, course-design, federal-proposals]
 readingTime: "8 min read"
 heroImage: /images/shell-ecomarathon-indy.jpg
@@ -57,7 +57,7 @@ The 2-page constraint forces team-level negotiation about what gets included. Th
 
 I can grade the white paper for proposal craft (page constraint, clarity, structure) and the System Solution Report for technical depth, separately. The two grades together tell me whether a team has both halves of the engineering proposal skill set.
 
-## What I have learned over four offerings
+## What I have learned over three offerings
 
 ### MBSE software is a cost, not a benefit, in Year 1
 

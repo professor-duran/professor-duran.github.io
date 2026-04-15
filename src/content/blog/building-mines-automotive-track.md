@@ -1,7 +1,7 @@
 ---
 title: "How We Built the Mines Automotive Track from Zero to 252 Students in Three Years"
 description: "A practical playbook for launching an experiential, industry-connected engineering track inside a university with no dedicated department, no new faculty lines, and no permission-asking culture."
-pubDate: 2026-04-15
+pubDate: 2025-11-03
 tags: [program-building, engineering-education, automotive, capstone, mines]
 readingTime: "10 min read"
 heroImage: /images/fsae-track.jpg
@@ -28,7 +28,7 @@ The lesson generalizes: if your program has a high-visibility student artifact, 
 
 ### 3. We treated industry partnerships as curriculum, not fundraising
 
-When we secured the DOE Battery Workforce Challenge with Stellantis (1st place nationally Year 1), the BWC vehicle was not a side project. It became the integration platform that MEGN 466, MEGN 417, and MEGN 300 students worked on. The same with the EcoCAR Innovation Challenge ($520K over four years, beginning Fall 2026). Industry money is most useful when it directly funds student work that would have happened anyway, not when it funds parallel research that competes for student attention.
+When we secured the DOE Battery Workforce Challenge with Stellantis (1st place nationally Year 1), the BWC vehicle was not a side project. It became the integration platform that MEGN 466, MEGN 417, and MEGN 300 students worked on. Industry money is most useful when it directly funds student work that would have happened anyway, not when it funds parallel research that competes for student attention.
 
 ### 4. We refused to wait for permission to do hard things
 
@@ -52,7 +52,7 @@ For external audiences (donors, deans, prospective students), competition wins a
 
 ### 3. We built faster than we documented
 
-The first two years of the program produced a lot of working systems and not much written documentation. As of 2026 we are belatedly writing it down, including the open course materials now hosted on GitHub for [MEGN 300](https://github.com/professor-duran/MEGN300), [MEGN 301](https://github.com/professor-duran/MEGN301), and [Capstone](https://github.com/professor-duran/Capstone). If I were starting over, I would write the documentation alongside the courses, not three years later.
+The first two years of the program produced a lot of working systems and not much written documentation. As we head into 2026 we are belatedly writing it down, including the open course materials now hosted on GitHub for [MEGN 300](https://github.com/professor-duran/MEGN300), [MEGN 301](https://github.com/professor-duran/MEGN301), and [Capstone](https://github.com/professor-duran/Capstone). If I were starting over, I would write the documentation alongside the courses, not three years later.
 
 ## What other faculty should take away
 
@@ -64,6 +64,6 @@ If you are trying to build a similar track at your institution, the order matter
 4. **Plan for the third faculty member from day one.** You will need them.
 5. **Document as you go.** Future you will thank present you.
 
-The Mines automotive track was not built through any single insight. It was built by refusing to ask permission for things that were obviously right and refusing to skip the unglamorous operational work that makes the visible parts function. Three years in, that has translated to 252 students, eight courses, $775K in confirmed external funding (BWC + EcoCAR), and a program ranked second in the department by enrollment.
+The Mines automotive track was not built through any single insight. It was built by refusing to ask permission for things that were obviously right and refusing to skip the unglamorous operational work that makes the visible parts function. Three years in, that has translated to 252 students, eight courses, a growing federal grant portfolio anchored by BWC, and a program ranked second in the department by enrollment.
 
 Anyone building something like this is welcome to email me. The model travels.
