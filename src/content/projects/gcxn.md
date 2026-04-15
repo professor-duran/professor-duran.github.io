@@ -12,6 +12,12 @@ gallery:
   - src: /images/gcxn-team.jpg
     alt: GCxN team and cohort wearing branded shirts at NREL
     caption: GCxN cohort and program team
+  - src: /images/gcxn-signing-contract.jpg
+    alt: Signing the Shell-NREL contract that established GCxN
+    caption: Signing the founding Shell-NREL agreement
+  - src: /images/gcxn-nrel-award.jpg
+    alt: NREL Outstanding Partnership Award for GCxN
+    caption: NREL Outstanding Partnership Award (2019)
 ---
 
 ## Overview
