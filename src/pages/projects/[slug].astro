@@ -13,9 +13,9 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content } = await render(project);
 ---
-<BaseLayout title={`${project.data.title} — Adam Duran`} activePage="projects">
+<BaseLayout title={`${project.data.title} -- Adam Duran`} activePage="projects">
   <div class="pt-28 pb-20 px-8">
-    <div class="max-w-[800px] mx-auto">
+    <div class="max-w-[900px] mx-auto">
       <a href="/projects" class="text-sm text-gold font-medium no-underline hover:underline mb-6 inline-block">&larr; All Projects</a>
 
       <div class="flex flex-wrap gap-2 mb-4">
@@ -27,12 +27,39 @@ const { Content } = await render(project);
       <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">{project.data.title}</h1>
       <div class="text-sm text-gold font-semibold uppercase tracking-wider mb-8">{project.data.role} &bull; {project.data.dates}</div>
 
+      {project.data.heroImage && (
+        <div class="mb-10 rounded-md overflow-hidden border border-mist dark:border-steel/30">
+          <img
+            src={project.data.heroImage}
+            alt={project.data.heroAlt ?? project.data.title}
+            class="w-full h-auto object-cover"
+            loading="eager"
+          />
+        </div>
+      )}
+
       <article class="prose prose-lg dark:prose-invert max-w-none
         prose-headings:font-serif prose-headings:text-navy dark:prose-headings:text-white
         prose-a:text-gold prose-a:no-underline hover:prose-a:underline
         prose-strong:text-navy dark:prose-strong:text-white">
         <Content />
       </article>
+
+      {project.data.gallery && project.data.gallery.length > 0 && (
+        <div class="mt-12">
+          <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Gallery</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {project.data.gallery.map(img => (
+              <figure class="rounded-md overflow-hidden border border-mist dark:border-steel/30">
+                <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-64 object-cover" />
+                {img.caption && (
+                  <figcaption class="text-xs text-caption p-3 bg-cloud dark:bg-slate/40">{img.caption}</figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </div>
 </BaseLayout>

@@ -10,6 +10,14 @@ const projects = defineCollection({
     dates: z.string(),
     tags: z.array(z.string()),
     order: z.number().default(0),
+    heroImage: z.string().optional(),
+    heroAlt: z.string().optional(),
+    thumbnail: z.string().optional(),
+    gallery: z.array(z.object({
+      src: z.string(),
+      alt: z.string(),
+      caption: z.string().optional(),
+    })).optional(),
   }),
 });
 

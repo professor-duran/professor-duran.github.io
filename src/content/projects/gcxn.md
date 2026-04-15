@@ -5,6 +5,13 @@ role: Program Director
 dates: "2018 — 2020"
 tags: [NREL, clean energy, startups, accelerator, Shell]
 order: 3
+heroImage: /images/gcxn-cohort-outdoor.jpg
+heroAlt: GCxN program cohort photo at NREL
+thumbnail: /images/gcxn-team.jpg
+gallery:
+  - src: /images/gcxn-team.jpg
+    alt: GCxN team and cohort wearing branded shirts at NREL
+    caption: GCxN cohort and program team
 ---
 
 ## Overview

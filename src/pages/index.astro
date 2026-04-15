@@ -6,6 +6,7 @@ import PublicationList from '../components/PublicationList.astro';
 import CourseCard from '../components/CourseCard.astro';
 import MaterialCard from '../components/MaterialCard.astro';
 import CVSection from '../components/CVSection.astro';
+import CollaborationSection from '../components/CollaborationSection.astro';
 import StudentsSection from '../components/StudentsSection.astro';
 import NewsSection from '../components/NewsSection.astro';
 import BeyondTheLab from '../components/BeyondTheLab.astro';
@@ -47,7 +48,7 @@ const materials = [
 
 const programProjectLinks: Record<string, string> = {
   'Automotive Engineering Program': '/projects/automotive-program',
-  'DOE Battery Workforce Challenge': '/projects/ecocar',
+  'DOE EcoCAR & Battery Workforce Challenge': '/projects/ecocar',
   'GCxN Clean Energy Accelerator': '/projects/gcxn',
 };
 
@@ -55,16 +56,19 @@ const programs = [
   {
     label: 'Automotive Engineering Program',
     role: 'Co-Founder & Co-Director',
+    image: '/images/fsae-track.jpg',
     desc: "Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment with only two core faculty.",
   },
   {
     label: 'DOE EcoCAR & Battery Workforce Challenge',
     role: 'Co-Lead with Prof. P. Brodsky',
+    image: '/images/ecocar-jeep-reveal.jpg',
     desc: "Prof. P. Brodsky and I are co-leading the EcoCAR program at Mines (Spring 2026-Present), an approximately $520K DOE Advanced Vehicle Technology Competition award over four years beginning Fall 2026. We also co-lead Mines' DOE Battery Workforce Challenge team ($255K total program value over three years, including DOE base grant, Chevron sponsorship, student stipends, and competition prizes): first-place national finish in Year 1 (2023-24); fourth place in Year 2 (2024-25).",
   },
   {
     label: 'GCxN Clean Energy Accelerator',
     role: 'Program Director',
+    image: '/images/gcxn-cohort-outdoor.jpg',
     desc: "Led NREL's cleantech startup accelerator, working with my counterpart at Shell to direct the program and shape the vision and annual program targets. Directed a $6.3M program with portfolio outcomes (as of 2025) including $1.048B raised by cohort companies, 954 new startup hires, and a $140:1 leverage ratio on Shell project funding.",
   },
   {
@@ -125,18 +129,26 @@ const programs = [
       </p>
       <div class="space-y-5">
         {programs.map(program => (
-          <div class="bg-white dark:bg-slate/40 rounded-md p-8 border border-mist dark:border-steel/30 grid md:grid-cols-[200px_1fr] gap-8">
-            <div>
-              <div class="font-serif text-lg font-semibold text-navy dark:text-white">{program.label}</div>
-              <div class="text-xs text-gold font-semibold uppercase tracking-wider mt-1">{program.role}</div>
-              {programProjectLinks[program.label] && (
-                <a href={programProjectLinks[program.label]}
-                  class="inline-block text-xs text-gold mt-3 no-underline hover:underline">
-                  Learn more &rarr;
-                </a>
-              )}
+          <div class="bg-white dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 overflow-hidden">
+            {program.image && (
+              <a href={programProjectLinks[program.label] ?? '#'} class="block aspect-[21/9] w-full overflow-hidden bg-navy">
+                <img src={program.image} alt={program.label} loading="lazy"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </a>
+            )}
+            <div class="p-8 grid md:grid-cols-[200px_1fr] gap-8">
+              <div>
+                <div class="font-serif text-lg font-semibold text-navy dark:text-white">{program.label}</div>
+                <div class="text-xs text-gold font-semibold uppercase tracking-wider mt-1">{program.role}</div>
+                {programProjectLinks[program.label] && (
+                  <a href={programProjectLinks[program.label]}
+                    class="inline-block text-xs text-gold mt-3 no-underline hover:underline">
+                    Learn more &rarr;
+                  </a>
+                )}
+              </div>
+              <div class="text-sm leading-relaxed">{program.desc}</div>
             </div>
-            <div class="text-sm leading-relaxed">{program.desc}</div>
           </div>
         ))}
       </div>
@@ -178,6 +190,8 @@ const programs = [
   <StudentsSection />
 
   <BeyondTheLab />
+
+  <CollaborationSection />
 
   <CVSection />
 

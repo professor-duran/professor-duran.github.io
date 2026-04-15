@@ -4,27 +4,39 @@ import { getCollection } from 'astro:content';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
-<BaseLayout title="Projects — Adam Duran" activePage="projects">
+<BaseLayout title="Projects -- Adam Duran" activePage="projects">
   <div class="pt-28 pb-20 px-8">
     <div class="max-w-[1100px] mx-auto">
       <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">Projects</h1>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
       <p class="max-w-[720px] text-base mb-12">
-        Programs, ventures, and initiatives I've built or led — from academic programs and DOE competitions to clean energy accelerators and craft spirits.
+        Programs, ventures, and initiatives I've built or led -- from academic programs and DOE competitions to clean energy accelerators and craft spirits.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map(project => (
           <a href={`/projects/${project.id}/`}
-            class="group bg-cloud dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 p-8 no-underline hover:border-gold dark:hover:border-gold transition-colors block">
-            <div class="flex flex-wrap gap-2 mb-3">
-              {project.data.tags.map(tag => (
-                <span class="text-[0.65rem] text-caption bg-white dark:bg-navy/50 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">{tag}</span>
-              ))}
+            class="group bg-cloud dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 no-underline hover:border-gold dark:hover:border-gold transition-colors block overflow-hidden">
+            {project.data.thumbnail && (
+              <div class="aspect-[16/9] w-full overflow-hidden bg-navy">
+                <img
+                  src={project.data.thumbnail}
+                  alt={project.data.title}
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
+            <div class="p-8">
+              <div class="flex flex-wrap gap-2 mb-3">
+                {project.data.tags.map(tag => (
+                  <span class="text-[0.65rem] text-caption bg-white dark:bg-navy/50 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">{tag}</span>
+                ))}
+              </div>
+              <h2 class="font-serif text-xl font-semibold text-navy dark:text-white mb-1 group-hover:text-gold transition-colors">{project.data.title}</h2>
+              <div class="text-xs text-gold font-semibold uppercase tracking-wider mb-3">{project.data.role} &bull; {project.data.dates}</div>
+              <p class="text-sm text-body dark:text-body leading-relaxed">{project.data.description}</p>
             </div>
-            <h2 class="font-serif text-xl font-semibold text-navy dark:text-white mb-1 group-hover:text-gold transition-colors">{project.data.title}</h2>
-            <div class="text-xs text-gold font-semibold uppercase tracking-wider mb-3">{project.data.role} &bull; {project.data.dates}</div>
-            <p class="text-sm text-body dark:text-body leading-relaxed">{project.data.description}</p>
           </a>
         ))}
       </div>
