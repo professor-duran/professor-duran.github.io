@@ -1,7 +1,7 @@
 ---
 title: GCxN Clean Energy Accelerator
-description: Co-founded and directed NREL's cleantech startup accelerator in partnership with Shell, a $6.3M program now with $1B+ in portfolio company fundraising.
-role: Co-Founder & Program Director
+description: Led the Shell GameChanger Accelerator Powered by NREL, a $6.3M program with $1B+ in portfolio company fundraising as of 2025.
+role: Program Director
 dates: "2018 — 2020"
 tags: [NREL, clean energy, startups, accelerator, Shell]
 order: 3
@@ -9,7 +9,7 @@ order: 3
 
 ## Overview
 
-Co-founded and directed the Shell GameChanger Accelerator Powered by NREL (GCxN), a multimillion-dollar clean technology startup accelerator with full responsibility for program strategy, P&L, partner agreements, and participant mentorship. Managed the contractual relationship between Shell International and NREL, assembled startup cohorts through rigorous down-selection, and led a team of technical, project management, and communications professionals.
+Led the Shell GameChanger Accelerator Powered by NREL (GCxN), working with my counterpart at Shell to direct the program and shape the vision, strategy, and annual program targets. Directed a $6.3M cleantech startup accelerator with full responsibility for program strategy, P&L, partner agreements, and participant mentorship. Managed the contractual relationship between Shell International and NREL, assembled startup cohorts through rigorous down-selection, and led a team of technical, project management, and communications professionals.
 
 ## Portfolio Outcomes (as of 2025 Annual Report)
 
@@ -23,7 +23,7 @@ Co-founded and directed the Shell GameChanger Accelerator Powered by NREL (GCxN)
 
 ## Program Design
 
-- Designed and operationalized the accelerator model from concept to sustained operation
+- Directed the accelerator model from concept to sustained operation
 - Selected companies receive up to $250,000 in nondilutive funding via access to NREL's technical experts and facilities
 - Built an ecosystem of Channel Partners (incubators, accelerators, universities) for deal flow
 - 18-24 month engagement cycle with technical validation and commercialization support

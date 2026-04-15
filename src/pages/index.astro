@@ -15,26 +15,33 @@ const materials = [
   {
     code: 'MEGN 300',
     title: 'Instrumentation & Automation',
-    description: 'Measurement systems, signal processing, data acquisition, and actuator control for mechanical engineers. Covers sensor integration, automation protocols, and system-level instrumentation.',
-    samples: ['Course Syllabus', 'Lab 3: Sensor Data Acquisition', 'Lecture Slides: Control Systems Intro'],
+    description: 'Combines mechanical systems with electrical controls, sensors, and actuators. Covers measurement systems, signal processing, data acquisition, and system-level instrumentation for mechanical engineers.',
+    samples: [
+      { label: 'Student Guide', url: 'https://github.com/professor-duran/megn300/blob/main/MEGN300_Student_Guide.pdf' },
+      { label: 'Master Reference', url: 'https://github.com/professor-duran/megn300/blob/main/megn300_master_reference.pdf' },
+    ],
     repoUrl: 'https://github.com/professor-duran/megn300',
-    releaseUrl: 'https://github.com/professor-duran/megn300/releases/latest',
   },
   {
     code: 'MEGN 301',
     title: 'Mechanical Integration & Design',
-    description: 'Integrated design projects connecting thermodynamics, fluids, and mechanics of materials into cohesive mechanical systems with hands-on prototyping.',
-    samples: ['Course Syllabus', 'Design Project Brief', 'Integration Challenge Rubric'],
+    description: 'Combines mechanical systems with electrical controls, sensors, and actuators in integrated design projects connecting thermodynamics, fluids, and mechanics of materials with hands-on prototyping.',
+    samples: [
+      { label: 'Student Guide', url: 'https://github.com/professor-duran/megn301/blob/main/MEGN301_Student_Guide.pdf' },
+      { label: 'Master Reference', url: 'https://github.com/professor-duran/megn301/blob/main/megn301_master_reference.pdf' },
+    ],
     repoUrl: 'https://github.com/professor-duran/megn301',
-    releaseUrl: 'https://github.com/professor-duran/megn301/releases/latest',
   },
   {
     code: 'EDS 491/492',
     title: 'Senior Capstone Design',
-    description: 'Year-long senior design sequence. Industry-sponsored projects with emphasis on professional practice, engineering character, and authentic assessment aligned with the EMBL framework.',
-    samples: ['Course Syllabus & Project Charter', 'Design Review Rubric', 'Team Formation & Norming Guide'],
+    description: 'Year-long senior design sequence. Industry-sponsored projects with emphasis on professional practice, engineering character, and authentic assessment.',
+    samples: [
+      { label: 'Student Guide', url: 'https://github.com/professor-duran/capstone/blob/main/EDNS491_Student_Guide.pdf' },
+      { label: 'PA Instructor Guide', url: 'https://github.com/professor-duran/capstone/blob/main/PA_Instructors_Guide.pdf' },
+      { label: 'Course Text', url: 'https://github.com/professor-duran/capstone/blob/main/edns491_course_text.pdf' },
+    ],
     repoUrl: 'https://github.com/professor-duran/capstone',
-    releaseUrl: 'https://github.com/professor-duran/capstone/releases/latest',
   },
 ];
 
@@ -47,18 +54,18 @@ const programProjectLinks: Record<string, string> = {
 const programs = [
   {
     label: 'Automotive Engineering Program',
-    role: 'Co-Founder & Co-Director (with Prof. P. Brodsky)',
-    desc: "Co-built Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years with Prof. P. Brodsky. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment with only two core faculty.",
+    role: 'Co-Founder & Co-Director',
+    desc: "Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment with only two core faculty.",
   },
   {
-    label: 'DOE Battery Workforce Challenge & EcoCAR',
+    label: 'DOE EcoCAR & Battery Workforce Challenge',
     role: 'Co-Lead with Prof. P. Brodsky',
-    desc: "Co-lead the Mines team in the U.S. Department of Energy's Battery Workforce Challenge with Prof. P. Brodsky ($255K total program value over three years, including DOE base grant, Chevron sponsorship, student stipends, and competition prizes). First-place national finish in Year 1 (2023-24); fourth place in Year 2 (2024-25). Also co-awarded the DOE EcoCAR Innovation Challenge (approximately $520K over four years, starting Fall 2026).",
+    desc: "Prof. P. Brodsky and I are co-leading the EcoCAR program at Mines (Spring 2026-Present), an approximately $520K DOE Advanced Vehicle Technology Competition award over four years beginning Fall 2026. We also co-lead Mines' DOE Battery Workforce Challenge team ($255K total program value over three years, including DOE base grant, Chevron sponsorship, student stipends, and competition prizes): first-place national finish in Year 1 (2023-24); fourth place in Year 2 (2024-25).",
   },
   {
     label: 'GCxN Clean Energy Accelerator',
-    role: 'Co-Founder & Program Director',
-    desc: "Co-launched NREL's cleantech startup accelerator in partnership with Shell. Directed a $6.3M program with portfolio outcomes (as of 2025) including $1.048B raised by cohort companies, 954 new startup hires, and a $140:1 leverage ratio on Shell project funding.",
+    role: 'Program Director',
+    desc: "Led NREL's cleantech startup accelerator, working with my counterpart at Shell to direct the program and shape the vision and annual program targets. Directed a $6.3M program with portfolio outcomes (as of 2025) including $1.048B raised by cohort companies, 954 new startup hires, and a $140:1 leverage ratio on Shell project funding.",
   },
   {
     label: 'Capstone Design Program',
@@ -84,7 +91,7 @@ const programs = [
       I am an Assistant Teaching Professor of Mechanical Engineering at Colorado School of Mines. With nearly two decades of combined industry and academic leadership, I bring a perspective shaped by both large-scale R&D program management and frontline teaching.
     </p>
     <p class="max-w-[720px] text-base mb-4">
-      Before joining Mines full-time, I spent over a decade at the National Renewable Energy Laboratory (2008-2020) progressing from Student Research Assistant to Senior Research Engineer to Program Manager, where I led technical development of the Fleet DNA commercial vehicle database, directed the $6.3M GCxN clean energy accelerator in partnership with Shell, and served as PI on multiple DOE-funded vehicle technology projects. I then served as Senior Engineer at QS-2 (2020-2022) leading research on automated driving systems.
+      Before joining Mines full-time, I spent over a decade at the National Renewable Energy Laboratory (2008-2020) progressing from Student Research Assistant to Senior Research Engineer to Program Manager, where I led technical development of the Fleet DNA commercial vehicle database, directed the $6.3M GCxN clean energy accelerator in partnership with Shell, and served as PI on multiple DOE-funded vehicle technology projects. I then served as Senior Engineer at Quantitative Scientific Solutions (2020-2022) leading research on automated driving systems.
     </p>
     <p class="max-w-[720px] text-base mb-4">
       My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up: connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.

@@ -1,7 +1,7 @@
 ---
 title: Automotive Engineering Program
-description: Co-built Colorado School of Mines' automotive engineering track from zero to 252 declared students in under three years with Prof. P. Brodsky.
-role: Co-Founder & Co-Director (with Prof. P. Brodsky)
+description: Built Colorado School of Mines' automotive engineering track from zero to 252 declared students in under three years, working closely with Prof. P. Brodsky.
+role: Co-Founder & Co-Director
 dates: "2022 — Present"
 tags: [engineering education, curriculum design, industry partnership]
 order: 1
@@ -9,7 +9,7 @@ order: 1
 
 ## Overview
 
-Co-built Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years with Prof. P. Brodsky. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment (behind only Aerospace) with a 126:1 student-to-faculty ratio and only two core faculty.
+Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment (behind only Aerospace) with a 126:1 student-to-faculty ratio and only two core faculty.
 
 ## Key Accomplishments
 
