@@ -63,7 +63,7 @@ const programs = [
   {
     label: 'DOE EcoCAR & Battery Workforce Challenge',
     role: 'Co-Lead with Prof. P. Brodsky',
-    image: '/images/ecocar-jeep-reveal.jpg',
+    image: '/images/bwc-year-1-awards.webp',
     desc: "Prof. P. Brodsky and I are co-leading the EcoCAR program at Mines (Spring 2026-Present), an approximately $520K DOE Advanced Vehicle Technology Competition award over four years beginning Fall 2026. We also co-lead Mines' DOE Battery Workforce Challenge team ($255K total program value over three years, including DOE base grant, Chevron sponsorship, student stipends, and competition prizes): first-place national finish in Year 1 (2023-24); fourth place in Year 2 (2024-25).",
   },
   {
@@ -101,6 +101,9 @@ const programs = [
     </p>
     <p class="max-w-[720px] text-base mb-4">
       My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up: connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
+    </p>
+    <p class="max-w-[720px] text-base mb-4 italic text-caption">
+      I am a three-time Mines graduate (B.S. 2009, M.S. Mechanical 2011, M.S. Engineering and Technology Management 2016), now teaching the next generation of Mines engineers in the same department where I started.
     </p>
 
     <!-- Partners -->
@@ -164,9 +167,15 @@ const programs = [
     <section id="teaching" class="max-w-[1100px] mx-auto py-20 px-8">
       <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Teaching</h2>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
-      <p class="max-w-[720px] text-base mb-8">
-        My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate, developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
-      </p>
+      <div class="grid md:grid-cols-[1fr_400px] gap-10 items-start mb-10">
+        <p class="text-base">
+          My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate, developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
+        </p>
+        <figure class="rounded-md overflow-hidden border border-mist dark:border-steel/30">
+          <img src="/images/adam-lecturing.jpg" alt="Adam Duran teaching a class at Colorado School of Mines" loading="lazy" class="w-full h-auto object-cover" />
+          <figcaption class="text-xs text-caption p-3 bg-white dark:bg-slate/40">In the classroom at Mines</figcaption>
+        </figure>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {courses.map(course => (
           <CourseCard code={course.code} name={course.name} description={course.description} crossList={course.crossList} semesters={course.semesters} developed={course.developed} />

@@ -5,10 +5,13 @@ role: Co-Lead with Prof. P. Brodsky
 dates: "2023 — Present"
 tags: [DOE, battery technology, competition, workforce development, Stellantis, EcoCAR]
 order: 2
-heroImage: /images/ecocar-jeep-reveal.jpg
-heroAlt: Mines team at the DOE EcoCAR vehicle reveal with a blue Jeep and Mines pennant
-thumbnail: /images/bwc-team-stellantis.jpg
+heroImage: /images/bwc-year-1-awards.webp
+heroAlt: Mines team accepting the Battery Workforce Challenge Year 1 first-place award
+thumbnail: /images/bwc-year-1-awards.webp
 gallery:
+  - src: /images/ecocar-jeep-reveal.jpg
+    alt: Mines team at the DOE EcoCAR vehicle reveal with a blue Jeep and Mines pennant
+    caption: EcoCAR Innovation Challenge vehicle reveal
   - src: /images/bwc-team-stellantis.jpg
     alt: Mines Battery Workforce Challenge team with Adam Duran at the Stellantis competition
     caption: Mines BWC team at the Stellantis competition event
