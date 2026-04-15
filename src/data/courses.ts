@@ -53,7 +53,7 @@ export const courses: Course[] = [
   {
     code: 'MEGN 200',
     name: 'Intro to ME: Programming & Hardware Interface',
-    description: 'Introductory programming and hardware interface for mechanical engineers. Covers programming fundamentals, sensor integration, and embedded systems basics.',
+    description: 'Introductory programming in C with hands-on hardware troubleshooting for mechanical engineers. Covers low-level embedded systems work, sensor integration, and the diagnostic skills that bridge code and physical systems.',
     semesters: 'F25',
   },
   {

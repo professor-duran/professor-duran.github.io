@@ -1,20 +1,43 @@
 ---
 const outlets = [
-  'Mines Newsroom',
-  'PR Newswire',
-  'Business Wire',
-  'Scientific American',
-  'CleanTechnica',
-  'Battery Tech Online',
-  'NREL News',
+  { name: 'Mines Newsroom', url: 'https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge' },
+  { name: 'PR Newswire', url: 'https://www.prnewswire.com/news-releases/battery-workforce-challenge-names-year-one-champion-teams-302141954.html' },
+  { name: 'Business Wire', url: 'https://www.businesswire.com/news/home/20191113005026/en/Five-Companies-Selected-to-Join-GCxN-Cleantech-Accelerator' },
+  { name: 'NREL News', url: 'https://www.nrel.gov/news/detail/program/2019/global-energy-gamechanger' },
+  { name: 'Battery Tech Online', url: 'https://www.batterytechonline.com/design-manufacturing/battery-workforce-challenge-declares-first-year-champion-teams' },
+  { name: 'Scientific American' },
+  { name: 'CleanTechnica' },
 ];
 ---
-<section id="press" class="max-w-[1100px] mx-auto py-16 px-8 text-center">
-  <p class="text-xs text-caption uppercase tracking-widest mb-5">As Covered In</p>
-  <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-serif italic text-steel dark:text-mist/70 mb-6">
-    {outlets.map(o => <span>{o}</span>)}
+<section id="press" class="bg-cloud dark:bg-slate/20">
+  <div class="max-w-[1100px] mx-auto py-16 px-8">
+    <p class="text-xs text-caption uppercase tracking-widest mb-5 text-center">As Covered In</p>
+
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-serif italic text-steel dark:text-mist/70 mb-10">
+      {outlets.map(o => (
+        o.url
+          ? <a href={o.url} target="_blank" rel="noopener" class="text-steel dark:text-mist/70 no-underline hover:text-gold transition-colors">{o.name}</a>
+          : <span>{o.name}</span>
+      ))}
+    </div>
+
+    <!-- Featured pull quote -->
+    <figure class="max-w-[760px] mx-auto bg-white dark:bg-slate/40 rounded-md p-8 border-l-[3px] border-gold mb-8">
+      <blockquote class="font-serif text-lg italic text-navy dark:text-white leading-relaxed">
+        "University leadership has been exceptionally supportive of the Battery Workforce Challenge team, recognizing its alignment with our mission to deliver hands-on, industry-relevant engineering education."
+      </blockquote>
+      <figcaption class="text-xs text-caption mt-4 not-italic">
+        <span class="font-semibold text-steel dark:text-mist">Adam Duran</span>, quoted in
+        <a href="https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">
+          Mines Newsroom &mdash; "Mines, ACC team named first-year champions of Battery Workforce Challenge"
+        </a>
+      </figcaption>
+    </figure>
+
+    <div class="text-center">
+      <a href="/press" class="inline-block text-sm text-gold font-semibold border border-gold px-5 py-2 rounded hover:bg-gold hover:text-white transition-all no-underline">
+        See full press archive &rarr;
+      </a>
+    </div>
   </div>
-  <a href="/press" class="inline-block text-sm text-gold font-semibold border border-gold px-5 py-2 rounded hover:bg-gold hover:text-white transition-all no-underline">
-    See full press archive &rarr;
-  </a>
 </section>
