@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter(p => !p.data.draft);
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function fmt(d: Date) {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<BaseLayout
+  title={`${post.data.title} -- Adam Duran`}
+  description={post.data.description}
+  ogImage={post.data.heroImage}>
+
+  <article class="pt-28 pb-20 px-8">
+    <div class="max-w-[760px] mx-auto">
+      <a href="/blog" class="text-sm text-gold font-medium no-underline hover:underline mb-6 inline-block">&larr; All essays</a>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        {post.data.tags.map(tag => (
+          <span class="text-[0.65rem] text-caption bg-cloud dark:bg-slate/50 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">{tag}</span>
+        ))}
+      </div>
+
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-3 leading-tight">{post.data.title}</h1>
+
+      <div class="flex flex-wrap gap-3 items-baseline mb-8 text-sm text-caption">
+        <time datetime={post.data.pubDate.toISOString()}>{fmt(post.data.pubDate)}</time>
+        {post.data.readingTime && <span>&middot; {post.data.readingTime}</span>}
+        {post.data.updatedDate && <span>&middot; Updated {fmt(post.data.updatedDate)}</span>}
+      </div>
+
+      {post.data.heroImage && (
+        <figure class="mb-10 rounded-md overflow-hidden border border-mist dark:border-steel/30">
+          <img src={post.data.heroImage} alt={post.data.heroAlt ?? post.data.title}
+            loading="eager" class="w-full h-auto object-cover" />
+        </figure>
+      )}
+
+      <div class="prose prose-lg dark:prose-invert max-w-none
+        prose-headings:font-serif prose-headings:text-navy dark:prose-headings:text-white
+        prose-a:text-gold prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-navy dark:prose-strong:text-white
+        prose-blockquote:border-l-gold prose-blockquote:not-italic
+        prose-blockquote:bg-cloud prose-blockquote:dark:bg-slate/40 prose-blockquote:p-6 prose-blockquote:rounded-md
+        prose-code:text-gold prose-code:bg-cloud prose-code:dark:bg-slate/40 prose-code:px-1.5 prose-code:rounded
+        prose-code:before:content-none prose-code:after:content-none">
+        <Content />
+      </div>
+
+      <hr class="my-12 border-mist dark:border-steel/30" />
+
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-8 text-center">
+        <h3 class="font-serif text-lg font-semibold text-navy dark:text-white mb-3">Get new essays by email</h3>
+        <p class="text-sm text-body mb-4">Quarterly notes on engineering education, program design, and the work I'm doing in real time. No spam.</p>
+        <a href="mailto:aduran@mines.edu?subject=Subscribe%20to%20essays"
+          class="inline-block bg-gold text-white font-semibold text-sm tracking-wide px-6 py-2.5 rounded hover:bg-gold-light transition-colors no-underline">
+          Subscribe
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
