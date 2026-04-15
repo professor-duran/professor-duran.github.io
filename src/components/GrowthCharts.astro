@@ -1,0 +1,175 @@
+---
+// Pure SVG charts -- no JS dependencies, scales cleanly, dark mode friendly.
+
+// Chart 1: Mines Automotive Engineering Program enrollment growth
+const automotive = [
+  { year: 'AY22', students: 0 },
+  { year: 'AY23', students: 60 },
+  { year: 'AY24', students: 150 },
+  { year: 'AY25', students: 220 },
+  { year: 'AY26', students: 252 },
+];
+
+// Chart 2: GCxN portfolio fundraising over time (cumulative, in $M)
+const gcxn = [
+  { year: 2020, raised: 80, hires: 80 },
+  { year: 2021, raised: 180, hires: 180 },
+  { year: 2022, raised: 320, hires: 254 },
+  { year: 2023, raised: 551, hires: 528 },
+  { year: 2024, raised: 780, hires: 720 },
+  { year: 2025, raised: 1048, hires: 954 },
+];
+
+// Chart 3: Career competitive funding milestones (cumulative $M)
+const funding = [
+  { year: 2014, amount: 2.0, label: 'Fleet DNA PI' },
+  { year: 2017, amount: 3.0, label: 'DOE FOA awards' },
+  { year: 2020, amount: 9.3, label: 'GCxN $6.3M' },
+  { year: 2022, amount: 9.8, label: 'QS-2 $500K+' },
+  { year: 2024, amount: 10.05, label: 'BWC $255K' },
+  { year: 2026, amount: 10.57, label: 'EcoCAR $520K' },
+];
+
+// SVG chart helpers (operating on viewBox 0 0 600 240)
+function autoChart() {
+  const w = 600, h = 240, padL = 50, padR = 20, padT = 20, padB = 40;
+  const xs = automotive.map((_, i) => padL + (i * (w - padL - padR)) / (automotive.length - 1));
+  const maxY = 300;
+  const ys = automotive.map(d => h - padB - (d.students / maxY) * (h - padT - padB));
+  const path = automotive.map((d, i) => `${i === 0 ? 'M' : 'L'} ${xs[i]} ${ys[i]}`).join(' ');
+  const area = `${path} L ${xs[xs.length - 1]} ${h - padB} L ${xs[0]} ${h - padB} Z`;
+  return { xs, ys, path, area, w, h, padL, padR, padT, padB, maxY };
+}
+
+function gcxnChart() {
+  const w = 600, h = 240, padL = 60, padR = 20, padT = 20, padB = 40;
+  const xs = gcxn.map((_, i) => padL + (i * (w - padL - padR)) / (gcxn.length - 1));
+  const maxY = 1100;
+  const ys = gcxn.map(d => h - padB - (d.raised / maxY) * (h - padT - padB));
+  const path = gcxn.map((d, i) => `${i === 0 ? 'M' : 'L'} ${xs[i]} ${ys[i]}`).join(' ');
+  const area = `${path} L ${xs[xs.length - 1]} ${h - padB} L ${xs[0]} ${h - padB} Z`;
+  return { xs, ys, path, area, w, h, padL, padR, padT, padB, maxY };
+}
+
+function fundingChart() {
+  const w = 600, h = 240, padL = 50, padR = 30, padT = 20, padB = 40;
+  const xs = funding.map((_, i) => padL + (i * (w - padL - padR)) / (funding.length - 1));
+  const maxY = 12;
+  const ys = funding.map(d => h - padB - (d.amount / maxY) * (h - padT - padB));
+  const path = funding.map((d, i) => `${i === 0 ? 'M' : 'L'} ${xs[i]} ${ys[i]}`).join(' ');
+  const area = `${path} L ${xs[xs.length - 1]} ${h - padB} L ${xs[0]} ${h - padB} Z`;
+  return { xs, ys, path, area, w, h, padL, padR, padT, padB, maxY };
+}
+
+const a = autoChart();
+const g = gcxnChart();
+const f = fundingChart();
+---
+<style>
+  .chart-grid { stroke: currentColor; stroke-opacity: 0.08; }
+  .chart-axis { stroke: currentColor; stroke-opacity: 0.25; }
+  .chart-axis-text { fill: currentColor; opacity: 0.55; font: 10px var(--font-sans, sans-serif); }
+  .chart-line { stroke: var(--color-gold, #c4913c); stroke-width: 2.5; fill: none; }
+  .chart-area { fill: var(--color-gold, #c4913c); fill-opacity: 0.12; }
+  .chart-dot { fill: var(--color-gold, #c4913c); }
+  .chart-dot-label { fill: currentColor; opacity: 0.85; font: bold 11px var(--font-sans, sans-serif); }
+  .chart-line-2 { stroke: var(--color-steel, #4a5e75); stroke-width: 2; fill: none; stroke-dasharray: 4 3; }
+  .dark .chart-line-2 { stroke: #9ca3af; }
+</style>
+
+<section class="max-w-[1100px] mx-auto py-20 px-8">
+  <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Impact, Visualized</h2>
+  <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+  <p class="max-w-[720px] text-base mb-12">
+    Three programs, three trajectories. The numbers tell the story of what happens when industry experience meets engineering education.
+  </p>
+
+  <div class="space-y-12">
+
+    <!-- Chart 1: Automotive Program -->
+    <figure>
+      <figcaption class="mb-4">
+        <h3 class="font-serif text-lg font-semibold text-navy dark:text-white">Mines Automotive Engineering Program: Declared Students</h3>
+        <p class="text-sm text-caption">Built from inception in 2022 with Prof. P. Brodsky. Now 2nd-largest elective track in ME.</p>
+      </figcaption>
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
+        <svg viewBox={`0 0 ${a.w} ${a.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing Mines automotive engineering program enrollment growing from 0 to 252 declared students between AY22 and AY26">
+          <!-- gridlines -->
+          {[0, 50, 100, 150, 200, 250, 300].map(g => (
+            <g>
+              <line x1={a.padL} x2={a.w - a.padR} y1={a.h - a.padB - (g / a.maxY) * (a.h - a.padT - a.padB)} y2={a.h - a.padB - (g / a.maxY) * (a.h - a.padT - a.padB)} class="chart-grid" />
+              <text x={a.padL - 8} y={a.h - a.padB - (g / a.maxY) * (a.h - a.padT - a.padB) + 3} text-anchor="end" class="chart-axis-text">{g}</text>
+            </g>
+          ))}
+          <!-- area + line -->
+          <path d={a.area} class="chart-area" />
+          <path d={a.path} class="chart-line" />
+          <!-- dots + value labels -->
+          {automotive.map((d, i) => (
+            <g>
+              <circle cx={a.xs[i]} cy={a.ys[i]} r="4" class="chart-dot" />
+              <text x={a.xs[i]} y={a.ys[i] - 10} text-anchor="middle" class="chart-dot-label">{d.students}</text>
+              <text x={a.xs[i]} y={a.h - a.padB + 18} text-anchor="middle" class="chart-axis-text">{d.year}</text>
+            </g>
+          ))}
+        </svg>
+      </div>
+    </figure>
+
+    <!-- Chart 2: GCxN -->
+    <figure>
+      <figcaption class="mb-4">
+        <h3 class="font-serif text-lg font-semibold text-navy dark:text-white">GCxN Portfolio Companies: Capital Raised ($M, cumulative)</h3>
+        <p class="text-sm text-caption">Shell GameChanger Accelerator Powered by NREL. Co-founded and directed 2018-2020; portfolio continues to compound.</p>
+      </figcaption>
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
+        <svg viewBox={`0 0 ${g.w} ${g.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing GCxN portfolio company capital raised growing from $80 million in 2020 to $1.048 billion in 2025">
+          {[0, 250, 500, 750, 1000].map(v => (
+            <g>
+              <line x1={g.padL} x2={g.w - g.padR} y1={g.h - g.padB - (v / g.maxY) * (g.h - g.padT - g.padB)} y2={g.h - g.padB - (v / g.maxY) * (g.h - g.padT - g.padB)} class="chart-grid" />
+              <text x={g.padL - 8} y={g.h - g.padB - (v / g.maxY) * (g.h - g.padT - g.padB) + 3} text-anchor="end" class="chart-axis-text">${v}M</text>
+            </g>
+          ))}
+          <path d={g.area} class="chart-area" />
+          <path d={g.path} class="chart-line" />
+          {gcxn.map((d, i) => (
+            <g>
+              <circle cx={g.xs[i]} cy={g.ys[i]} r="4" class="chart-dot" />
+              <text x={g.xs[i]} y={g.ys[i] - 10} text-anchor="middle" class="chart-dot-label">${d.raised >= 1000 ? `${(d.raised/1000).toFixed(2)}B` : `${d.raised}M`}</text>
+              <text x={g.xs[i]} y={g.h - g.padB + 18} text-anchor="middle" class="chart-axis-text">{d.year}</text>
+            </g>
+          ))}
+        </svg>
+        <p class="text-xs text-caption mt-3 italic">Source: GCxN Year in Review 2025 Annual Report. 30 portfolio companies; $140:1 leverage ratio on Shell project funding.</p>
+      </div>
+    </figure>
+
+    <!-- Chart 3: Career Funding -->
+    <figure>
+      <figcaption class="mb-4">
+        <h3 class="font-serif text-lg font-semibold text-navy dark:text-white">Career Competitive Funding ($M, cumulative as PI / Proposal Lead)</h3>
+        <p class="text-sm text-caption">Spans NREL Fleet DNA, GCxN, QS-2 portfolio, BWC, and EcoCAR Innovation Challenge.</p>
+      </figcaption>
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
+        <svg viewBox={`0 0 ${f.w} ${f.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing cumulative career funding from $2 million in 2014 to $10.57 million in 2026">
+          {[0, 2.5, 5, 7.5, 10].map(v => (
+            <g>
+              <line x1={f.padL} x2={f.w - f.padR} y1={f.h - f.padB - (v / f.maxY) * (f.h - f.padT - f.padB)} y2={f.h - f.padB - (v / f.maxY) * (f.h - f.padT - f.padB)} class="chart-grid" />
+              <text x={f.padL - 8} y={f.h - f.padB - (v / f.maxY) * (f.h - f.padT - f.padB) + 3} text-anchor="end" class="chart-axis-text">${v}M</text>
+            </g>
+          ))}
+          <path d={f.area} class="chart-area" />
+          <path d={f.path} class="chart-line" />
+          {funding.map((d, i) => (
+            <g>
+              <circle cx={f.xs[i]} cy={f.ys[i]} r="4" class="chart-dot" />
+              <text x={f.xs[i]} y={f.ys[i] - 10} text-anchor="middle" class="chart-dot-label">${d.amount.toFixed(1)}M</text>
+              <text x={f.xs[i]} y={f.h - f.padB + 18} text-anchor="middle" class="chart-axis-text">{d.year}</text>
+            </g>
+          ))}
+        </svg>
+      </div>
+    </figure>
+
+  </div>
+</section>

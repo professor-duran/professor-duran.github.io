@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const topics = [
+  {
+    title: 'Building Engineering Programs from Zero',
+    blurb: 'How to design, fund, and scale new engineering education programs in three years or less. Lessons from the Mines Automotive Engineering Program (0 to 252 students) and the Shell GameChanger Accelerator at NREL ($6.3M, 30 portfolio companies).',
+    audience: 'Department heads, deans, program directors, foundation officers',
+  },
+  {
+    title: 'Mastery at Scale',
+    blurb: 'Designing experiential, mastery-based engineering courses that work for hundreds of students and are sustainable for faculty. Drawn from MEGN 417/527 and MEGN 456 redesigns.',
+    audience: 'Engineering faculty, instructional designers, faculty developers',
+  },
+  {
+    title: 'Co-Creating with AI in Engineering Education',
+    blurb: 'How AI tools can amplify (not replace) engineering pedagogy. Frameworks for AI as a learning partner, integration patterns for project-based courses, and what changes in classroom assessment when AI is in the room. (Flash talk delivered at Mines Generative AI Summit, Fall 2025.)',
+    audience: 'KEEN community, engineering faculty, ed-tech leaders',
+  },
+  {
+    title: 'Industry-Connected Capstone Design',
+    blurb: 'Lessons from advising 30+ Capstone teams over 8 semesters and serving on the Mines Capstone Leadership Team and Industry Partnership Board. How to source, scope, and run capstone projects that produce real outcomes for both students and industry sponsors.',
+    audience: 'Capstone coordinators, industry partnership offices, deans',
+  },
+  {
+    title: 'From National Lab to Tenure Track',
+    blurb: 'Translating industry and federal R&D experience into engineering faculty practice. Building scholarly identity around applied work, leveraging industry relationships for funding and student opportunities, and navigating P&T as a teaching-track faculty member.',
+    audience: 'New faculty, postdocs considering teaching positions, faculty mentors',
+  },
+  {
+    title: 'Entrepreneurial Mindset in Action',
+    blurb: 'Co-founder of Method & Muse Spirits and director of the GCxN cleantech accelerator on what it actually takes to translate engineering work into ventures. Part case study, part practical workshop on opportunity recognition and value creation.',
+    audience: 'KEEN, KERN, engineering entrepreneurship programs, student innovators',
+  },
+];
+
+const recentVenues = [
+  { date: 'March 2026', venue: 'KEEN Crescendo Program, University of the Pacific', role: 'Selected national member (1 of 5)' },
+  { date: 'February 2026', venue: 'KERN/KEEN EMxAI Summit', role: 'Presenter' },
+  { date: 'January 2026', venue: 'KEEN National Conference', role: 'Participant and contributor' },
+  { date: 'Fall 2025', venue: 'Generative AI and Human Futures Summit, Colorado School of Mines', role: 'Flash Talk: "Co-Creating with AI: New Frontiers in Teaching and Design"' },
+  { date: 'September 2023', venue: 'AIAA Pathfinder Conference', role: 'ME department representative' },
+  { date: '2018', venue: 'SAE World Congress', role: 'Two technical papers presented' },
+  { date: '2017', venue: 'DOE Annual Merit Review', role: 'Multi-modal intra-city freight presentation' },
+];
+
+const guestLectures = [
+  'MEGN 408 -- Spacecraft Subsystems (F23)',
+  'MEGN 452 -- Introduction to Space Exploration (F25)',
+  'HNRS 110 -- Leadership by Design (F24)',
+  'MEGN 391 -- Automotive Design (F24, F25)',
+  'EBGN 566 -- Technology Entrepreneurship (F24, guest judge)',
+];
+---
+<BaseLayout title="Speaking & Workshops -- Adam Duran"
+  description="Adam Duran -- Speaking topics, workshops, and guest lectures on engineering education, program design, AI in the classroom, and entrepreneurial mindset.">
+
+  <div class="pt-28 pb-20 px-8">
+    <div class="max-w-[900px] mx-auto">
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">Speaking & Workshops</h1>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="text-base mb-12 max-w-[720px]">
+        I speak at conferences, faculty workshops, and industry events on engineering education, program design, AI in the classroom, and the practical work of building experiential programs at scale. If you're organizing an event and one of these topics fits, get in touch.
+      </p>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Speaking Topics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
+        {topics.map(t => (
+          <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border-l-[3px] border-gold">
+            <div class="font-serif text-base font-semibold text-navy dark:text-white mb-2">{t.title}</div>
+            <p class="text-sm text-body leading-relaxed mb-3">{t.blurb}</p>
+            <p class="text-xs text-caption uppercase tracking-wider"><span class="font-semibold">Audience:</span> {t.audience}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Recent Venues & Conferences</h2>
+      <div class="mb-16">
+        {recentVenues.map(v => (
+          <div class="flex gap-4 py-3 border-b border-mist dark:border-steel/30 text-sm leading-relaxed">
+            <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap min-w-[140px] pt-0.5">{v.date}</span>
+            <div>
+              <div class="font-medium text-navy dark:text-white">{v.venue}</div>
+              <div class="text-xs text-caption">{v.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Guest Lectures (Mines)</h2>
+      <ul class="list-none p-0 m-0 mb-16 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {guestLectures.map(g => (
+          <li class="text-sm py-2 px-3 bg-cloud dark:bg-slate/40 rounded">{g}</li>
+        ))}
+      </ul>
+
+      <div class="bg-navy text-center rounded-md p-10">
+        <h2 class="font-serif text-2xl font-bold text-white mb-3">Inquire About Speaking</h2>
+        <p class="text-mist text-base mb-6 max-w-[560px] mx-auto">
+          For conference invitations, faculty workshops, or industry events, please include the date, audience, format (keynote, panel, workshop), and which topic interests you.
+        </p>
+        <a href="mailto:aduran@mines.edu?subject=Speaking%20Inquiry%20-%20%5BEvent%20Name%5D"
+          class="inline-block bg-gold text-white font-semibold text-sm tracking-wide px-8 py-3 rounded hover:bg-gold-light transition-colors no-underline">
+          Send a Speaking Inquiry
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

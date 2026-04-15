@@ -10,6 +10,8 @@ import CollaborationSection from '../components/CollaborationSection.astro';
 import StudentsSection from '../components/StudentsSection.astro';
 import NewsSection from '../components/NewsSection.astro';
 import BeyondTheLab from '../components/BeyondTheLab.astro';
+import GrowthCharts from '../components/GrowthCharts.astro';
+import PressStrip from '../components/PressStrip.astro';
 import { courses } from '../data/courses';
 
 const materials = [
@@ -160,6 +162,8 @@ const programs = [
     </section>
   </div>
 
+  <GrowthCharts />
+
   <PublicationList />
 
   <!-- Teaching -->
@@ -197,6 +201,8 @@ const programs = [
   </div>
 
   <NewsSection />
+
+  <PressStrip />
 
   <StudentsSection />
 

@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface PressItem {
+  date: string;
+  outlet: string;
+  headline: string;
+  url?: string;
+  note?: string;
+}
+
+const recent: PressItem[] = [
+  {
+    date: 'April 2026',
+    outlet: 'PR Newswire',
+    headline: 'Energy Department and Argonne Join GM, Stellantis and MathWorks to Launch EcoCAR Innovation Challenge',
+    url: 'https://www.prnewswire.com/news-releases/energy-department-and-argonne-join-gm-stellantis-and-mathworks-to-launch-ecocar-innovation-challenge-302740566.html',
+    note: 'Mines selected as one of 20 participating universities',
+  },
+  {
+    date: 'May 2024',
+    outlet: 'Colorado School of Mines Newsroom',
+    headline: 'Mines, ACC team named first-year champions of Battery Workforce Challenge',
+    url: 'https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge',
+    note: 'Quoted as faculty advisor',
+  },
+  {
+    date: 'May 2024',
+    outlet: 'PR Newswire',
+    headline: 'Battery Workforce Challenge Names Year One Champion Teams',
+    url: 'https://www.prnewswire.com/news-releases/battery-workforce-challenge-names-year-one-champion-teams-302141954.html',
+  },
+  {
+    date: '2024',
+    outlet: 'Battery Tech Online',
+    headline: 'Battery Workforce Challenge Declares First-Year Champion Teams',
+    url: 'https://www.batterytechonline.com/design-manufacturing/battery-workforce-challenge-declares-first-year-champion-teams',
+  },
+  {
+    date: '2024',
+    outlet: 'Mines Mechanical Engineering Department',
+    headline: 'Battery Workforce Challenge Names Year One Champion Teams',
+    url: 'https://mechanical.mines.edu/battery-workforce-challenge-names-year-one-champion-teams/',
+  },
+  {
+    date: '2024',
+    outlet: 'Arapahoe Community College Newsroom',
+    headline: 'ACC and Mines Named BattChallenge Year One Champions',
+    url: 'https://www.arapahoe.edu/news/acc-and-mines-named-battchallenge-year-one-champions',
+  },
+  {
+    date: '2024',
+    outlet: 'Colorado School of Mines Newsroom',
+    headline: 'Building on an idea: Battery Workforce Challenge team creates electric vehicle for multi-year competition',
+    url: 'https://www.minesnewsroom.com/news/building-idea-battery-workforce-team-creates-electric-vehicle-multi-year-challenge',
+  },
+  {
+    date: '2023',
+    outlet: 'Colorado School of Mines Newsroom',
+    headline: 'Colorado School of Mines, Arapahoe Community College selected for Battery Workforce Challenge',
+    url: 'https://www.minesnewsroom.com/news/colorado-school-mines-arapahoe-community-college-selected-battery-workforce-challenge',
+  },
+];
+
+const nrelEra: PressItem[] = [
+  {
+    date: 'May 2020',
+    outlet: 'Business Wire',
+    headline: 'Three startups with solar and energy storage technologies selected for Shell GameChanger Accelerator Powered by NREL',
+    url: 'https://www.businesswire.com/news/home/20200501005096/en/Three-startups-with-solar-and-energy-storage-technologies-selected-for-Shell-GameChanger-Accelerator-Powered-by-NREL',
+  },
+  {
+    date: '2020',
+    outlet: 'CleanTechnica',
+    headline: 'Shell Has a Bigger Clean Energy Plan Than You Think',
+  },
+  {
+    date: '2020',
+    outlet: 'Energy Storage News',
+    headline: 'Shell-NREL Accelerator: Important to Explore Alternatives to Lithium-Ion',
+  },
+  {
+    date: '2020',
+    outlet: 'GreenTech Media',
+    headline: 'From the Lab: The Energy Transition Needs Perovskite PV and Alternative Energy Storage',
+  },
+  {
+    date: '2020',
+    outlet: 'Innovation and Tech Today',
+    headline: 'How Resilience Technology is Helping Communities Through Natural Disasters',
+  },
+  {
+    date: 'November 2019',
+    outlet: 'Business Wire',
+    headline: 'Five Companies Selected to Join GCxN Cleantech Accelerator',
+    url: 'https://www.businesswire.com/news/home/20191113005026/en/Five-Companies-Selected-to-Join-GCxN-Cleantech-Accelerator',
+  },
+  {
+    date: '2019',
+    outlet: 'Scientific American',
+    headline: 'Climate Concerns Are Pushing Oil Majors to Look Beyond Fossil Fuels',
+  },
+  {
+    date: '2019',
+    outlet: 'NREL News',
+    headline: 'A Global Energy GameChanger',
+    url: 'https://www.nrel.gov/news/detail/program/2019/global-energy-gamechanger',
+  },
+  {
+    date: 'March 2019',
+    outlet: 'NREL News',
+    headline: 'Shell GameChanger Accelerator Powered by NREL (GCxN) Recognized as Top NREL Partnership in 2018',
+    url: 'https://gcxnrel.com/shell-gamechanger-accelerator-powered-by-nrel-gcxn-recognized-as-top-nrel-partnership-in-2018/',
+  },
+  {
+    date: '2019',
+    outlet: 'Medium',
+    headline: 'A Global Energy Gamechanger',
+  },
+  {
+    date: '2019',
+    outlet: 'Service Truck Magazine',
+    headline: 'How to Make Smart Choices when Acquiring a New Truck',
+  },
+  {
+    date: '2018',
+    outlet: 'NREL News',
+    headline: 'NREL and Shell Launch Accelerator Program for Emerging Technologies',
+    url: 'https://www.nrel.gov/news/detail/program/2018/nrel-and-shell-launch-accelerator-program-for-emerging-technologies',
+    note: 'Founding announcement, quoted as program manager',
+  },
+  {
+    date: '2015',
+    outlet: 'EurekAlert!',
+    headline: 'NREL Collaborates with Trucking Industry to Prioritize R&D Opportunities',
+  },
+];
+
+const featuredOutlets = [
+  'Mines Newsroom',
+  'PR Newswire',
+  'Business Wire',
+  'Scientific American',
+  'CleanTechnica',
+  'Battery Tech Online',
+  'GreenTech Media',
+  'Energy Storage News',
+  'NREL News',
+];
+---
+<BaseLayout title="In the Press -- Adam Duran"
+  description="Press coverage of Adam Duran's work in engineering education, the DOE Battery Workforce Challenge, the GCxN clean energy accelerator, and Mines Automotive Engineering Program.">
+
+  <div class="pt-28 pb-20 px-8">
+    <div class="max-w-[900px] mx-auto">
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">In the Press</h1>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="text-base mb-12 max-w-[720px]">
+        Selected media coverage of my work across engineering education, vehicle technology competitions, the GCxN clean energy accelerator, and clean technology commercialization.
+      </p>
+
+      <!-- Featured outlets strip -->
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 mb-16">
+        <p class="text-xs text-caption uppercase tracking-widest mb-4">As Covered In</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-serif text-steel dark:text-mist/80 italic">
+          {featuredOutlets.map(o => <span>{o}</span>)}
+        </div>
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Mines & Industry Coverage (2023-2026)</h2>
+      <div class="mb-16 space-y-1">
+        {recent.map(item => (
+          <article class="py-4 border-b border-mist dark:border-steel/30">
+            <div class="flex flex-wrap gap-3 items-baseline mb-1">
+              <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{item.date}</span>
+              <span class="text-xs text-caption uppercase tracking-wider">{item.outlet}</span>
+            </div>
+            {item.url ? (
+              <a href={item.url} target="_blank" rel="noopener" class="font-serif text-base font-medium text-navy dark:text-white no-underline hover:text-gold transition-colors block">
+                {item.headline} &rarr;
+              </a>
+            ) : (
+              <p class="font-serif text-base font-medium text-navy dark:text-white">{item.headline}</p>
+            )}
+            {item.note && <p class="text-xs text-caption italic mt-1">{item.note}</p>}
+          </article>
+        ))}
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">NREL & GCxN Era (2015-2020)</h2>
+      <div class="space-y-1">
+        {nrelEra.map(item => (
+          <article class="py-4 border-b border-mist dark:border-steel/30">
+            <div class="flex flex-wrap gap-3 items-baseline mb-1">
+              <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap">{item.date}</span>
+              <span class="text-xs text-caption uppercase tracking-wider">{item.outlet}</span>
+            </div>
+            {item.url ? (
+              <a href={item.url} target="_blank" rel="noopener" class="font-serif text-base font-medium text-navy dark:text-white no-underline hover:text-gold transition-colors block">
+                {item.headline} &rarr;
+              </a>
+            ) : (
+              <p class="font-serif text-base font-medium text-navy dark:text-white">{item.headline}</p>
+            )}
+            {item.note && <p class="text-xs text-caption italic mt-1">{item.note}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

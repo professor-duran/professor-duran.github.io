@@ -1,0 +1,20 @@
+---
+const outlets = [
+  'Mines Newsroom',
+  'PR Newswire',
+  'Business Wire',
+  'Scientific American',
+  'CleanTechnica',
+  'Battery Tech Online',
+  'NREL News',
+];
+---
+<section id="press" class="max-w-[1100px] mx-auto py-16 px-8 text-center">
+  <p class="text-xs text-caption uppercase tracking-widest mb-5">As Covered In</p>
+  <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-serif italic text-steel dark:text-mist/70 mb-6">
+    {outlets.map(o => <span>{o}</span>)}
+  </div>
+  <a href="/press" class="inline-block text-sm text-gold font-semibold border border-gold px-5 py-2 rounded hover:bg-gold hover:text-white transition-all no-underline">
+    See full press archive &rarr;
+  </a>
+</section>
