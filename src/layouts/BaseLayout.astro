@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   activePage?: string;
   ogImage?: string;
+  includePersonSchema?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -16,9 +17,90 @@ const {
   description = 'Adam Duran, PE, PMP -- Engineering Educator & Program Builder at Colorado School of Mines. $10M+ in funded research, 252 students in programs built from scratch, 30+ publications.',
   activePage = 'home',
   ogImage = '/images/headshot.png',
+  includePersonSchema = Astro.url.pathname === '/',
 } = Astro.props;
 
 const ogImageURL = new URL(ogImage, Astro.site);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Adam W. Duran',
+  givenName: 'Adam',
+  familyName: 'Duran',
+  honorificSuffix: 'PE, PMP',
+  jobTitle: 'Assistant Teaching Professor',
+  worksFor: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Colorado School of Mines',
+    department: 'Department of Mechanical Engineering',
+    url: 'https://www.mines.edu',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '1500 Illinois Street',
+      addressLocality: 'Golden',
+      addressRegion: 'CO',
+      postalCode: '80401',
+      addressCountry: 'US',
+    },
+  },
+  email: 'aduran@mines.edu',
+  url: 'https://professor-duran.github.io',
+  image: new URL('/images/headshot.png', Astro.site).toString(),
+  description: 'Engineering educator, program architect, and engineering education researcher specializing in experiential, industry-connected academic programs at scale.',
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Colorado School of Mines',
+    url: 'https://www.mines.edu',
+  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Professional License',
+      name: 'Professional Engineer (PE), State of Colorado',
+      identifier: 'PE.0061606',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Professional Certification',
+      name: 'Project Management Professional (PMP)',
+      recognizedBy: { '@type': 'Organization', name: 'Project Management Institute' },
+      identifier: '3726574',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Degree',
+      name: 'M.S., Engineering and Technology Management, Colorado School of Mines (2016)',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Degree',
+      name: 'M.S., Engineering (Mechanical Specialty), Colorado School of Mines (2011)',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Degree',
+      name: 'B.S., Engineering (Mechanical Specialty), Colorado School of Mines (2009)',
+    },
+  ],
+  knowsAbout: [
+    'Engineering Education',
+    'Experiential Learning',
+    'Vehicle Dynamics',
+    'Aerospace Systems Engineering',
+    'Battery Technology',
+    'Clean Energy Technology Commercialization',
+    'Program Design and Management',
+    'Mastery-Based Assessment',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/adamduran/',
+    'https://scholar.google.com/citations?user=BQ404mAAAAAJ',
+    'https://orcid.org/0000-0002-7776-3896',
+    'https://www.researchgate.net/profile/Adam-Duran-2',
+    'https://github.com/professor-duran',
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +110,9 @@ const ogImageURL = new URL(ogImage, Astro.site);
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
+
+  <!-- Search engine verification -->
+  <meta name="google-site-verification" content="WmXatC_8aF3wLcKRmpjl211lymE83fnW5VJSlYRbYgY" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -42,6 +127,10 @@ const ogImageURL = new URL(ogImage, Astro.site);
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImageURL} />
+
+  {includePersonSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  )}
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
