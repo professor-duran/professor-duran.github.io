@@ -23,7 +23,7 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
                   src={project.data.thumbnail}
                   alt={project.data.title}
                   loading="lazy"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             )}

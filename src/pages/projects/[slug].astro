@@ -51,7 +51,7 @@ const { Content } = await render(project);
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {project.data.gallery.map(img => (
               <figure class="rounded-md overflow-hidden border border-mist dark:border-steel/30">
-                <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-64 object-cover" />
+                <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-64 object-cover object-top" />
                 {img.caption && (
                   <figcaption class="text-xs text-caption p-3 bg-cloud dark:bg-slate/40">{img.caption}</figcaption>
                 )}

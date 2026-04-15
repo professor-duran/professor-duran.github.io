@@ -141,7 +141,7 @@ const programs = [
             {program.image && (
               <a href={programProjectLinks[program.label] ?? '#'} class="block aspect-[21/9] w-full overflow-hidden bg-navy">
                 <img src={program.image} alt={program.label} loading="lazy"
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
               </a>
             )}
             <div class="p-8 grid md:grid-cols-[200px_1fr] gap-8">
