@@ -2,27 +2,27 @@
 const news = [
   {
     date: 'Spring 2026',
-    text: 'Selected for DOE EcoCAR Innovation Challenge as Lead PI, one of a limited number of institutions nationwide. Approximately $520K over four years.',
+    html: 'Selected for <a href="https://avtcseries.org/next-avtc-series/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">DOE EcoCAR Innovation Challenge</a> as Lead PI, one of a limited number of institutions nationwide. Approximately $520K over four years.',
   },
   {
     date: 'Spring 2026',
-    text: 'Selected as one of five national members for the KEEN Crescendo Program at University of the Pacific.',
+    html: 'Selected as one of five national members for the <a href="https://engineeringunleashed.com" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN Crescendo Program</a> at <a href="https://www.pacific.edu" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">University of the Pacific</a>.',
   },
   {
     date: 'Spring 2026',
-    text: 'New course launch: EBGN 599A Financial Engineering for Engineers, a 16-week graduate course in quantitative finance with Python.',
+    html: 'New course launch: EBGN 599A Financial Engineering for Engineers, an accelerated 8-week online graduate course taught as an independent study.',
   },
   {
     date: '2025',
-    text: 'Named Mines Trefny Center Engineering Learning Fellow and Kern Family Foundation Community Catalyst, Cohort 13.',
+    html: 'Named <a href="https://www.mines.edu/trefny-center/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Mines Trefny Center</a> Engineering Learning Fellow and <a href="https://www.kffdn.org/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Kern Family Foundation</a> Community Catalyst, Cohort 13.',
   },
   {
     date: '2025',
-    text: 'Co-authored paper in ACS Energy Letters on decarbonizing off-road vehicles.',
+    html: 'Co-authored paper in <a href="https://doi.org/10.1021/acsenergylett.5c02459" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">ACS Energy Letters</a> on decarbonizing off-road vehicles.',
   },
   {
     date: '2024',
-    text: 'DOE Battery Workforce Challenge: 1st place nationally in the inaugural Year 1 competition, with prize money awarded to the student team.',
+    html: '<a href="https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">DOE Battery Workforce Challenge: 1st place nationally</a> in the inaugural Year 1 competition, with prize money awarded to the student team.',
   },
 ];
 ---
@@ -30,11 +30,11 @@ const news = [
   <section id="news" class="max-w-[1100px] mx-auto py-20 px-8">
     <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Recent & Upcoming</h2>
     <hr class="w-12 h-[3px] bg-gold border-none my-4" />
-    <div class="max-w-[720px]">
+    <div class="max-w-[760px]">
       {news.map(item => (
         <div class="flex gap-4 py-3 border-b border-mist dark:border-steel/30 last:border-b-0">
           <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap min-w-[100px] pt-0.5">{item.date}</span>
-          <p class="text-sm leading-relaxed">{item.text}</p>
+          <p class="text-sm leading-relaxed" set:html={item.html} />
         </div>
       ))}
     </div>
