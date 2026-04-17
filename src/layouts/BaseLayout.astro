@@ -14,7 +14,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
-  description = 'Adam Duran, PE, PMP -- Engineering Educator & Program Builder at Colorado School of Mines. $10M+ in funded research, 252 students in programs built from scratch, 30+ publications.',
+  description = 'Adam W. Duran, PE, PMP -- Engineering Educator & Program Builder at Colorado School of Mines. $10M+ in funded research, 252 students in programs built from scratch, 30+ publications.',
   activePage = 'home',
   ogImage = '/images/headshot.png',
   includePersonSchema = Astro.url.pathname === '/',
@@ -120,13 +120,7 @@ const personSchema = {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImageURL} />
-  <meta property="og:site_name" content="Adam Duran" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImageURL} />
+  <meta property="og:site_name" content="Adam W. Duran" />
 
   {includePersonSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />

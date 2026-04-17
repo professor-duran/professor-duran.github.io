@@ -93,7 +93,9 @@ const f = fundingChart();
         <p class="text-sm text-caption">Built from inception in 2022 with Prof. P. Brodsky. Now 2nd-largest elective track in ME.</p>
       </figcaption>
       <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
-        <svg viewBox={`0 0 ${a.w} ${a.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing Mines automotive engineering program enrollment growing from 0 to 252 declared students between AY22 and AY26">
+        <svg viewBox={`0 0 ${a.w} ${a.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-labelledby="auto-title auto-desc">
+          <title id="auto-title">Mines Automotive Engineering Program enrollment, AY22 to AY26</title>
+          <desc id="auto-desc">Declared students grew from 0 in AY22 to 60 in AY23, 150 in AY24, 220 in AY25, and 252 in AY26.</desc>
           <!-- gridlines -->
           {[0, 50, 100, 150, 200, 250, 300].map(g => (
             <g>
@@ -123,7 +125,9 @@ const f = fundingChart();
         <p class="text-sm text-caption">Shell GameChanger Accelerator Powered by NREL. Co-founded and directed 2018-2020; portfolio continues to compound.</p>
       </figcaption>
       <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
-        <svg viewBox={`0 0 ${g.w} ${g.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing GCxN portfolio company capital raised growing from $80 million in 2020 to $1.048 billion in 2025">
+        <svg viewBox={`0 0 ${g.w} ${g.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-labelledby="gcxn-title gcxn-desc">
+          <title id="gcxn-title">GCxN portfolio cumulative capital raised, 2020 to 2025</title>
+          <desc id="gcxn-desc">Capital raised by GCxN portfolio companies grew from $80M in 2020 to $180M in 2021, $320M in 2022, $551M in 2023, $780M in 2024, and $1.048B in 2025.</desc>
           {[0, 250, 500, 750, 1000].map(v => (
             <g>
               <line x1={g.padL} x2={g.w - g.padR} y1={g.h - g.padB - (v / g.maxY) * (g.h - g.padT - g.padB)} y2={g.h - g.padB - (v / g.maxY) * (g.h - g.padT - g.padB)} class="chart-grid" />
@@ -148,10 +152,24 @@ const f = fundingChart();
     <figure>
       <figcaption class="mb-4">
         <h3 class="font-serif text-lg font-semibold text-navy dark:text-white">Career Competitive Funding ($M, cumulative as PI / Proposal Lead)</h3>
-        <p class="text-sm text-caption">Spans NREL Fleet DNA, GCxN, QS-2 portfolio, BWC, and EcoCAR Innovation Challenge.</p>
+        <p class="text-sm text-caption">Spans NREL Fleet DNA, GCxN, QS-2 portfolio, BWC, and EcoCAR Innovation Challenge. NREL era closes in 2020; Mines era opens in 2022.</p>
       </figcaption>
       <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 text-navy dark:text-white">
-        <svg viewBox={`0 0 ${f.w} ${f.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-label="Line chart showing cumulative career funding from $2 million in 2014 to $10.57 million in 2026">
+        <svg viewBox={`0 0 ${f.w} ${f.h}`} preserveAspectRatio="xMidYMid meet" class="w-full h-auto" role="img" aria-labelledby="fund-title fund-desc">
+          <title id="fund-title">Cumulative competitive funding as PI or Proposal Lead, 2014 to 2026</title>
+          <desc id="fund-desc">Cumulative funding reached $9.3M by the end of the NREL era in 2020, then added approximately $1.3M more during the Mines era (2022 to 2026) for a total of $10.57M.</desc>
+          {/* NREL -> Mines transition marker (midpoint between 2020 and 2022 points) */}
+          {(() => {
+            const i2020 = funding.findIndex(d => d.year === 2020);
+            const i2022 = funding.findIndex(d => d.year === 2022);
+            const xMid = (f.xs[i2020] + f.xs[i2022]) / 2;
+            return (
+              <g>
+                <line x1={xMid} x2={xMid} y1={f.padT + 14} y2={f.h - f.padB} stroke="currentColor" stroke-opacity="0.28" stroke-dasharray="3 3" />
+                <text x={xMid} y={f.padT + 10} text-anchor="middle" class="chart-axis-text" style="font-weight: 600;">NREL &rarr; Mines</text>
+              </g>
+            );
+          })()}
           {[0, 2.5, 5, 7.5, 10].map(v => (
             <g>
               <line x1={f.padL} x2={f.w - f.padR} y1={f.h - f.padB - (v / f.maxY) * (f.h - f.padT - f.padB)} y2={f.h - f.padB - (v / f.maxY) * (f.h - f.padT - f.padB)} class="chart-grid" />

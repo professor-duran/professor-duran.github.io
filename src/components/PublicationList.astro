@@ -1,6 +1,39 @@
 ---
 import { publications, worksInProgress, pubStats } from '../data/publications';
+
+// Emit ScholarlyArticle JSON-LD for every published entry that has a DOI.
+// Helps AI and search systems attribute these works to Adam correctly.
+const author = {
+  '@type': 'Person',
+  name: 'Adam W. Duran',
+  url: 'https://adamwduran.com',
+  sameAs: [
+    'https://scholar.google.com/citations?user=BQ404mAAAAAJ',
+    'https://orcid.org/0000-0002-7776-3896',
+  ],
+};
+
+const scholarlySchemas = publications
+  .filter(p => !!p.doi)
+  .map(p => ({
+    '@context': 'https://schema.org',
+    '@type': 'ScholarlyArticle',
+    headline: p.title.replace(/\.$/, ''),
+    datePublished: String(p.year),
+    isPartOf: p.venue.replace(/\.$/, ''),
+    identifier: {
+      '@type': 'PropertyValue',
+      propertyID: 'DOI',
+      value: p.doi,
+    },
+    url: `https://doi.org/${p.doi}`,
+    author,
+  }));
 ---
+{scholarlySchemas.map(schema => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}
+
 <section id="publications" class="max-w-[1100px] mx-auto py-20 px-8 border-b border-mist dark:border-steel/30">
   <div class="flex justify-between items-baseline flex-wrap gap-4 mb-8">
     <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Publications</h2>

@@ -4,11 +4,10 @@ interface Props {
   name: string;
   description: string;
   crossList?: string;
-  semesters?: string;
   developed?: boolean;
 }
 
-const { code, name, description, crossList, semesters, developed } = Astro.props;
+const { code, name, description, crossList, developed } = Astro.props;
 ---
 <div class="bg-white dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30">
   <div class="flex items-center gap-2 mb-1">
@@ -19,8 +18,5 @@ const { code, name, description, crossList, semesters, developed } = Astro.props
     {name}
     {developed && <span class="text-[10px] text-gold align-super ml-1" title="Course developed or co-developed by instructor">*</span>}
   </div>
-  <div class="text-sm text-caption leading-relaxed mb-2">{description}</div>
-  {semesters && (
-    <div class="text-[11px] text-steel dark:text-mist/50">{semesters}</div>
-  )}
+  <div class="text-sm text-caption leading-relaxed">{description}</div>
 </div>

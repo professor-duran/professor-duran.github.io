@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Simple Now page (see nownownow.com). Short-form, high-signal, low-maintenance.
+// Update this file in place whenever priorities shift; no dates needed in the body.
+const lastUpdated = 'April 2026';
+
+const current = [
+  {
+    heading: 'EcoCAR Innovation Challenge',
+    body: 'Stood up as Lead PI for the $520K, four-year DOE Advanced Vehicle Technology Competition award; assembling the Mines team for the Fall 2026 kickoff alongside Prof. P. Brodsky.',
+  },
+  {
+    heading: 'Battery Workforce Challenge',
+    body: 'Year 3 competition with the Mines-ACC team after a Year 1 national win and Year 2 fourth-place finish. Coaching students through the EV build-off and year-end report-out.',
+  },
+  {
+    heading: 'Teaching',
+    body: 'Wrapping EBGN 599A (Financial Engineering for Engineers) and the spring offering of MEGN 301. Drafting the Summer 2026 iteration of MEGN 301 with tighter mastery-based rubrics.',
+  },
+  {
+    heading: 'KEEN Crescendo',
+    body: 'One of five national members in the Spring 2026 KEEN Crescendo cohort at University of the Pacific. Workshop design for the EMxAI summer intensive is the next deliverable.',
+  },
+  {
+    heading: 'Writing',
+    body: 'Drafting the Teaching Workload Index paper for the Journal of Engineering Education. Editing the "Hydrogen Dreams, False Claims" book chapter on the Nikola Corporation collapse for Elgar Publishing.',
+  },
+  {
+    heading: 'Method & Muse',
+    body: 'Co-founder operations continue. Current focus is the next single-barrel release and front-of-house automation work that pulls on the engineering side of my brain.',
+  },
+];
+---
+<BaseLayout title="Now -- Adam W. Duran"
+  description="What Adam W. Duran is focused on right now across teaching, research, program leadership, and venture work.">
+
+  <div class="pt-28 pb-20 px-8">
+    <div class="max-w-[760px] mx-auto">
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">Now</h1>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="text-sm text-caption mb-8">
+        A snapshot of what's on my plate this season, in the spirit of the
+        <a href="https://nownownow.com/about" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">/now movement</a>.
+        Updated {lastUpdated}.
+      </p>
+
+      <div class="space-y-6 mb-12">
+        {current.map(item => (
+          <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border-l-[3px] border-gold">
+            <h2 class="font-serif text-base font-semibold text-navy dark:text-white mb-1">{item.heading}</h2>
+            <p class="text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-sm text-caption italic">
+        If any of this overlaps with what you're working on,
+        <a href="mailto:aduran@mines.edu" class="text-gold no-underline hover:underline">get in touch</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

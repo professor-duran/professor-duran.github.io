@@ -61,7 +61,7 @@ const programs = [
     label: 'Automotive Engineering Program',
     role: 'Co-Founder & Co-Director',
     image: '/images/fsae-track.jpg',
-    desc: "Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment with only two core faculty.",
+    desc: "Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception to 252 declared students in under three years. Developed 8 new courses across 3 departments, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. Per Mines ME enrollment data (Fall 2025), the program ranks 2nd within ME by elective-track enrollment with only two core faculty.",
   },
   {
     label: 'DOE EcoCAR & Battery Workforce Challenge',
@@ -71,9 +71,9 @@ const programs = [
   },
   {
     label: 'GCxN Clean Energy Accelerator',
-    role: 'Program Director',
+    role: 'Program Director (2018-2020)',
     image: '/images/gcxn-cohort-outdoor.jpg',
-    desc: "Led NREL's cleantech startup accelerator, working with my counterpart at Shell to direct the program and shape the vision and annual program targets. Directed a $6.3M program with portfolio outcomes (as of 2025) including $1.048B raised by cohort companies, 954 new startup hires, and a $140:1 leverage ratio on Shell project funding.",
+    desc: "Led NREL's cleantech startup accelerator from 2018 to 2020, working with my counterpart at Shell to direct the program and shape the vision and annual program targets. Directed a $6.3M program; portfolio continues to compound post-tenure, with outcomes as of 2025 including $1.048B raised by cohort companies, 954 new startup hires, and a $140:1 leverage ratio on Shell project funding.",
   },
   {
     label: 'Capstone Design Program',
@@ -88,7 +88,7 @@ const programs = [
   },
 ];
 ---
-<BaseLayout title="Adam Duran, PE, PMP -- Engineering Educator & Program Builder">
+<BaseLayout title="Adam W. Duran, PE, PMP -- Engineering Educator & Program Builder">
 
   <Hero />
 
@@ -177,13 +177,13 @@ const programs = [
           My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate, developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
         </p>
         <figure class="rounded-md overflow-hidden border border-mist dark:border-steel/30">
-          <img src="/images/adam-lecturing.jpg" alt="Adam Duran teaching a class at Colorado School of Mines" loading="lazy" class="w-full h-auto object-cover" />
+          <img src="/images/adam-lecturing.jpg" alt="Adam W. Duran teaching a class at Colorado School of Mines" loading="lazy" class="w-full h-auto object-cover" />
           <figcaption class="text-xs text-caption p-3 bg-white dark:bg-slate/40">In the classroom at Mines</figcaption>
         </figure>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {courses.map(course => (
-          <CourseCard code={course.code} name={course.name} description={course.description} crossList={course.crossList} semesters={course.semesters} developed={course.developed} />
+          <CourseCard code={course.code} name={course.name} description={course.description} crossList={course.crossList} developed={course.developed} />
         ))}
       </div>
       <p class="text-xs text-caption mt-3">* Course developed or co-developed by instructor</p>

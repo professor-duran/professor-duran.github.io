@@ -10,12 +10,6 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
-    year: 2026,
-    authors: 'Duran, A.',
-    title: 'Hydrogen Dreams, False Claims: The Ethical Collapse of Nikola Corporation.',
-    venue: 'Book chapter case study, Elgar Publishing, 2026.',
-  },
-  {
     year: 2025,
     authors: 'Mistry, A.N., Brodsky, P., Brickey, A.J., Duran, A., Mozur, E., Rajasegar, R., et al.',
     title: 'Not-So-Quick and Not-So-Dirty Solutions to Decarbonize Off-Road Vehicles.',
@@ -115,7 +109,15 @@ export const publications: Publication[] = [
   },
 ];
 
-export const worksInProgress: Publication[] = [];
+export const worksInProgress: Publication[] = [
+  {
+    year: 2026,
+    authors: 'Duran, A.',
+    title: 'Hydrogen Dreams, False Claims: The Ethical Collapse of Nikola Corporation.',
+    venue: 'Forthcoming book chapter case study, Elgar Publishing.',
+    status: 'in_press',
+  },
+];
 
 export const pubStats = {
   publications: '30+',
