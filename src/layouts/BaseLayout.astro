@@ -132,14 +132,16 @@ const personSchema = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <!-- Theme default: dark. User can opt into light via the theme toggle
-       (sets localStorage.theme = 'light'). This runs before paint to
-       prevent a flash of the wrong theme. -->
+  <!-- Theme follows OS preference. prefers-color-scheme: dark renders
+       dark mode; prefers-color-scheme: light renders light mode. This
+       runs before paint to prevent a flash of the wrong theme.
+       Also responds live if the user switches OS theme during a session. -->
   <script is:inline>
     (function() {
-      if (localStorage.getItem('theme') !== 'light') {
-        document.documentElement.classList.add('dark');
-      }
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      const apply = (isDark) => document.documentElement.classList.toggle('dark', isDark);
+      apply(mq.matches);
+      mq.addEventListener?.('change', e => apply(e.matches));
     })();
   </script>
 </head>
