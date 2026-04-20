@@ -31,7 +31,6 @@ Worked closely with key collaborator Prof. P. Brodsky to build Colorado School o
 
 - **252 declared students** in the automotive engineering track launched in Fall 2022 (17% of ME track-declared students)
 - **Developed MEGN 417/527 Vehicle Dynamics** and stabilized MEGN 391 Introduction to Automotive Design as the track's required courses, with curated electives covering vibrations, controls, EVs, fuel cells, combustion, and CFD
-- Estimated **$365K-$827K** in annual tuition generated for the university
 - Established partnerships with OEMs, Tier 1 suppliers, and DOE national laboratories
 - Created experiential curriculum framework connecting coursework to real-world projects
 - Designed the program to be self-sustaining through industry sponsorship and competition funding

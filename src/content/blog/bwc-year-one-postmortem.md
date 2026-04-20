@@ -16,9 +16,9 @@ I have been asked frequently what we did differently. The honest answer is that 
 
 The Battery Workforce Challenge (BWC) is a three-year DOE/Stellantis-sponsored competition where collegiate teams design, build, test, and integrate an advanced EV battery into a future Stellantis vehicle. Twelve teams compete each year. The competition combines engineering deliverables (battery pack design, cell-level analysis, thermal modeling), project management deliverables (Gantt charts, risk registers, gate reviews), and a physical build that has to pass safety inspection and competition driving events.
 
-Mines paired with Arapahoe Community College, which is structurally important. ACC contributed manufacturing technology students alongside our engineering students. The team learned to operate as a real cross-functional industrial team, not a single-school engineering club.
+Mines paired with Arapahoe Community College, which is structurally important. ACC contributed automotive technology students alongside our engineering students and shared their facilities and expertise in vehicle servicing and maintenance. The team learned to operate as a real cross-functional industrial team, not a single-school engineering club.
 
-The faculty side was Prof. Polina Brodsky and me, with Polina as Co-PI and me as Lead PI. Total program value across three years was $255,100 (DOE/Stellantis base grant, Chevron sponsorship, student travel stipends, competition prizes).
+The faculty side was Prof. Polina Brodsky and me, both serving as co-PIs. Total program value across three years was $255,100 (DOE/Stellantis base grant, Chevron sponsorship, student travel stipends, competition prizes).
 
 ## What worked in Year 1
 
@@ -36,15 +36,15 @@ This sounds obvious. It is not how most faculty teams operate. Most faculty co-a
 
 ### 3. We treated the cross-school partnership as a feature, not a hassle
 
-Working with ACC required building relationships at a different institution with different cultures, schedules, and assessment expectations. We invested time in those relationships from day one. The ACC students were not "subcontractors" on the manufacturing side; they were full team members with full decision authority on manufacturing questions. When their faculty advisor (also Polina, recognized with the BWC Outstanding Faculty Award that year) made a call, it stuck.
+Working with ACC required building relationships at a different institution with different cultures, schedules, and assessment expectations. We invested time in those relationships from day one. The ACC students were not "subcontractors" on the automotive technology side; they were full team members with full decision authority on servicing, maintenance, and build questions. When their faculty advisor Jeff Tipsword made a call, it stuck.
 
 Cross-institutional teams are usually weaker than single-institution teams because of the operational tax. We made it work because we treated ACC as a peer institution with distinct expertise, not a junior partner.
 
-### 4. We let students lose at the right moments
+### 4. We mentored hard and held the bar high
 
-A piece of conventional faculty wisdom is to protect student teams from public failure. We did not do that. When Year 1 deliverables were going to miss intermediate gates, we let them miss those gates and let the team feel the consequence. By the final competition, the team had learned to read its own progress accurately because they had felt the cost of misreading it earlier.
+A piece of conventional faculty wisdom is to step back and let student teams find their own pace, up to and including missing intermediate gates. We did not do that. When a deliverable looked at risk, we stepped in early with hands-on mentorship, honest feedback, and coaching, and we worked with the team to make sure each milestone landed on time and at the expected quality level. Nothing slipped.
 
-This is not cruelty. It is calibration. A student team that does not know what failing a gate feels like cannot accurately predict its own deliverables.
+The result was exceptional student performance. The team learned fast because the expectations were clear, the feedback was immediate, and the support was there when they needed it. High expectations coupled with high support is not a soft version of faculty mentoring; it is the version that actually produces winning competition teams.
 
 ## What was different in Year 2
 
@@ -58,9 +58,9 @@ We expanded from five students to about twelve. Some of the operational efficien
 
 Other teams learned from Year 1. Ohio State in particular came back significantly stronger. Our absolute performance improved; our relative ranking dropped. Both things are true and both matter.
 
-### 3. We had less novel insight to deploy
+### 3. Paper-to-product transitions caught us
 
-A year of building a battery pack with our specific OEM partner and our specific cell chemistry produced returns. Year 2, we did not have a corresponding step change. The marginal improvements were real but smaller.
+Year 2 was our first time competing at scale in a multi-year DOE competition like BWC, and that inexperience showed up most acutely in the transition from design to build. Decisions that looked clean on paper ran into fabrication, integration, and testing realities that slowed us down. Some of that is unavoidable in any first cycle at this scale; some of it we will catch earlier next time with more build-side rehearsal before the design freeze.
 
 The 4th-place finish is, in many ways, a more honest reflection of where we are as a program than the 1st-place finish was. First place required a confluence of small team, fresh problem, and competitor inexperience. Fourth place came from a normalized field where we are competing on sustained execution.
 
@@ -71,7 +71,7 @@ If you are thinking about taking on a multi-year DOE Advanced Vehicle Technology
 1. **Start small.** The temptation to give 30 students "a chance" will produce worse outcomes for everyone.
 2. **Divide faculty advising along a clean line.** Decide who owns technical risk and who owns operational risk before the year starts.
 3. **Partner with a different kind of institution.** A peer engineering school is less valuable than a partner with complementary expertise (community college, design school, business school).
-4. **Build the team's failure tolerance early.** They have to know what missing a gate feels like before the gates start counting.
+4. **Mentor hard and hold the bar high.** Hands-on mentorship, clear high expectations, and immediate feedback produce exceptional student performance. Do not step back and assume the team will calibrate on its own.
 5. **Plan for relative ranking to drop in Year 2.** Other teams learn. Be prepared for stakeholders who treat 1st place as the floor.
 
 The full BWC program value at Mines was $255,100 across three years, plus significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and a vehicle donation from Stellantis (Dodge RAM ProMaster Van). As we head into BWC Year 3, we are looking at what comes next. The same lessons will apply.

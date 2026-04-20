@@ -8,7 +8,7 @@ heroImage: /images/fsae-track.jpg
 heroAlt: Mines Formula SAE car #140 competing on track
 ---
 
-When Prof. Polina Brodsky and I started talking about an automotive engineering track at the Colorado School of Mines in 2022, the program existed only as a hypothesis. There was no department for it, no faculty lines, no curriculum committee charge, and no pot of money. Three years later, the track had grown to a major declared-undergraduate cohort, eight new courses, two top-five national competition finishes, and an estimated $365K-$827K in annual track-attributable tuition. It is the second-largest elective track in Mechanical Engineering, behind only Aerospace, and we are still operating with two core faculty.
+When Prof. Polina Brodsky and I started talking about an automotive engineering track at the Colorado School of Mines in 2022, the program existed only as a hypothesis. There was no department for it, no faculty lines, no curriculum committee charge, and no pot of money. Three years later, the track had grown to a major declared-undergraduate cohort, eight new courses, and two top-five national competition finishes. It is the second-largest elective track in Mechanical Engineering, behind only Aerospace, and we are still operating with two core faculty.
 
 I get asked often how we did it, and especially what other faculty trying to build something similar should and should not do. Here is the honest version, including the mistakes.
 
