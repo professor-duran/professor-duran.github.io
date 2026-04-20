@@ -1,5 +1,5 @@
 ---
-title: "How We Built the Mines Automotive Track from Zero to 252 Students in Four Years"
+title: "How We Built the Mines Automotive Track from Zero"
 description: "A practical playbook for launching an experiential, industry-connected engineering track inside a university with no dedicated department, no new faculty lines, and no permission-asking culture."
 pubDate: 2025-11-03
 tags: [program-building, engineering-education, automotive, capstone, mines]
