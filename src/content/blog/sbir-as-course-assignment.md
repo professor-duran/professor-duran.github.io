@@ -4,8 +4,8 @@ description: "Most engineering students will eventually write a federal proposal
 pubDate: 2025-01-20
 tags: [pedagogy, aerospace, megn455, course-design, federal-proposals]
 readingTime: "8 min read"
-heroImage: /images/shell-ecomarathon-indy.jpg
-heroAlt: Mines Shell Eco-marathon team at Indianapolis Motor Speedway Gasoline Alley
+heroImage: /images/sbir-phase1-process.jpg
+heroAlt: "Standard SBIR/STTR Phase 1 process diagram from the U.S. Small Business Administration, showing the flow from solicitation topics through proposal submission, evaluation, and Phase I award over about 6 to 9 months"
 ---
 
 I have a particular strong feeling about how engineering students learn to write. Most engineering courses ask students to produce reports for an audience that does not exist. The TA reads the report. The grader returns the report. The student produces another report next semester for the same imaginary audience. By graduation, the student has written perhaps a dozen technical artifacts, none of which would survive contact with a real reader.
