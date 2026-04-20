@@ -16,7 +16,7 @@ I get asked often how we did it, and especially what other faculty trying to bui
 
 ### 1. We built a course portfolio before we asked for a program
 
-The temptation when you want to start a new program is to write a proposal, gather signatures, and try to formalize before you have anything to show. We did the opposite. We put existing courses (MEGN 417/527 Vehicle Dynamics, MEGN 391 Introduction to Automotive Design) on a stable footing first, then added MEGN 455, 456, 566, 301, 200, and EBGN 599 in turn. By the time anyone needed to evaluate the program institutionally, the course portfolio already existed. Curriculum committees reviewed individual courses, not a contested new track.
+The temptation when you want to start a new program is to write a proposal, gather signatures, and try to formalize before you have anything to show. We did the opposite. We put the two required track courses (MEGN 391 Introduction to Automotive Design, MEGN 417/527 Vehicle Dynamics) on a stable footing first, rebuilding both around experiential integration projects. We then curated the track's elective slate from existing ME and EE offerings so that students could specialize toward a focus area: vibrations, controls, electric vehicle powertrains, fuel cells, combustion, aerodynamics, or CFD. By the time anyone needed to evaluate the program institutionally, the course portfolio already existed. Curriculum committees reviewed individual courses, not a contested new track.
 
 This sequencing matters because new programs trigger institutional immune responses. A coherent set of already-running courses with enrollment data does not.
 
