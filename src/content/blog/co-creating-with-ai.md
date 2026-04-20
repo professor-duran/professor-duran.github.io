@@ -44,7 +44,7 @@ This framing is not a metaphor. It is operationally how I want students to use A
 
 ## What this looks like in practice
 
-In my courses (MEGN 200, MEGN 300, MEGN 301, MEGN 417, MEGN 455, MEGN 456, EBGN 599A) I have been gradually reshaping assignments to be explicit about AI use. The pattern that has emerged:
+In my courses (MEGN 200, MEGN 300, MEGN 301, MEGN 417/527, MEGN 455, MEGN 456, EBGN 599) I have been gradually reshaping assignments to be explicit about AI use. The pattern that has emerged:
 
 ### 1. Explicit AI policy on every assignment
 

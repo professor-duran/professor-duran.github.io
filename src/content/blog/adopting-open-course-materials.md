@@ -4,8 +4,8 @@ description: "A short practical guide on how to adopt open course materials in y
 pubDate: 2026-04-02
 tags: [open-educational-resources, pedagogy, course-design, ztc]
 readingTime: "7 min read"
-heroImage: /images/adam-lecturing.jpg
-heroAlt: Adam Duran teaching at Colorado School of Mines
+heroImage: /images/megn300-hero.jpg
+heroAlt: "Figures from the MEGN 300 Master Reference Document: the five-block generalized measurement system with error sources on the left, and a Bode magnitude comparison of 4th-order Butterworth, Chebyshev, and Bessel low-pass filters on the right"
 ---
 
 I publish open course materials for the courses I teach. The current set:
