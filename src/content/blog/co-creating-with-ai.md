@@ -8,7 +8,7 @@ heroImage: /images/adam-lecturing.jpg
 heroAlt: Adam Duran teaching at Colorado School of Mines
 ---
 
-I gave a flash talk at the Mines Generative AI Summit in Fall 2025 titled "Co-Creating with AI: New Frontiers in Teaching and Design." The argument I made there is the argument I want to make here, in longer form. As of Spring 2026 I am also a member of the KERN Community Catalysts Cohort 13 EMxAI Working Group and one of five national members of the KEEN Crescendo Program. I think a lot about how AI changes engineering education. Most of the conversations I am in are still not very useful.
+I gave a flash talk at the Mines Generative AI Summit in Fall 2025 titled "Co-Creating with AI: New Frontiers in Teaching and Design." The argument I made there is the argument I want to make here, in longer form. As of Spring 2026 I am also a member of the KERN Community Catalysts Cohort 13 EMxAI Working Group and part of a select national group in the KEEN Crescendo Program. I think a lot about how AI changes engineering education. Most of the conversations I am in are still not very useful.
 
 The most common framing I hear from faculty is some version of "How do I detect AI use?" or "How do I redesign my assignments so AI cannot do them?" Both questions assume AI is an adversary. Both questions will lose.
 
