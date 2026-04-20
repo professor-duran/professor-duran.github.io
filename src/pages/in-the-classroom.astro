@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Photo {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+// Curated gallery of teaching, build, and travel moments. Grouped top-down
+// so first 4-6 are the strongest; rest fill out the page.
+const photos: Photo[] = [
+  {
+    src: '/images/halloween-in-class.jpg',
+    alt: 'MEGN 300 lecture on Halloween at Colorado School of Mines',
+    caption: 'MEGN 300 Instrumentation, Halloween edition. Engineering measurement is a year-round sport.',
+  },
+  {
+    src: '/images/megn200-operation-game.jpg',
+    alt: 'Student-built recreation of the Operation board game for a MEGN 200 final project',
+    caption: "MEGN 200 final project: students rebuild the board game 'Operation' from scratch. Embedded C, sensor integration, and a working buzzer on the nose.",
+  },
+  {
+    src: '/images/megn200-rover.jpg',
+    alt: 'MEGN 200 student rover project on a test surface',
+    caption: 'MEGN 200 rover project. Intro-scale hardware-software integration on a vehicle students can touch.',
+  },
+  {
+    src: '/images/megn301-human-power.jpg',
+    alt: 'MEGN 301 human-powered integration project',
+    caption: 'MEGN 301 Mechanical Integration: human-powered subsystem project, built and tested by the team.',
+  },
+  {
+    src: '/images/megn301-bike-power.jpg',
+    alt: 'MEGN 301 bicycle-powered generator build',
+    caption: 'MEGN 301 bike-powered generator integration, instrumented and characterized under load.',
+  },
+  {
+    src: '/images/megn301-wind-turbine.jpg',
+    alt: 'MEGN 301 student wind turbine design and build',
+    caption: 'MEGN 301 wind turbine design and build.',
+  },
+  {
+    src: '/images/bwc-workshop.jpg',
+    alt: 'Mines and Arapahoe Community College Battery Workforce Challenge team in the shop',
+    caption: 'Battery Workforce Challenge team at work in the shop, Mines and Arapahoe Community College together.',
+  },
+  {
+    src: '/images/shell-eco-kitchen-build.jpg',
+    alt: 'Shell Eco-marathon team building the prototype body shell at Mines',
+    caption: 'Shell Eco-marathon body shell build at Mines.',
+  },
+  {
+    src: '/images/shell-eco-passed-tech.jpg',
+    alt: 'Shell Eco-marathon team celebrating passing technical inspection',
+    caption: 'Shell Eco-marathon team after passing technical inspection.',
+  },
+  {
+    src: '/images/shell-eco-indy-pagoda.jpg',
+    alt: 'Shell Eco-marathon team at the Indianapolis Motor Speedway pagoda',
+    caption: 'Shell Eco-marathon at the IMS pagoda during Shell Eco-marathon Americas.',
+  },
+  {
+    src: '/images/capstone-simulator.jpg',
+    alt: 'Multiaxis driving simulator capstone build',
+    caption: 'Capstone multiaxis driving simulator, also used as the verification bench for MEGN 417/527 Vehicle Dynamics.',
+  },
+  {
+    src: '/images/capstone-motodemption.jpg',
+    alt: 'Capstone Motodemption project',
+    caption: 'Capstone Motodemption project at final delivery.',
+  },
+  {
+    src: '/images/capstone-automotive-projects.jpg',
+    alt: 'Automotive capstone projects at end-of-semester showcase',
+    caption: 'Automotive capstone projects at end-of-semester showcase.',
+  },
+  {
+    src: '/images/capstone-lemons.jpg',
+    alt: 'Capstone 24 Hours of Lemons project vehicle',
+    caption: '24 Hours of Lemons capstone project vehicle.',
+  },
+  {
+    src: '/images/keen-national-2026.jpg',
+    alt: 'Adam at the KEEN National Conference 2026',
+    caption: 'KEEN National Conference 2026, where engineering faculty convene to advance AI-integrated pedagogy.',
+  },
+];
+---
+<BaseLayout
+  title="In the Classroom | Adam W. Duran"
+  description="A gallery of teaching, build, and travel moments from the Mines Automotive Engineering Program and Adam Duran's courses: MEGN 200, 300, 301, 417/527, Capstone, Shell Eco-marathon, Battery Workforce Challenge, and KEEN."
+  activePage="in-the-classroom"
+>
+  <section class="max-w-[1200px] mx-auto pt-32 pb-16 px-8">
+    <div class="text-gold text-xs font-medium tracking-widest uppercase mb-2">Gallery</div>
+    <h1 class="font-serif text-4xl md:text-5xl font-bold text-navy dark:text-white leading-tight mb-4">In the Classroom</h1>
+    <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+    <p class="max-w-[760px] text-base leading-relaxed mb-12">
+      A working album of what hands-on, industry-connected engineering education actually looks like. Courses, competition teams, capstone builds, and the occasional moment that reminds me why this kind of teaching is worth the operational tax.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {photos.map(photo => (
+        <figure class="group overflow-hidden rounded-md border border-mist dark:border-steel/30 bg-cloud dark:bg-slate/40 flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-slate">
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none"
+            />
+          </div>
+          <figcaption class="p-4 text-sm text-steel dark:text-mist/85 leading-snug flex-1">
+            {photo.caption}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
