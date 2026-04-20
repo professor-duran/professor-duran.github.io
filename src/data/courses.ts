@@ -8,10 +8,9 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    code: 'MEGN 417',
-    name: 'Vehicle Dynamics & Powertrain Systems',
-    description: 'Advanced vehicle systems analysis covering suspension, tire, and powertrain dynamics with simulation-based and hardware-in-the-loop components.',
-    crossList: 'MEGN 527 (Graduate)',
+    code: 'MEGN 417/527',
+    name: 'Vehicle Dynamics',
+    description: 'Advanced vehicle systems analysis covering suspension, tire, and powertrain dynamics through calculation, simulation, and experimentation.',
     developed: true,
   },
   {
@@ -35,13 +34,13 @@ export const courses: Course[] = [
   {
     code: 'MEGN 301',
     name: 'Mechanical Integration & Design',
-    description: 'Combines mechanical systems with electrical controls, sensors, and actuators in integrated design projects connecting thermodynamics, fluids, and mechanics of materials with hands-on prototyping.',
+    description: 'Mechanical-electrical integration for design. Teams translate subsystem concepts into working prototypes, pairing thermodynamics, fluids, and mechanics of materials with sensors and actuators in hands-on builds.',
     developed: true,
   },
   {
     code: 'MEGN 300',
     name: 'Instrumentation & Automation',
-    description: 'Combines mechanical systems with electrical controls, sensors, and actuators. Covers measurement systems, signal processing, data acquisition, and system-level instrumentation.',
+    description: 'Data acquisition, analog and digital filtering, feedback controls, and instrumentation. Signal processing and sensor integration grounded in mechanical systems.',
   },
   {
     code: 'MEGN 200',
@@ -49,14 +48,14 @@ export const courses: Course[] = [
     description: 'Introductory programming in C with hands-on hardware troubleshooting for mechanical engineers. Covers low-level embedded systems work, sensor integration, and the diagnostic skills that bridge code and physical systems.',
   },
   {
-    code: 'EBGN 599A',
-    name: 'Financial Engineering for Engineers',
+    code: 'EBGN 599',
+    name: 'Financial Engineering',
     description: 'Accelerated 8-week online graduate course (taught as independent study) developing quantitative finance skills in Python, including walk-forward validation, regime detection, and tail hedging.',
     developed: true,
   },
   {
     code: 'EDS 491/492',
     name: 'Senior Capstone Design',
-    description: 'Year-long industry-sponsored senior design sequence with emphasis on professional practice, engineering character, and authentic assessment.',
+    description: 'Year-long industry-sponsored senior design sequence walking teams through the full design-build arc: needs analysis, concept selection, preliminary and critical design reviews, fabrication, verification testing, and final delivery. Emphasis on professional practice, engineering character, and authentic assessment.',
   },
 ];

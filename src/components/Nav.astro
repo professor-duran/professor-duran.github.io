@@ -1,6 +1,4 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
-
 interface Props {
   activePage?: string;
 }
@@ -23,9 +21,9 @@ const navLinks = [
   Skip to main content
 </a>
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-navy/[.97] backdrop-blur-sm border-b border-gold/20" aria-label="Main navigation">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/[.97] dark:bg-navy/[.97] backdrop-blur-sm border-b border-gold/20" aria-label="Main navigation">
   <div class="max-w-[1100px] mx-auto px-8 flex items-center justify-between h-[60px]">
-    <a href="/" class="font-serif text-white text-lg font-semibold tracking-wide no-underline">
+    <a href="/" class="font-serif text-navy dark:text-white text-lg font-semibold tracking-wide no-underline">
       Adam W. <span class="text-gold">Duran</span>
     </a>
     <div class="flex items-center gap-6">
@@ -34,16 +32,15 @@ const navLinks = [
           <a href={link.href}
             class:list={[
               "text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline",
-              link.page && activePage === link.page ? 'text-gold' : 'text-mist'
+              link.page && activePage === link.page ? 'text-gold' : 'text-steel dark:text-mist'
             ]}
             aria-current={link.page && activePage === link.page ? 'page' : undefined}>
             {link.label}
           </a>
         ))}
       </div>
-      <ThemeToggle />
       <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-mist hover:text-gold cursor-pointer" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-steel dark:text-mist hover:text-gold cursor-pointer" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -51,9 +48,9 @@ const navLinks = [
     </div>
   </div>
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-navy border-t border-gold/20 px-8 py-4 space-y-3">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-navy border-t border-gold/20 px-8 py-4 space-y-3">
     {navLinks.map(link => (
-      <a href={link.href} class="block text-mist text-sm font-medium hover:text-gold transition-colors no-underline mobile-nav-link">
+      <a href={link.href} class="block text-steel dark:text-mist text-sm font-medium hover:text-gold transition-colors no-underline mobile-nav-link">
         {link.label}
       </a>
     ))}
@@ -88,13 +85,8 @@ const navLinks = [
           const id = entry.target.id;
           desktopLinks.forEach(link => {
             const href = link.getAttribute('href');
-            if (href === `/#${id}`) {
-              link.classList.remove('text-mist');
-              link.classList.add('text-gold');
-            } else {
-              link.classList.remove('text-gold');
-              link.classList.add('text-mist');
-            }
+            // Toggle only text-gold; base classes (text-steel dark:text-mist) show through when removed
+            link.classList.toggle('text-gold', href === `/#${id}`);
           });
         }
       });

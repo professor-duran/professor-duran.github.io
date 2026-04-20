@@ -8,7 +8,7 @@ heroImage: /images/gcxn-cohort-outdoor.jpg
 heroAlt: GCxN cohort photo at NREL
 ---
 
-In 2018 I co-founded the Shell GameChanger Accelerator Powered by NREL, working closely with my counterpart at Shell to direct the program and shape the vision and annual program targets. We called it GCxN. The program was a $6.3M, multi-year partnership between Shell International and the National Renewable Energy Laboratory designed to advance early-stage cleantech startups by giving them access to NREL's facilities, technical experts, and the de-risking infrastructure of a national lab.
+In 2018 I co-founded the Shell GameChanger Accelerator Powered by NREL, working closely with my counterpart at Shell to direct the program and shape the vision and annual program targets. We called it GCxN. The program was a multimillion-dollar, multi-year partnership between Shell International and the National Renewable Energy Laboratory designed to advance early-stage cleantech startups by giving them access to NREL's facilities, technical experts, and the de-risking infrastructure of a national lab.
 
 According to the [GCxN Year in Review 2025 Annual Report](https://gcxnrel.com), the portfolio companies have now raised $1.048 billion cumulatively. The program has logged 954 new startup hires since its founding (374% growth since 2022), achieved a $140:1 leverage ratio on Shell project funding, and grown to 30 portfolio companies. The first GCxN portfolio company (eXoZymes, formerly Invizyne) launched an IPO. Shell renewed its multi-year funding commitment.
 

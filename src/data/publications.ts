@@ -43,7 +43,6 @@ export const publications: Publication[] = [
     title: 'Leveraging Big Data Analysis Techniques for US Vocational Vehicle Drive Cycle Characterization, Segmentation, and Development.',
     venue: 'SAE Technical Paper 2018-01-1199.',
     doi: '10.4271/2018-01-1199',
-    note: 'Drive cycles adopted by U.S. EPA in GHG Phase 2 rulemaking.',
   },
   {
     year: 2018,
