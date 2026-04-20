@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ScrollEnhancements from '../components/ScrollEnhancements.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -85,6 +86,7 @@ const personSchema = {
   ],
   knowsAbout: [
     'Engineering Education',
+    'AI-Integrated Engineering Pedagogy',
     'Experiential Learning',
     'Vehicle Dynamics',
     'Aerospace Systems Engineering',
@@ -146,5 +148,6 @@ const personSchema = {
     <slot />
   </main>
   <Footer />
+  <ScrollEnhancements />
 </body>
 </html>

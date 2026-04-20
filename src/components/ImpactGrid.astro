@@ -15,7 +15,7 @@ const scholarlyStats = [
 ---
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
   {stats.map(stat => (
-    <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-gold">
+    <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-gold transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_12px_20px_-12px_rgba(0,0,0,0.18)] dark:hover:shadow-[0_12px_20px_-12px_rgba(255,255,255,0.08)] motion-reduce:transform-none motion-reduce:transition-none">
       <div class="font-serif text-4xl font-bold text-navy dark:text-white leading-none mb-1">{stat.number}</div>
       <div class="text-sm text-steel dark:text-mist/70 leading-snug">{stat.label}</div>
     </div>
@@ -26,7 +26,7 @@ const scholarlyStats = [
   <p class="text-xs text-caption uppercase tracking-widest mb-3 mt-8">Scholarly & Student Impact</p>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {scholarlyStats.map(stat => (
-      <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-steel/30 dark:border-mist/20">
+      <div class="bg-cloud dark:bg-slate/50 rounded-md p-7 border-l-[3px] border-steel/30 dark:border-mist/20 transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_12px_20px_-12px_rgba(0,0,0,0.18)] dark:hover:shadow-[0_12px_20px_-12px_rgba(255,255,255,0.08)] motion-reduce:transform-none motion-reduce:transition-none">
         {stat.link ? (
           <a href={stat.link} target="_blank" rel="noopener" class="no-underline">
             <div class="font-serif text-3xl font-bold text-navy dark:text-white leading-none mb-1">{stat.number}</div>
