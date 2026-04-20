@@ -11,7 +11,16 @@ thumbnail: /images/capstone-hot-swap.jpg
 gallery:
   - src: /images/capstone-lemons.jpg
     alt: Mines Capstone 24 Hours of Lemons project vehicle
-    caption: 24 Hours of Lemons capstone project (Fall 2024)
+    caption: 24 Hours of Lemons capstone project
+  - src: /images/capstone-automotive-projects.jpg
+    alt: Automotive capstone projects on display
+    caption: Automotive capstone projects on display
+  - src: /images/capstone-motodemption.jpg
+    alt: Mines Capstone Motodemption project
+    caption: Motodemption capstone project
+  - src: /images/capstone-simulator.jpg
+    alt: Capstone driving simulator build
+    caption: Driving simulator capstone build
 ---
 
 ## Overview

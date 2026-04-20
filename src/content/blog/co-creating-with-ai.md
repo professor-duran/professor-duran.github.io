@@ -4,8 +4,8 @@ description: "AI is in your students' workflow whether you want it there or not.
 pubDate: 2026-04-14
 tags: [ai, pedagogy, engineering-education, keen, generative-ai]
 readingTime: "9 min read"
-heroImage: /images/adam-lecturing.jpg
-heroAlt: Adam Duran teaching at Colorado School of Mines
+heroImage: /images/keen-national-2026.jpg
+heroAlt: Adam Duran at the KEEN National Conference 2026, where engineering faculty convene to advance AI-integrated pedagogy
 ---
 
 I gave a flash talk at the Mines Generative AI Summit in Fall 2025 titled "Co-Creating with AI: New Frontiers in Teaching and Design." The argument I made there is the argument I want to make here, in longer form. As of Spring 2026 I am also a member of the KERN Community Catalysts Cohort 13 EMxAI Working Group and part of a select national group in the KEEN Crescendo Program. I think a lot about how AI changes engineering education. Most of the conversations I am in are still not very useful.

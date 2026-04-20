@@ -12,12 +12,33 @@ gallery:
   - src: /images/shell-ecomarathon-indy.jpg
     alt: Shell Eco-marathon team at Indianapolis Motor Speedway Gasoline Alley
     caption: Shell Eco-marathon team at Indianapolis Motor Speedway
+  - src: /images/shell-eco-passed-tech.jpg
+    alt: Shell Eco-marathon team celebrating after passing technical inspection
+    caption: Shell Eco-marathon team passing technical inspection
   - src: /images/fsae-tilt-test.jpg
     alt: Formula SAE car on tilt test platform
     caption: Formula SAE tilt testing during competition
   - src: /images/rc-car-workshop.jpg
     alt: Students assembling an RC car at a hands-on workshop
-    caption: Students in a hands-on RC vehicle workshop
+    caption: Hands-on RC vehicle workshop (MEGN 391)
+  - src: /images/capstone-simulator.jpg
+    alt: Students operating the multiaxis driving simulator built for MEGN 417/527 Vehicle Dynamics
+    caption: Multiaxis driving simulator (MEGN 417/527 Vehicle Dynamics)
+  - src: /images/capstone-automotive-projects.jpg
+    alt: Automotive capstone projects on display
+    caption: Automotive capstone projects
+  - src: /images/megn200-rover.jpg
+    alt: MEGN 200 student rover project
+    caption: MEGN 200 rover project
+  - src: /images/megn301-human-power.jpg
+    alt: MEGN 301 human-powered design project
+    caption: MEGN 301 human-powered design project
+  - src: /images/megn301-bike-power.jpg
+    alt: MEGN 301 bike-powered design project
+    caption: MEGN 301 bike-powered design project
+  - src: /images/megn301-wind-turbine.jpg
+    alt: MEGN 301 student wind turbine design
+    caption: MEGN 301 wind turbine design
   - src: /images/shell-ecomarathon-garage.jpg
     alt: Shell Eco-marathon team assembling their vehicle in the paddock garage
     caption: Shell Eco-marathon paddock preparation
