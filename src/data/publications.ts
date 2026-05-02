@@ -69,13 +69,14 @@ export const publications: Publication[] = [
     year: 2016,
     authors: 'Marcinkoski, J., Vijayagopal, R., Kast, J., and Duran, A.',
     title: 'Driving an Industry: Medium and Heavy Duty Fuel Cell Electric Truck Component Sizing.',
-    venue: 'World Electric Vehicle Journal, 8(1).',
+    venue: 'World Electric Vehicle Journal, 8(1), 78-89.',
+    doi: '10.3390/wevj8010078',
   },
   {
-    year: 2015,
+    year: 2014,
     authors: 'Lammert, M., Burton, J., Sindler, P., and Duran, A.',
     title: 'Hydraulic Hybrid and Conventional Parcel Delivery Vehicles\' Measured Laboratory Fuel Economy on Targeted Drive Cycles.',
-    venue: 'SAE International Journal of Alternative Powertrains, 4(1).',
+    venue: 'SAE International Journal of Alternative Powertrains, 4(1), 11-19.',
     doi: '10.4271/2014-01-2375',
   },
   {
