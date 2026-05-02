@@ -18,8 +18,8 @@ export const publications: Publication[] = [
   },
   {
     year: 2024,
-    authors: 'Mistry, A.N., Brodsky, P., Duran, A., Mozur, E., Rajasegar, R., et al.',
-    title: 'Electrifying Off-Road Vehicles: Is 1000 Wh/kg Enough?',
+    authors: 'Brucker, A., Duran, A., Sullivan, N.P., and Mistry, A.',
+    title: 'Electrifying Off-Road Vehicles: Is 1000 [Wh/kg] Enough?',
     venue: 'ACS Energy Letters, 9(8), 4053-4058.',
     doi: '10.1021/acsenergylett.4c01276',
   },
@@ -47,7 +47,7 @@ export const publications: Publication[] = [
   {
     year: 2018,
     authors: 'Lammert, M., Bugbee, B., Hou, Y., Mack, A., Muratori, M., Holden, J., Duran, A., and Swaney, E.',
-    title: 'Analysis of Opportunities for Truck Platooning from Telematics Data.',
+    title: 'Exploring Telematics Big Data for Truck Platooning Opportunities.',
     venue: 'SAE Technical Paper 2018-01-1083.',
     doi: '10.4271/2018-01-1083',
   },
