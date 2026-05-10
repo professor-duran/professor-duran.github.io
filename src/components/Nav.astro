@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/projects', label: 'Projects', page: 'projects' },
   { href: '/blog', label: 'Essays', page: 'blog' },
   { href: '/speaking', label: 'Speaking', page: 'speaking' },
+  { href: '/coaching', label: 'Coaching', page: 'coaching' },
   { href: '/press', label: 'Press', page: 'press' },
 ];
 ---
@@ -25,11 +26,11 @@ const navLinks = [
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white/[.97] dark:bg-navy/[.97] backdrop-blur-sm border-b border-gold/20" aria-label="Main navigation">
   <div class="max-w-[1100px] mx-auto px-8 flex items-center justify-between h-[60px]">
-    <a href="/" class="font-serif text-navy dark:text-white text-lg font-semibold tracking-wide no-underline">
-      Adam W. <span class="text-gold">Duran</span>
+    <a href="/" class="font-serif text-navy dark:text-white text-lg font-semibold tracking-wide no-underline hover:text-gold transition-colors whitespace-nowrap shrink-0">
+      Adam W. Duran
     </a>
-    <div class="flex items-center gap-6">
-      <div class="hidden lg:flex gap-7">
+    <div class="flex items-center gap-4">
+      <div class="hidden lg:flex gap-5">
         {navLinks.map(link => (
           <a href={link.href}
             class:list={[
