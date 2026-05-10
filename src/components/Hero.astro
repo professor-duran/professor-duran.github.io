@@ -1,8 +1,11 @@
 ---
 ---
-<div class="pt-40 pb-20 px-8 bg-gradient-to-br from-cloud to-white dark:from-navy dark:to-slate relative overflow-hidden">
+<div class="hero-bg pt-40 pb-20 px-8 bg-gradient-to-br from-cloud to-white dark:from-navy dark:to-slate relative overflow-hidden">
+  <!-- Drifting mesh-gradient blobs (topographic texture lives on body::before, page-wide) -->
+  <div class="hero-mesh absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <!-- Existing gold radial bloom (kept for warmth in upper right) -->
   <div class="absolute -top-[40%] -right-[20%] w-[700px] h-[700px] bg-[radial-gradient(circle,rgba(196,145,60,0.12)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(196,145,60,0.08)_0%,transparent_70%)] pointer-events-none"></div>
-  <div class="max-w-[1100px] mx-auto grid md:grid-cols-[1fr_280px] gap-16 items-center">
+  <div class="max-w-[1100px] mx-auto grid md:grid-cols-[1fr_280px] gap-16 items-center relative">
     <div>
       <!-- Mobile headshot -->
       <div class="md:hidden mb-8 flex justify-center">
@@ -38,3 +41,34 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Drifting mesh-gradient blobs over a 24s loop. Translate amplitude is large enough
+     to be perceptible without distracting; combined with scale this makes the blobs
+     "breathe" across the hero rather than sit static. */
+  .hero-mesh {
+    background:
+      radial-gradient(ellipse 60vw 45vh at 12% 25%, rgba(74, 94, 117, 0.36) 0%, transparent 60%),
+      radial-gradient(ellipse 50vw 35vh at 85% 75%, rgba(196, 145, 60, 0.24) 0%, transparent 60%),
+      radial-gradient(ellipse 70vw 50vh at 50% 110%, rgba(45, 58, 74, 0.28) 0%, transparent 60%);
+    animation: hero-mesh-drift 24s ease-in-out infinite;
+    will-change: transform;
+  }
+  :global(.dark) .hero-mesh {
+    background:
+      radial-gradient(ellipse 60vw 45vh at 12% 25%, rgba(74, 94, 117, 0.55) 0%, transparent 55%),
+      radial-gradient(ellipse 50vw 35vh at 85% 75%, rgba(196, 145, 60, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 70vw 50vh at 50% 110%, rgba(232, 236, 241, 0.08) 0%, transparent 55%);
+  }
+  @keyframes hero-mesh-drift {
+    0%   { transform: translate3d(0,    0,   0) scale(1); }
+    25%  { transform: translate3d(60px, -30px, 0) scale(1.08); }
+    50%  { transform: translate3d(-40px, 20px, 0) scale(0.94); }
+    75%  { transform: translate3d(30px,  40px, 0) scale(1.04); }
+    100% { transform: translate3d(0,    0,   0) scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-mesh { animation: none; }
+  }
+</style>

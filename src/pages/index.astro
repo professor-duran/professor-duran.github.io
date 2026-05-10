@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import ImpactBand from '../components/ImpactBand.astro';
 import ImpactGrid from '../components/ImpactGrid.astro';
 import PublicationList from '../components/PublicationList.astro';
 import CourseCard from '../components/CourseCard.astro';
@@ -92,6 +93,9 @@ const programs = [
 <BaseLayout title="Adam W. Duran, PE, PMP -- Engineering Educator & Program Builder">
 
   <Hero />
+
+  <!-- Outcomes-first impact band: count-up on scroll into view. -->
+  <ImpactBand />
 
   <!-- About -->
   <section id="about" class="max-w-[1100px] mx-auto py-20 px-8">

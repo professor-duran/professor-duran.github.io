@@ -1,0 +1,100 @@
+---
+// ImpactBand.astro
+// Direction 1 mockup: outcomes-first metrics tile band, count-up on scroll into view.
+// Honors prefers-reduced-motion (snaps to final value).
+// Decimals are explicit per tile so display matches the numbers below the fold exactly.
+const tiles = [
+  { value: 10.5, decimals: 1, prefix: '$', suffix: 'M+', label: 'Career competitive funding (PI / Proposal Lead)' },
+  { value: 252, decimals: 0, prefix: '', suffix: '', label: 'Track-declared students (0 to 252 in three years)' },
+  { value: 1, decimals: 0, prefix: '', suffix: 'st', label: 'Place nationally, DOE Battery Workforce Challenge Year 1' },
+  { value: 1.048, decimals: 3, prefix: '$', suffix: 'B', label: 'Raised by GCxN portfolio companies' },
+  { value: 1000, decimals: 0, suffix: '+', prefix: '', label: 'Google Scholar citations (h-index 17, i10-index 20)' },
+];
+---
+<section
+  id="impact-band"
+  aria-label="Career impact metrics"
+  class="bg-cloud dark:bg-slate/40 border-y border-mist dark:border-steel/20"
+>
+  <div class="max-w-[1100px] mx-auto px-8 py-10">
+    <ul class="grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-8" data-impact-tiles>
+      {tiles.map((t) => (
+        <li class="border-b-2 border-gold/60 pb-3">
+          <div class="font-serif text-navy dark:text-white text-3xl md:text-4xl font-bold leading-none">
+            <span class="impact-prefix">{t.prefix}</span><span
+              class="impact-number tabular-nums"
+              data-target={t.value}
+              data-decimals={t.decimals}
+            >0</span><span class="impact-suffix">{t.suffix}</span>
+          </div>
+          <div class="mt-2 text-[0.72rem] uppercase tracking-widest text-caption leading-snug">
+            {t.label}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<script>
+  // Count-up animation: triggers once when band scrolls into view.
+  // Skips animation entirely if user prefers reduced motion.
+  function fmt(value: number, decimals: number): string {
+    if (decimals === 0) {
+      return Math.round(value).toLocaleString('en-US');
+    }
+    return value.toFixed(decimals);
+  }
+
+  function animateTile(el: HTMLElement, target: number, decimals: number, duration = 1200) {
+    const start = performance.now();
+    function step(now: number) {
+      const t = Math.min(1, (now - start) / duration);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = fmt(target * eased, decimals);
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = fmt(target, decimals);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function init() {
+    const root = document.querySelector('[data-impact-tiles]');
+    if (!root) return;
+    const nums = root.querySelectorAll<HTMLElement>('.impact-number');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduce) {
+      nums.forEach((n) => {
+        const target = parseFloat(n.dataset.target ?? '0');
+        const decimals = parseInt(n.dataset.decimals ?? '0', 10);
+        n.textContent = fmt(target, decimals);
+      });
+      return;
+    }
+
+    const seen = new WeakSet<Element>();
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !seen.has(entry.target)) {
+            seen.add(entry.target);
+            const n = entry.target as HTMLElement;
+            const target = parseFloat(n.dataset.target ?? '0');
+            const decimals = parseInt(n.dataset.decimals ?? '0', 10);
+            animateTile(n, target, decimals);
+          }
+        }
+      },
+      { threshold: 0.4 }
+    );
+    nums.forEach((n) => obs.observe(n));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
