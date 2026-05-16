@@ -1,8 +1,10 @@
 ---
 // ImpactBand.astro
-// Direction 1 mockup: outcomes-first metrics tile band, count-up on scroll into view.
-// Honors prefers-reduced-motion (snaps to final value).
-// Decimals are explicit per tile so display matches the numbers below the fold exactly.
+// Outcomes-first metrics tile band, count-up on scroll into view.
+// Final values are rendered server-side so the band is fully readable with
+// JavaScript disabled; JS only enhances by replacing the value with a
+// count-up animation. Honors prefers-reduced-motion (snaps to final value).
+// Decimals are explicit per tile so display matches the numbers below the fold.
 const tiles = [
   { value: 10.5, decimals: 1, prefix: '$', suffix: 'M+', label: 'Career competitive funding (PI / Proposal Lead)' },
   { value: 252, decimals: 0, prefix: '', suffix: '', label: 'Track-declared students (0 to 252 in three years)' },
@@ -10,6 +12,13 @@ const tiles = [
   { value: 1.048, decimals: 3, prefix: '$', suffix: 'B', label: 'Raised by GCxN portfolio companies' },
   { value: 1000, decimals: 0, suffix: '+', prefix: '', label: 'Google Scholar citations (h-index 17, i10-index 20)' },
 ];
+
+function fmtValue(value: number, decimals: number): string {
+  if (decimals === 0) {
+    return Math.round(value).toLocaleString('en-US');
+  }
+  return value.toFixed(decimals);
+}
 ---
 <section
   id="impact-band"
@@ -25,7 +34,7 @@ const tiles = [
               class="impact-number tabular-nums"
               data-target={t.value}
               data-decimals={t.decimals}
-            >0</span><span class="impact-suffix">{t.suffix}</span>
+            >{fmtValue(t.value, t.decimals)}</span><span class="impact-suffix">{t.suffix}</span>
           </div>
           <div class="mt-2 text-[0.72rem] uppercase tracking-widest text-caption leading-snug">
             {t.label}
@@ -65,14 +74,15 @@ const tiles = [
     const nums = root.querySelectorAll<HTMLElement>('.impact-number');
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (reduce) {
-      nums.forEach((n) => {
-        const target = parseFloat(n.dataset.target ?? '0');
-        const decimals = parseInt(n.dataset.decimals ?? '0', 10);
-        n.textContent = fmt(target, decimals);
-      });
-      return;
-    }
+    // Values are already rendered server-side. If the user prefers reduced motion,
+    // leave the final values in place and skip the animation entirely.
+    if (reduce) return;
+
+    // JS is enabled and motion is OK: reset each tile to 0 so we can animate it up
+    // when it scrolls into view.
+    nums.forEach((n) => {
+      n.textContent = '0';
+    });
 
     const seen = new WeakSet<Element>();
     const obs = new IntersectionObserver(
