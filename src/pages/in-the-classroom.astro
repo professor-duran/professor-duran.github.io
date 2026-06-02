@@ -5,6 +5,9 @@ interface Photo {
   src: string;
   alt: string;
   caption: string;
+  // Optional object-position override for the cover-crop (default: center).
+  // e.g. 'object-top' keeps the top of a tall portrait image from being cut.
+  position?: string;
 }
 
 // Curated gallery of teaching, build, and travel moments. Grouped top-down
@@ -19,6 +22,7 @@ const photos: Photo[] = [
     src: '/images/megn200-operation-game.jpg',
     alt: 'Student-built recreation of the Operation board game for a MEGN 200 final project',
     caption: "MEGN 200 final project: students rebuild the board game 'Operation' from scratch. Embedded C, sensor integration, and a working buzzer on the nose.",
+    position: 'object-top',
   },
   {
     src: '/images/megn200-rover.jpg',
@@ -108,7 +112,7 @@ const photos: Photo[] = [
               src={photo.src}
               alt={photo.alt}
               loading="lazy"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none"
+              class={`w-full h-full object-cover ${photo.position ?? ''} transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none`}
             />
           </div>
           <figcaption class="p-4 text-sm text-steel dark:text-mist/85 leading-snug flex-1">
