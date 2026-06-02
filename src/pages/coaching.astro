@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const credentials = [
+  'PE (Professional Engineer), Mechanical, State of Colorado',
+  'PMP (Project Management Professional)',
+  'FE Exam Review Coordinator, Mines Mechanical Engineering (Spring 2023 to present)',
+  'Assistant Teaching Professor, Colorado School of Mines',
+  '12 years of applied R&D at the National Renewable Energy Laboratory',
+  '700+ Mines Capstone students mentored across 8 semesters',
+];
+
+const offerings = [
+  {
+    name: '1:1 Coaching',
+    summary: 'Targeted, hourly sessions for students working through specific weak areas or finalizing exam readiness.',
+    details: 'Best for students who already have a study plan and need accountability, problem-solving coaching, or focused help on specific topic areas (statics, dynamics, thermodynamics, fluid mechanics, electricity and magnetism, mathematics).',
+    format: 'Virtual (Zoom) or in-person near Golden, CO. Sessions recorded on request.',
+  },
+  {
+    name: 'Diagnostic and Study Plan',
+    summary: 'A single fixed-price intake session that benchmarks your current readiness and produces a written, week-by-week study plan to your exam date.',
+    details: 'Includes a topic-area diagnostic, recommended reference materials, weekly milestone targets, and a follow-up check-in. Most useful 8 to 12 weeks before your scheduled exam.',
+    format: '90 minute session plus written plan delivered within 48 hours.',
+  },
+  {
+    name: 'Small Group Cohort',
+    summary: 'A 6 to 8 week structured cohort timed to NCEES exam windows, capped at small group size for high engagement.',
+    details: 'Weekly working sessions covering the full FE Other Disciplines blueprint, with practice problem sets and topic-area reviews. Cohort pricing is per student and significantly lower than 1:1.',
+    format: 'Virtual, weekly. Next cohort dates announced before each NCEES exam window.',
+  },
+  {
+    name: 'Corporate and Team Prep',
+    summary: 'Custom programs for engineering firms putting EITs through the FE on a coordinated schedule.',
+    details: 'Designed for employers who want to support their early-career engineers in earning licensure. Includes a kickoff session, structured weekly meetings, and progress reporting to the sponsoring company.',
+    format: 'Custom scope and pricing. Contact for a quote.',
+  },
+];
+
+const audiences = [
+  'Mines undergraduates preparing for the FE Other Disciplines exam',
+  'Mines alumni and recent graduates re-engaging with the FE',
+  'Working engineers and EITs on a structured path to PE licensure',
+  'Career-switchers entering engineering practice',
+  'Engineering firms supporting cohorts of early-career staff',
+];
+
+const faqs = [
+  {
+    q: 'Which exam do you coach?',
+    a: 'FE Other Disciplines. I am also available for general FE Mechanical coaching given the heavy topic overlap.',
+  },
+  {
+    q: 'What materials do I need?',
+    a: 'I will recommend specific references at the diagnostic stage. I do not require students to purchase any specific commercial review course.',
+  },
+  {
+    q: 'Are you affiliated with NCEES?',
+    a: 'No. This is independent coaching. NCEES owns and administers the FE exam. I am the FE Review Coordinator for the Mines ME department, which is a separate institutional role.',
+  },
+  {
+    q: 'Do you guarantee a passing score?',
+    a: 'No coach can ethically guarantee an exam outcome. What I provide is structured preparation, accountability, and topic-area expertise. Effort and consistency on the student side are required.',
+  },
+  {
+    q: 'Where are you located?',
+    a: 'Golden, Colorado. Most coaching is virtual; in-person is available locally by arrangement.',
+  },
+];
+---
+<BaseLayout title="FE Exam Coaching -- Adam Duran"
+  description="1:1 and small-group FE exam coaching from the Mines FE Review Coordinator. PE-licensed, PMP-certified engineering educator with 12 years of applied R&D at NREL.">
+
+  <div class="pt-28 pb-20 px-8">
+    <div class="max-w-[900px] mx-auto">
+
+      <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">FE Exam Coaching</h1>
+      <hr class="w-12 h-[3px] bg-gold border-none my-4" />
+      <p class="text-lg leading-relaxed mb-4 max-w-[720px]">
+        1:1 and small-group coaching for the FE Other Disciplines exam, taught by the Mines FE Review Coordinator.
+      </p>
+      <p class="text-base text-body leading-relaxed mb-12 max-w-[720px]">
+        I help engineering students, recent graduates, and working EITs prepare for the Fundamentals of Engineering exam with structured study plans, weekly accountability, and direct topic-area coaching. My goal is straightforward: help you walk into the exam confident and prepared.
+      </p>
+
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border-l-[3px] border-gold mb-16">
+        <h2 class="font-serif text-xl font-semibold text-navy dark:text-white mb-4">Credentials</h2>
+        <ul class="list-none p-0 m-0 space-y-2">
+          {credentials.map(c => (
+            <li class="text-sm text-body leading-relaxed flex gap-3">
+              <span class="text-gold font-bold">|</span>
+              <span>{c}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">What I Offer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
+        {offerings.map(o => (
+          <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border-l-[3px] border-gold">
+            <div class="font-serif text-base font-semibold text-navy dark:text-white mb-2">{o.name}</div>
+            <p class="text-sm text-body leading-relaxed mb-3">{o.summary}</p>
+            <p class="text-sm text-body leading-relaxed mb-3">{o.details}</p>
+            <p class="text-xs text-caption uppercase tracking-wider"><span class="font-semibold">Format:</span> {o.format}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-cloud dark:bg-slate/40 rounded-md p-6 border-l-[3px] border-gold mb-16 text-center">
+        <div class="text-xs uppercase tracking-wider text-caption mb-2">Pricing</div>
+        <div class="font-serif text-lg font-semibold text-navy dark:text-white">Rates available upon inquiry</div>
+        <p class="text-sm text-body leading-relaxed mt-2 max-w-[560px] mx-auto">
+          Pricing is scoped to the engagement, the timeline, and the format. Send a note with your exam date and goals and I'll respond with a quote.
+        </p>
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Who This Is For</h2>
+      <ul class="list-none p-0 m-0 mb-16 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {audiences.map(a => (
+          <li class="text-sm py-2 px-3 bg-cloud dark:bg-slate/40 rounded">{a}</li>
+        ))}
+      </ul>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">How It Works</h2>
+      <ol class="list-none p-0 m-0 mb-16 space-y-4">
+        <li class="flex gap-4">
+          <span class="text-gold font-serif text-2xl font-bold leading-none min-w-[2rem]">1.</span>
+          <div>
+            <div class="font-semibold text-navy dark:text-white mb-1">Inquiry</div>
+            <p class="text-sm text-body leading-relaxed">Send a short note with your exam date, current preparation status, and which offering interests you.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-gold font-serif text-2xl font-bold leading-none min-w-[2rem]">2.</span>
+          <div>
+            <div class="font-semibold text-navy dark:text-white mb-1">Diagnostic</div>
+            <p class="text-sm text-body leading-relaxed">A brief intake call to confirm fit, scope the engagement, and align on goals and timeline.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-gold font-serif text-2xl font-bold leading-none min-w-[2rem]">3.</span>
+          <div>
+            <div class="font-semibold text-navy dark:text-white mb-1">Coaching</div>
+            <p class="text-sm text-body leading-relaxed">Structured sessions on a weekly cadence, with problem sets, accountability, and topic-area deep dives.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-gold font-serif text-2xl font-bold leading-none min-w-[2rem]">4.</span>
+          <div>
+            <div class="font-semibold text-navy dark:text-white mb-1">Exam Day</div>
+            <p class="text-sm text-body leading-relaxed">A final readiness session in the week before your exam to consolidate preparation and manage test-day strategy.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Frequently Asked Questions</h2>
+      <div class="mb-16 space-y-5">
+        {faqs.map(f => (
+          <div class="border-b border-mist dark:border-steel/30 pb-5">
+            <div class="font-semibold text-navy dark:text-white mb-2">{f.q}</div>
+            <p class="text-sm text-body leading-relaxed">{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-navy text-center rounded-md p-10">
+        <h2 class="font-serif text-2xl font-bold text-white mb-3">Inquire About Coaching</h2>
+        <p class="text-mist text-base mb-6 max-w-[560px] mx-auto">
+          Include your exam date, your current preparation status, and which offering interests you. I respond within two business days.
+        </p>
+        <a href="mailto:aduran@mines.edu?subject=FE%20Exam%20Coaching%20Inquiry"
+          class="inline-block bg-gold text-white font-semibold text-sm tracking-wide px-8 py-3 rounded hover:bg-gold-light transition-colors no-underline">
+          Send a Coaching Inquiry
+        </a>
+      </div>
+
+      <p class="text-xs text-caption mt-8 max-w-[720px] leading-relaxed">
+        Coaching offered as independent professional services, separate from my faculty role at Colorado School of Mines. Not affiliated with or endorsed by NCEES.
+      </p>
+
+    </div>
+  </div>
+</BaseLayout>

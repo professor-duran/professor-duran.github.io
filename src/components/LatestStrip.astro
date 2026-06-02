@@ -1,0 +1,70 @@
+---
+// Latest: auto-pulls the most recent publication, news item, and press hit so
+// visitors see the site is current. Pure data composition, no fetch at build.
+import { publications } from '../data/publications';
+import { news } from '../data/news';
+import { outlets } from '../data/press';
+
+const latestPub = [...publications].sort((a, b) => b.year - a.year)[0];
+const latestNews = [...news].sort((a, b) => b.sortDate.localeCompare(a.sortDate))[0];
+const latestPress = [...outlets]
+  .filter(o => o.sortDate && o.url)
+  .sort((a, b) => (b.sortDate ?? '').localeCompare(a.sortDate ?? ''))[0];
+
+function pubYearLabel(y: number) { return String(y); }
+---
+<section
+  aria-label="Latest activity"
+  class="bg-white dark:bg-navy/30 border-b border-mist dark:border-steel/20"
+>
+  <div class="max-w-[1100px] mx-auto px-8 py-7">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+      <a
+        href="#publications"
+        class="group block no-underline"
+      >
+        <div class="text-[0.65rem] text-gold uppercase tracking-[0.22em] font-semibold mb-2">
+          Latest Publication &middot; {pubYearLabel(latestPub.year)}
+        </div>
+        <div class="font-serif text-sm md:text-[0.95rem] text-navy dark:text-white leading-snug group-hover:text-gold transition-colors">
+          &ldquo;{latestPub.title.replace(/\.$/, '')}&rdquo;
+        </div>
+        <div class="text-xs text-caption italic mt-1.5 line-clamp-1">{latestPub.venue}</div>
+      </a>
+
+      <a
+        href={latestNews.url ?? '#news'}
+        target={latestNews.url ? '_blank' : undefined}
+        rel={latestNews.url ? 'noopener' : undefined}
+        class="group block no-underline border-l-0 md:border-l md:pl-8 border-mist dark:border-steel/30"
+      >
+        <div class="text-[0.65rem] text-gold uppercase tracking-[0.22em] font-semibold mb-2">
+          Latest News &middot; {latestNews.date}
+        </div>
+        <div class="font-serif text-sm md:text-[0.95rem] text-navy dark:text-white leading-snug group-hover:text-gold transition-colors">
+          {latestNews.headline}
+        </div>
+        <div class="text-xs text-caption italic mt-1.5">Read more &rarr;</div>
+      </a>
+
+      {latestPress && (
+        <a
+          href={latestPress.url}
+          target="_blank"
+          rel="noopener"
+          class="group block no-underline border-l-0 md:border-l md:pl-8 border-mist dark:border-steel/30"
+        >
+          <div class="text-[0.65rem] text-gold uppercase tracking-[0.22em] font-semibold mb-2">
+            Latest Press &middot; {latestPress.name}
+          </div>
+          <div class="font-serif text-sm md:text-[0.95rem] text-navy dark:text-white leading-snug group-hover:text-gold transition-colors">
+            {latestPress.headline}
+          </div>
+          <div class="text-xs text-caption italic mt-1.5">Read article &rarr;</div>
+        </a>
+      )}
+
+    </div>
+  </div>
+</section>

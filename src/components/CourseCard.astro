@@ -9,7 +9,7 @@ interface Props {
 
 const { code, name, description, crossList, developed } = Astro.props;
 ---
-<div class="bg-white dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30">
+<div class="card-lift bg-white dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30">
   <div class="flex items-center gap-2 mb-1">
     <span class="text-xs text-gold font-semibold uppercase tracking-widest">{code}</span>
     {crossList && <span class="text-[10px] text-caption">/ {crossList}</span>}

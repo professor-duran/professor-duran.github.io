@@ -20,7 +20,7 @@ function fmt(d: Date) {
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {posts.map(post => (
-        <a href={`/blog/${post.id}/`} class="group block bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 hover:border-gold dark:hover:border-gold transition-colors no-underline">
+        <a href={`/blog/${post.id}/`} class="card-lift group block bg-cloud dark:bg-slate/40 rounded-md p-6 border border-mist dark:border-steel/30 no-underline">
           <div class="flex flex-wrap gap-2 mb-3">
             {post.data.tags.slice(0, 2).map(tag => (
               <span class="text-[0.6rem] text-caption bg-white dark:bg-navy/50 px-2 py-0.5 rounded uppercase tracking-wider font-semibold">{tag}</span>

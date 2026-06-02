@@ -14,6 +14,8 @@ import BeyondTheLab from '../components/BeyondTheLab.astro';
 import GrowthCharts from '../components/GrowthCharts.astro';
 import PressStrip from '../components/PressStrip.astro';
 import RecentEssays from '../components/RecentEssays.astro';
+import LatestStrip from '../components/LatestStrip.astro';
+import PullQuote from '../components/PullQuote.astro';
 import { courses } from '../data/courses';
 
 const materials = [
@@ -94,8 +96,12 @@ const programs = [
 
   <Hero />
 
-  <!-- Outcomes-first impact band: count-up on scroll into view. -->
+  <!-- Key metrics first, at the top of the page: count-up on scroll into view. -->
   <ImpactBand />
+
+  <!-- Latest banner: auto-pulled most-recent publication, news, and press.
+       Positioned directly after the metrics so it sits just above the fold on first scroll. -->
+  <LatestStrip />
 
   <!-- About -->
   <section id="about" class="max-w-[1100px] mx-auto py-20 px-8">
@@ -110,6 +116,12 @@ const programs = [
     <p class="max-w-[720px] text-base mb-4">
       My work sits at the intersection of engineering education, experiential program design, and industry partnership. I specialize in building new academic programs from the ground up: connecting curriculum to workforce needs, securing external funding, and creating the institutional infrastructure that makes hands-on, team-based engineering education sustainable at scale.
     </p>
+
+    <PullQuote
+      kicker="On the work"
+      quote="I measure my work by how far it travels, by what it changes not only for the students in front of me but for the field they'll shape and the society they'll serve. That's why I'm drawn to big ideas, systems, and scale, because that's where impact compounds. So I stand up engineering programs from nothing, tie their curriculum to the careers students are headed for, and secure the funding that sustains them, until hands-on, team-based engineering education is no longer a luxury a few students get but the standard for how engineers are trained."
+    />
+
     <p class="max-w-[720px] text-base mb-4 italic text-caption">
       I am a three-time Mines graduate (B.S. 2009, M.S. Mechanical 2011, M.S. Engineering and Technology Management 2016), now teaching the next generation of Mines engineers in the same department where I started.
     </p>
@@ -142,11 +154,11 @@ const programs = [
       </p>
       <div class="space-y-5">
         {programs.map(program => (
-          <div class="bg-white dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 overflow-hidden">
+          <div class="card-lift bg-white dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 overflow-hidden">
             {program.image && (
               <a href={programProjectLinks[program.label] ?? '#'} class="block aspect-[21/9] w-full overflow-hidden bg-navy">
                 <img src={program.image} alt={program.label} loading="lazy"
-                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                  class="card-lift-image w-full h-full object-cover object-top" />
               </a>
             )}
             <div class="p-8 grid md:grid-cols-[200px_1fr] gap-8">
@@ -177,10 +189,12 @@ const programs = [
     <section id="teaching" class="max-w-[1100px] mx-auto py-20 px-8">
       <h2 class="font-serif text-3xl font-bold text-navy dark:text-white">Teaching</h2>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
-      <div class="grid md:grid-cols-[1fr_400px] gap-10 items-start mb-10">
-        <p class="text-base">
-          My courses emphasize experiential, team-based learning with authentic industry connection. Students design, build, test, and iterate, developing both technical competence and the engineering judgment that comes from working on real systems with real constraints.
-        </p>
+      <div class="grid md:grid-cols-[1fr_400px] gap-10 items-center mb-10">
+        <PullQuote
+          inline
+          kicker="On teaching"
+          quote="Engineering judgment comes from working on real systems with real constraints. Lectures alone can't teach that."
+        />
         <figure class="rounded-md overflow-hidden border border-mist dark:border-steel/30">
           <img src="/images/adam-lecturing.jpg" alt="Adam W. Duran presenting on high-performance computing for vehicle fuel economy" loading="lazy" class="w-full h-auto object-cover" />
           <figcaption class="text-xs text-caption p-3 bg-white dark:bg-slate/40">HPC, meet fuel economy.</figcaption>

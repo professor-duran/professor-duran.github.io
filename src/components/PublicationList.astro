@@ -44,26 +44,74 @@ const scholarlySchemas = publications
   </div>
   <hr class="w-12 h-[3px] bg-gold border-none mb-8" />
 
-  <div class="flex gap-8 md:gap-12 mb-10 flex-wrap">
+  <div class="flex gap-8 md:gap-12 mb-10 flex-wrap" data-pub-stats>
     <div>
-      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.publications}</div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white tabular-nums pub-stat" data-target={pubStats.publications}>{pubStats.publications}</div>
       <div class="text-xs text-caption uppercase tracking-widest">Publications</div>
     </div>
     <div>
       <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank" rel="noopener" class="no-underline">
-        <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.citations}</div>
+        <div class="font-serif text-3xl font-bold text-navy dark:text-white tabular-nums pub-stat" data-target={pubStats.citations}>{pubStats.citations}</div>
         <div class="text-xs text-caption uppercase tracking-widest">Citations</div>
       </a>
     </div>
     <div>
-      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.hIndex}</div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white tabular-nums pub-stat" data-target={pubStats.hIndex}>{pubStats.hIndex}</div>
       <div class="text-xs text-caption uppercase tracking-widest">h-index</div>
     </div>
     <div>
-      <div class="font-serif text-3xl font-bold text-navy dark:text-white">{pubStats.i10Index}</div>
+      <div class="font-serif text-3xl font-bold text-navy dark:text-white tabular-nums pub-stat" data-target={pubStats.i10Index}>{pubStats.i10Index}</div>
       <div class="text-xs text-caption uppercase tracking-widest">i10-index</div>
     </div>
   </div>
+
+  <script>
+    function initPubStats() {
+      const root = document.querySelector('[data-pub-stats]');
+      if (!root) return;
+      const nums = root.querySelectorAll<HTMLElement>('.pub-stat');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      const seen = new WeakSet<Element>();
+
+      function animate(el: HTMLElement, target: number, dur = 1100) {
+        const start = performance.now();
+        const startVal = 0;
+        function step(now: number) {
+          const t = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const v = Math.round(startVal + (target - startVal) * eased);
+          el.textContent = v.toLocaleString('en-US');
+          if (t < 1) requestAnimationFrame(step);
+          else el.textContent = target.toLocaleString('en-US');
+        }
+        // Set to 0 right before we start so the count visibly grows.
+        el.textContent = '0';
+        requestAnimationFrame(step);
+      }
+
+      const obs = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting && !seen.has(entry.target)) {
+              seen.add(entry.target);
+              const el = entry.target as HTMLElement;
+              const target = parseFloat(el.dataset.target ?? '0');
+              animate(el, target);
+            }
+          }
+        },
+        { threshold: 0.5 }
+      );
+      nums.forEach((n) => obs.observe(n));
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPubStats);
+    } else {
+      initPubStats();
+    }
+  </script>
 
   <!-- Works in Progress -->
   {worksInProgress.length > 0 && (

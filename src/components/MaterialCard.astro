@@ -14,7 +14,7 @@ interface Props {
 
 const { code, title, description, samples, repoUrl } = Astro.props;
 ---
-<div class="bg-white dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 overflow-hidden flex flex-col">
+<div class="card-lift bg-white dark:bg-slate/40 rounded-md border border-mist dark:border-steel/30 overflow-hidden flex flex-col">
   <div class="bg-navy p-5 border-b-[3px] border-gold">
     <div class="text-[0.7rem] text-gold font-semibold uppercase tracking-widest">{code}</div>
     <div class="font-serif text-base font-semibold text-white mt-1">{title}</div>
