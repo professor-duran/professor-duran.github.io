@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-09T00:00:00Z",
+  "title": "Design System: Adam W. Duran",
+  "extensions": {
+    "colorMeta": {
+      "navy": { "role": "neutral", "displayName": "Midnight Navy", "canonical": "#1a2332", "tonalRamp": ["#0d1119", "#141a26", "#1a2332", "#273349", "#3a4a66", "#5a6e8c", "#8a9bb0", "#c4ced9"] },
+      "slate": { "role": "neutral", "displayName": "Steel Slate", "canonical": "#2d3a4a", "tonalRamp": ["#141a22", "#1f2935", "#2d3a4a", "#3a4a5e", "#4a5e75", "#6f8299", "#9aa9bb", "#cdd6df"] },
+      "steel": { "role": "neutral", "displayName": "Steel Blue", "canonical": "#4a5e75", "tonalRamp": ["#222b36", "#2d3a4a", "#3a4a5e", "#4a5e75", "#64788f", "#8a9bae", "#b3c0cd", "#dde3e9"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#e8ecf1", "tonalRamp": ["#aeb8c4", "#c2cad4", "#d5dce3", "#e8ecf1", "#eef2f5", "#f4f7f9", "#f9fbfc", "#ffffff"] },
+      "cloud": { "role": "neutral", "displayName": "Cloud", "canonical": "#f4f6f8", "tonalRamp": ["#d9dde2", "#e2e6ea", "#ebeef1", "#f4f6f8", "#f8fafb", "#fbfcfd", "#fdfdfe", "#ffffff"] },
+      "gold": { "role": "primary", "displayName": "Brushed Gold", "canonical": "#c4913c", "tonalRamp": ["#4a3614", "#6b4e1d", "#8d6727", "#ad7f31", "#c4913c", "#d4a84e", "#e3c180", "#f0dcb3"] },
+      "gold-light": { "role": "primary", "displayName": "Gold Light", "canonical": "#d4a84e", "tonalRamp": ["#5a4419", "#7d6024", "#a07c30", "#c0973d", "#d4a84e", "#e0bd73", "#ecd29e", "#f5e7c7"] },
+      "body": { "role": "neutral", "displayName": "Ink Body", "canonical": "#3a3f47", "tonalRamp": ["#1c1f24", "#2a2e34", "#3a3f47", "#525860", "#6f767f", "#969ca4", "#c0c5cb", "#e4e7ea"] },
+      "caption": { "role": "neutral", "displayName": "Caption Gray", "canonical": "#6b7280", "tonalRamp": ["#33373d", "#474c54", "#5b616b", "#6b7280", "#8b919b", "#aab0b8", "#cbcfd5", "#e9ebee"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name and top-of-page statements. Source Serif 4, 700, tight leading." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings. Source Serif 4, 600." },
+      "title": { "displayName": "Title", "purpose": "Card titles, course names, sub-section heads. Source Serif 4, 600." },
+      "body": { "displayName": "Body", "purpose": "Long-form and descriptive text. DM Sans, 400, 65-75ch measure." },
+      "label": { "displayName": "Label / Eyebrow", "purpose": "Gold uppercase kicker. DM Sans, 600, 0.12em tracking." }
+    },
+    "shadows": [
+      { "name": "ambient-rest", "value": "0 1px 3px rgba(26,35,50,0.06), 0 1px 2px rgba(26,35,50,0.04)", "purpose": "Default resting elevation for cards and raised surfaces. Whisper-low." },
+      { "name": "interaction-lift", "value": "0 14px 24px -14px rgba(0,0,0,0.22)", "purpose": "Hover/focus response, paired with a 4px upward translate and gold border tint." },
+      { "name": "interaction-lift-dark", "value": "0 14px 24px -14px rgba(255,255,255,0.10)", "purpose": "Dark-mode variant of the hover lift." }
+    ],
+    "motion": [
+      { "name": "ease-lift", "value": "cubic-bezier(0.2, 0.9, 0.4, 1.05)", "purpose": "Card and button lift on hover; a confident ease-out with a hair of overshoot." },
+      { "name": "duration-state", "value": "220ms", "purpose": "Default transition duration for transform, shadow, and border-color state changes." },
+      { "name": "duration-image", "value": "700ms", "purpose": "Slow scale on card-lift imagery (scale 1.04)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The confident filled CTA. Navy fill, white text, tactile hover lift.",
+      "html": "<button class=\"ds-btn-primary\">View the record</button>",
+      "css": ".ds-btn-primary { background: #1a2332; color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; padding: 12px 28px; border: none; border-radius: 6px; cursor: pointer; transition: background 220ms ease, transform 220ms cubic-bezier(0.2,0.9,0.4,1.05), box-shadow 220ms ease; } .ds-btn-primary:hover { background: #2d3a4a; transform: translateY(-2px); box-shadow: 0 14px 24px -14px rgba(0,0,0,0.22); } .ds-btn-primary:focus-visible { outline: 2px solid #c4913c; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary inline action (email, LinkedIn, Scholar). Steel outline that shifts to gold on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Google Scholar</a>",
+      "css": ".ds-btn-ghost { display: inline-block; background: transparent; color: #4a5e75; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; font-size: 0.875rem; text-decoration: none; padding: 8px 16px; border: 1px solid rgba(74,94,117,0.3); border-radius: 4px; transition: color 220ms ease, border-color 220ms ease; } .ds-btn-ghost:hover { color: #c4913c; border-color: #c4913c; } .ds-btn-ghost:focus-visible { outline: 2px solid #c4913c; outline-offset: 2px; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Course/project/news card. Gold eyebrow, serif title, sans caption. Ambient rest, lift on hover.",
+      "html": "<div class=\"ds-card\"><span class=\"ds-card-eyebrow\">MEGN 301</span><div class=\"ds-card-title\">Mechanical Engineering Design</div><p class=\"ds-card-desc\">A studio-based capstone sequence built around real industry-sponsored projects.</p></div>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #e8ecf1; border-radius: 6px; padding: 24px; box-shadow: 0 1px 3px rgba(26,35,50,0.06), 0 1px 2px rgba(26,35,50,0.04); transition: transform 220ms cubic-bezier(0.2,0.9,0.4,1.05), box-shadow 220ms ease, border-color 220ms ease; } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 14px 24px -14px rgba(0,0,0,0.22); border-color: rgba(196,145,60,0.55); } .ds-card-eyebrow { display: block; color: #c4913c; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; } .ds-card-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.125rem; color: #1a2332; margin-bottom: 8px; } .ds-card-desc { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.6; color: #6b7280; margin: 0; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixed top bar with serif wordmark and sans links that shift to gold.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#\">Adam W. Duran</a><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\">Teaching</a><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Writing</a></div></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 32px; background: rgba(255,255,255,0.97); border-bottom: 1px solid rgba(196,145,60,0.2); backdrop-filter: blur(4px); } .ds-nav-logo { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 1.125rem; letter-spacing: 0.02em; color: #1a2332; text-decoration: none; transition: color 220ms ease; } .ds-nav-logo:hover { color: #c4913c; } .ds-nav-links { display: flex; gap: 20px; } .ds-nav-link { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; font-size: 0.875rem; color: #4a5e75; text-decoration: none; transition: color 220ms ease; } .ds-nav-link:hover { color: #c4913c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineer's Editorial",
+    "overview": "The personal site of an engineering educator and program builder, read like a well-edited publication run by someone who actually builds things. Magazine-grade editorial rigor (serif display, generous measure, deliberate hierarchy) meets engineering precision (a disciplined navy/steel structure, exact spacing, one accent used on purpose). Gold is the single distinguishing mark, the brushed-brass accent that signals care without raising its voice. The system earns the trust of a skeptical, time-pressed reader by leading with proof: named programs, real numbers, things that were built. Boldness comes from committed typography, confident components, and considered depth, never from decoration.",
+    "keyCharacteristics": [
+      "Editorial serif display over a clean geometric sans body",
+      "Navy/steel authority structure with a single gold accent",
+      "Tactile, confident components on quiet resting elevation",
+      "Proof-forward layout: evidence leads, decoration never does",
+      "Light and dark modes, both first-class"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Gold appears on no more than ~10% of any screen. It is the only saturated color in the system; if a second accent feels necessary, the layout is wrong, not the palette.", "section": "colors" },
+      { "name": "The Gold-on-Light Caution", "body": "Brushed Gold (#c4913c) is a mid-tone. Never set it as body text on cloud or white; it fails 4.5:1. Use it for marks, borders, and large/bold accents, or darken toward #9a6f28.", "section": "colors" },
+      { "name": "The Serif-Authority Rule", "body": "Every heading is serif; every functional string (labels, nav, metadata, buttons) is sans. The split is the system's voice; do not mix it.", "section": "typography" },
+      { "name": "The One Eyebrow Rule", "body": "The gold uppercase label is a real device, not scaffolding. Use it where it carries information; do not stamp it above every section.", "section": "typography" },
+      { "name": "The Quiet-Depth Rule", "body": "Resting elevation is whisper-low; the drama lives in the change on hover, not the resting state. If a resting shadow is visible from across the room, it is too heavy.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lead every section with proof (named programs, real numbers, built outcomes); let evidence carry the page.",
+      "Do keep gold to ~10% of any screen, as marks, borders, and accents only.",
+      "Do use serif for all headings and DM Sans for all working text; hold the split.",
+      "Do keep body measure at 65-75ch and body contrast at 4.5:1 (push toward 7:1 / AAA where the palette allows).",
+      "Do make components tactile: filled navy primary, ambient resting shadow, a real hover lift with the gold border tint.",
+      "Do honor prefers-reduced-motion with a crossfade or instant fallback for every transition."
+    ],
+    "donts": [
+      "Don't build the generic university-CMS faculty homepage: no sidebar nav, stock photography, cramped CV dump, or dated typography.",
+      "Don't reach for SaaS/startup landing tropes: no gradient-text headings, no hero-metric template, no identical icon-heading-text card grids, no tracked-uppercase eyebrow above every section.",
+      "Don't set Brushed Gold (#c4913c) as body text on light backgrounds; it fails contrast.",
+      "Don't add a third type family or break the serif-heading / sans-body split.",
+      "Don't let resting shadows get heavy; the drama is in the hover change, not the rest state.",
+      "Don't introduce a second saturated accent; gold is the only voice."
+    ]
+  }
+}

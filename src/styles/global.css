@@ -32,12 +32,22 @@ body {
 }
 
 /* Reusable card hover micro-interaction. Subtle lift, soft shadow expansion,
-   gold border tint. Honors prefers-reduced-motion. */
+   gold border tint. Honors prefers-reduced-motion.
+   Cards now rest on a whisper-low ambient shadow (the Quiet-Depth rule) rather
+   than fully flat, then lift on hover. */
 .card-lift {
+  box-shadow:
+    0 1px 3px rgba(26, 35, 50, 0.06),
+    0 1px 2px rgba(26, 35, 50, 0.04);
   transition:
     transform 220ms cubic-bezier(0.2, 0.9, 0.4, 1.05),
     box-shadow 220ms ease,
     border-color 220ms ease;
+}
+.dark .card-lift {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.30),
+    0 1px 2px rgba(0, 0, 0, 0.20);
 }
 @media (prefers-reduced-motion: no-preference) {
   .card-lift:hover {
@@ -54,6 +64,57 @@ body {
   }
   .card-lift:hover .card-lift-image {
     transform: scale(1.04);
+  }
+}
+
+/* Filled primary button: the confident, tactile CTA. Navy fill in light mode;
+   gold fill in dark mode so it never disappears against the navy canvas.
+   Ghost/outline actions remain the secondary pattern (inline utilities). */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-navy);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  padding: 14px 28px; /* 14px keeps the tap target >= 44px tall on touch */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 220ms ease,
+    transform 220ms cubic-bezier(0.2, 0.9, 0.4, 1.05),
+    box-shadow 220ms ease;
+}
+.btn-primary:hover {
+  background: var(--color-slate);
+}
+.btn-primary:active {
+  background: var(--color-navy); /* settle back on press */
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+.dark .btn-primary {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+.dark .btn-primary:hover {
+  background: var(--color-gold-light);
+}
+.dark .btn-primary:active {
+  background: var(--color-gold);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px -14px rgba(0, 0, 0, 0.22);
+  }
+  .btn-primary:active {
+    transform: translateY(0); /* press cancels the lift */
   }
 }
 

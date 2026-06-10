@@ -5,3 +5,10 @@ dist/
 
 # Local scratch: landing-page drafts and workflow snippets (not part of site build)
 scaffolding/
+
+# Impeccable: vendored skill files and local build artifacts.
+# DESIGN.md, PRODUCT.md, .impeccable/design.json and .impeccable/live/ stay tracked.
+.claude/skills/
+.github/skills/
+.impeccable/compare/
+.impeccable/preview/
