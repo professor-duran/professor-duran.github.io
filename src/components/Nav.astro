@@ -5,18 +5,19 @@ interface Props {
 
 const { activePage = 'home' } = Astro.props;
 
+// Cards / Projects / Speaking / Coaching are intentionally hidden from the
+// header while we tighten the IA. The pages still build and stay reachable
+// by direct URL (/teaching-cards, /projects, /speaking, /coaching) so the
+// content remains in reserve and can be re-enabled by restoring the entries.
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#programs', label: 'Programs' },
   { href: '/#publications', label: 'Publications' },
   { href: '/#teaching', label: 'Teaching' },
-  { href: '/teaching-cards', label: 'Cards', page: 'teaching-cards' },
   { href: '/in-the-classroom', label: 'Gallery', page: 'in-the-classroom' },
-  { href: '/projects', label: 'Projects', page: 'projects' },
   { href: '/blog', label: 'Essays', page: 'blog' },
-  { href: '/speaking', label: 'Speaking', page: 'speaking' },
-  { href: '/coaching', label: 'Coaching', page: 'coaching' },
   { href: '/press', label: 'Press', page: 'press' },
+  { href: 'https://cdn.jsdelivr.net/gh/professor-duran/academic-cv@main/cv.pdf', label: 'CV', external: true },
 ];
 ---
 <!-- Skip to content -->
@@ -33,6 +34,8 @@ const navLinks = [
       <div class="hidden lg:flex gap-5">
         {navLinks.map(link => (
           <a href={link.href}
+            target={link.external ? '_blank' : undefined}
+            rel={link.external ? 'noopener' : undefined}
             class:list={[
               "text-xs font-medium uppercase tracking-wider hover:text-gold transition-colors no-underline",
               link.page && activePage === link.page ? 'text-gold' : 'text-steel dark:text-mist'
@@ -53,7 +56,10 @@ const navLinks = [
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-navy border-t border-gold/20 px-8 py-4 space-y-3">
     {navLinks.map(link => (
-      <a href={link.href} class="block text-steel dark:text-mist text-sm font-medium hover:text-gold transition-colors no-underline mobile-nav-link">
+      <a href={link.href}
+        target={link.external ? '_blank' : undefined}
+        rel={link.external ? 'noopener' : undefined}
+        class="block text-steel dark:text-mist text-sm font-medium hover:text-gold transition-colors no-underline mobile-nav-link">
         {link.label}
       </a>
     ))}
