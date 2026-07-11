@@ -10,6 +10,20 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: 'Summer 2026',
+    sortDate: '2026-07-01',
+    headline: 'Named a 2026 National KEEN Rising Star',
+    url: 'https://www.engineeringunleashed.com/content/keen-rising-stars',
+    html: 'Named a 2026 <a href="https://www.engineeringunleashed.com/content/keen-rising-stars" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">National KEEN Rising Star</a>, one of three faculty selected nationally by the KEEN Awards Committee, honoring those who have gone above and beyond to equip undergraduate engineers with an entrepreneurial mindset to create personal, economic, and societal value for others. The award includes a Kern Family Foundation grant to Colorado School of Mines and recognition at the KEEN National Conference.',
+  },
+  {
+    date: 'Summer 2026',
+    sortDate: '2026-06-15',
+    headline: 'Selected as a KEEN Engineering Unleashed Fellow (Fall 2026 cohort)',
+    url: 'https://circle.engineeringunleashed.com/fellows',
+    html: 'Selected as a <a href="https://circle.engineeringunleashed.com/fellows" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN Engineering Unleashed Fellow</a>, an annual competitive award supporting Fellows as advocates for the entrepreneurial mindset through funded project work. Fellowship begins Fall 2026.',
+  },
+  {
     date: 'Spring 2026',
     sortDate: '2026-03-01',
     headline: 'Selected for DOE EcoCAR Innovation Challenge as Co-PI (~$520K / 4 yr)',
@@ -34,7 +48,7 @@ export const news: NewsItem[] = [
     sortDate: '2025-09-01',
     headline: 'Named Mines Trefny Center Engineering Learning Fellow & Kern Family Foundation Community Catalyst',
     url: 'https://www.mines.edu/trefny-center/',
-    html: 'Named <a href="https://www.mines.edu/trefny-center/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Mines Trefny Center</a> Engineering Learning Fellow and <a href="https://www.kffdn.org/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Kern Family Foundation</a> Community Catalyst, Cohort 13.',
+    html: 'Named <a href="https://www.mines.edu/trefny-center/" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Mines Trefny Center</a> Engineering Learning Fellow and <a href="https://engineeringunleashed.com/community-catalysts" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Kern Family Foundation Community Catalyst</a>, Cohort 13, joining a small national group of faculty who curate Engineering Unleashed content and connect educators across the KEEN network.',
   },
   {
     date: '2025',

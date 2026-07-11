@@ -15,7 +15,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
-  description = 'Adam W. Duran, PE, PMP -- Engineering Educator & Program Builder at Colorado School of Mines. $10M+ in funded research, 252 students in programs built from scratch, 30+ publications.',
+  description = 'Adam W. Duran, PE, PMP -- Program Builder & Innovation Leader at Colorado School of Mines. Founding Director of the Shell GameChanger Accelerator at NREL ($1.048B portfolio), $10.5M+ in funded research, 252 students in programs built from scratch.',
   activePage = 'home',
   ogImage = '/images/headshot.png',
   includePersonSchema = Astro.url.pathname === '/',
@@ -48,7 +48,7 @@ const personSchema = {
   email: 'aduran@mines.edu',
   url: 'https://adamwduran.com',
   image: new URL('/images/headshot.png', Astro.site).toString(),
-  description: 'Engineering educator, program architect, and industry-connected engineer (PE, PMP) specializing in experiential, industry-connected academic programs at scale. Over a decade of R&D experience at NREL and DOE-funded vehicle technology programs, now building the next generation of engineers at Colorado School of Mines.',
+  description: 'Program builder and innovation leader (PE, PMP) specializing in entrepreneurial ecosystems and experiential academic programs at scale. Founding Director of the Shell GameChanger Accelerator at NREL, with over a decade of R&D and DOE-funded vehicle technology program leadership, now building the next generation of engineers at Colorado School of Mines.',
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Colorado School of Mines',
