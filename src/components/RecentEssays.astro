@@ -7,7 +7,7 @@ const posts = (await getCollection('blog'))
   .slice(0, 3);
 
 function fmt(d: Date) {
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 ---
 {posts.length > 0 && (
