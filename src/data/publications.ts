@@ -121,7 +121,7 @@ export const worksInProgress: Publication[] = [
 
 export const pubStats = {
   publications: '30+',
-  citations: '1,006',
+  citations: '1,044',
   hIndex: '17',
-  i10Index: '20',
+  i10Index: '21',
 };
