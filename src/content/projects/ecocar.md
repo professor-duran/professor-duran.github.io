@@ -29,7 +29,7 @@ Prof. P. Brodsky and I are co-leading the DOE EcoCAR Innovation Challenge at Min
 - **1st place nationally** in the inaugural Year 1 competition (2023-24)
 - **4th place nationally** in Year 2 (2024-25)
 - More than a dozen technical and project management awards across both years
-- Total BWC program value: **$255,100** (DOE/Stellantis base grant $147K, Chevron sponsorship $20K, student travel stipends $35.6K, competition prizes $32.5K)
+- Total BWC program value: **$258,100** (DOE/Stellantis base grant $147K, additional DOE/Stellantis program support $20K, Chevron sponsorship $20K, student travel stipends $35.6K, competition prizes $32.5K, Gene Haas Foundation competition award $3K)
 - Additional significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and vehicle donation (Dodge RAM ProMaster Van)
 
 ## EcoCAR Innovation Challenge (Fall 2026-Present)
