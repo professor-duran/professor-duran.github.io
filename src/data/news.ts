@@ -10,6 +10,13 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: 'Fall 2026',
+    sortDate: '2026-08-15',
+    headline: 'Selected for KEEN EM-FUEL, the national faculty leadership program',
+    url: 'https://engineeringunleashed.com',
+    html: 'Selected for <a href="https://engineeringunleashed.com" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN EM-FUEL</a> (Entrepreneurial Mindset for Future University Engineering Leaders), a competitive national program that prepares engineering faculty for expanded roles of institutional influence across the Kern Entrepreneurial Engineering Network. Cohort begins Fall 2026.',
+  },
+  {
     date: 'Summer 2026',
     sortDate: '2026-07-01',
     headline: 'Named a 2026 National KEEN Rising Star',
