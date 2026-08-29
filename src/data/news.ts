@@ -14,7 +14,7 @@ export const news: NewsItem[] = [
     sortDate: '2026-08-15',
     headline: 'Selected for KEEN EM-FUEL, the national faculty leadership program',
     url: 'https://engineeringunleashed.com',
-    html: 'Selected for <a href="https://engineeringunleashed.com" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN EM-FUEL</a> (Entrepreneurial Mindset for Future University Engineering Leaders), a competitive national program that prepares engineering faculty for expanded roles of institutional influence across the Kern Entrepreneurial Engineering Network. Cohort begins Fall 2026.',
+    html: 'Selected for <a href="https://engineeringunleashed.com" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN EM-FUEL</a> (Entrepreneurial Mindset for Future University Engineering Leaders), a competitive national program that prepares engineering faculty for expanded roles of institutional influence across the Kern Entrepreneurial Engineering Network. The 2027 cohort convenes in December 2026.',
   },
   {
     date: 'Summer 2026',
