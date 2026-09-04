@@ -9,6 +9,12 @@ export interface PressOutlet {
 
 export const outlets: PressOutlet[] = [
   {
+    name: 'Engineering Unleashed (Kern Family Foundation)',
+    url: 'https://engineeringunleashed.com/keen-rising-star-adam-duran',
+    sortDate: '2026-07-01',
+    headline: 'Adam Duran: 2026 National KEEN Rising Star',
+  },
+  {
     name: 'Mines Newsroom',
     url: 'https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge',
     sortDate: '2024-06-15',

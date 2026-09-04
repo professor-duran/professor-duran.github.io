@@ -20,8 +20,8 @@ export const news: NewsItem[] = [
     date: 'Summer 2026',
     sortDate: '2026-07-01',
     headline: 'Named a 2026 National KEEN Rising Star',
-    url: 'https://www.engineeringunleashed.com/content/keen-rising-stars',
-    html: 'Named a 2026 <a href="https://www.engineeringunleashed.com/content/keen-rising-stars" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">National KEEN Rising Star</a>, one of three faculty selected nationally by the KEEN Awards Committee, honoring those who have gone above and beyond to equip undergraduate engineers with an entrepreneurial mindset to create personal, economic, and societal value for others. The award includes a Kern Family Foundation grant to Colorado School of Mines and recognition at the KEEN National Conference.',
+    url: 'https://engineeringunleashed.com/keen-rising-star-adam-duran',
+    html: 'Named a 2026 <a href="https://engineeringunleashed.com/rising-stars" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">National KEEN Rising Star</a>, one of three faculty selected nationally by the KEEN Awards Committee, honoring those who have gone above and beyond to equip undergraduate engineers with an entrepreneurial mindset to create personal, economic, and societal value for others. The award includes a Kern Family Foundation grant to Colorado School of Mines and recognition at the KEEN National Conference. Read the <a href="https://engineeringunleashed.com/keen-rising-star-adam-duran" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">award interview</a> with Renee McLachlan of the Kern Family Foundation.',
   },
   {
     date: 'Summer 2026',
