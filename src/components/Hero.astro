@@ -1,4 +1,23 @@
 ---
+// Profile links rendered as the pill row under the tagline. Kept as data so the
+// shared styling lives in one place rather than being repeated per anchor.
+const profileLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adamduran/' },
+  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=BQ404mAAAAAJ' },
+  { label: 'GitHub', href: 'https://github.com/professor-duran' },
+  { label: 'ORCID', href: 'https://orcid.org/0000-0002-7776-3896' },
+];
+
+const profileLinkClass =
+  'text-steel dark:text-mist text-sm font-medium border border-steel/30 dark:border-mist/25 ' +
+  'px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline';
+
+// The visible headshot is served as WebP (~87 KB vs ~970 KB for the PNG at the
+// same 900x900). The PNG is retained in public/images because it remains the
+// og:image and JSON-LD image in BaseLayout, where some social scrapers still
+// handle WebP poorly.
+const headshot = '/images/headshot.webp';
+const headshotAlt = 'Adam W. Duran';
 ---
 <div class="hero-bg pt-40 pb-20 px-8 bg-gradient-to-br from-cloud to-white dark:from-navy dark:to-slate relative overflow-hidden">
   <!-- Drifting mesh-gradient blobs (topographic texture lives on body::before, page-wide) -->
@@ -10,7 +29,16 @@
       <!-- Mobile headshot -->
       <div class="md:hidden mb-8 flex justify-center">
         <div class="w-[140px] h-[140px] rounded-full overflow-hidden border-[3px] border-gold/30">
-          <img src="/images/headshot.png" alt="Adam W. Duran" width="140" height="140" class="w-full h-full object-cover" />
+          <img
+            src={headshot}
+            alt={headshotAlt}
+            width="140"
+            height="140"
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </div>
       <h1 class="font-serif text-navy dark:text-white text-5xl md:text-[2.8rem] font-bold leading-tight mb-2">Adam W. Duran</h1>
@@ -26,15 +54,23 @@
       </p>
       <div class="flex gap-4 flex-wrap items-center">
         <a href="mailto:aduran@mines.edu" class="btn-primary no-underline">aduran@mines.edu</a>
-        <a href="https://www.linkedin.com/in/adamduran/" target="_blank" rel="noopener" class="text-steel dark:text-mist text-sm font-medium border border-steel/30 dark:border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=BQ404mAAAAAJ" target="_blank" rel="noopener" class="text-steel dark:text-mist text-sm font-medium border border-steel/30 dark:border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">Google Scholar</a>
-        <a href="https://github.com/professor-duran" target="_blank" rel="noopener" class="text-steel dark:text-mist text-sm font-medium border border-steel/30 dark:border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">GitHub</a>
-        <a href="https://orcid.org/0000-0002-7776-3896" target="_blank" rel="noopener" class="text-steel dark:text-mist text-sm font-medium border border-steel/30 dark:border-mist/25 px-4 py-2 rounded hover:border-gold hover:text-gold transition-all no-underline">ORCID</a>
+        {profileLinks.map(link => (
+          <a href={link.href} target="_blank" rel="noopener" class={profileLinkClass}>{link.label}</a>
+        ))}
       </div>
     </div>
     <!-- Desktop headshot -->
     <div class="hidden md:block w-[280px] h-[320px] rounded-md overflow-hidden border-[3px] border-gold/30">
-      <img src="/images/headshot.png" alt="Adam W. Duran" width="280" height="320" class="w-full h-full object-cover" loading="eager" />
+      <img
+        src={headshot}
+        alt={headshotAlt}
+        width="280"
+        height="320"
+        class="w-full h-full object-cover"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
     </div>
   </div>
 </div>
