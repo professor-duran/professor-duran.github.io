@@ -2,7 +2,7 @@
 title: GCxN Clean Energy Accelerator
 description: Launched and directed the Shell GameChanger Accelerator Powered by NREL, a multimillion-dollar program with $1B+ in portfolio company fundraising as of 2025.
 role: Founding Director
-dates: "2018 — 2020"
+dates: "2018 – 2020"
 tags: [NREL, clean energy, startups, accelerator, Shell]
 order: 3
 heroImage: /images/gcxn-cohort-outdoor.jpg

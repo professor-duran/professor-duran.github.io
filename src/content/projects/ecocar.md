@@ -2,7 +2,7 @@
 title: DOE EcoCAR & Battery Workforce Challenge
 description: Co-leading Mines' teams in DOE's EcoCAR Innovation Challenge and Battery Workforce Challenge with Prof. P. Brodsky.
 role: Co-Lead with Prof. P. Brodsky
-dates: "2023 — Present"
+dates: "2023 – Present"
 tags: [DOE, battery technology, competition, workforce development, Stellantis, EcoCAR]
 order: 2
 heroImage: /images/bwc-year-1-awards.webp

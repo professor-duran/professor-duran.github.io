@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content } = await render(project);
 ---
-<BaseLayout title={`${project.data.title} -- Adam Duran`} activePage="projects">
+<BaseLayout title={`${project.data.title} | Adam Duran`} activePage="projects">
   <div class="pt-28 pb-20 px-8">
     <div class="max-w-[900px] mx-auto">
       <a href="/projects" class="text-sm text-gold font-medium no-underline hover:underline mb-6 inline-block">&larr; All Projects</a>

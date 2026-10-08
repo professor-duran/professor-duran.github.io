@@ -1,6 +1,6 @@
 ﻿---
 title: "The Money Didn't Leave Climate Tech. It Left the Part That Matters Most."
-description: "Climate tech posted a near-record funding year while early-stage capital quietly collapsed. The lab-embedded accelerator model is becoming load-bearing infrastructure for American energy innovation, and we should treat it that way."
+description: "Climate tech posted a near-record funding year while early-stage capital quietly collapsed. The lab-embedded accelerator model is becoming core infrastructure for American energy innovation, and we should treat it that way."
 pubDate: 2026-06-25
 tags: [cleantech, accelerators, lab-to-market, venture-capital, nrel]
 readingTime: "7 min read"
@@ -16,7 +16,7 @@ The money did not shrink. It walked up the stage ladder, away from exactly the m
 
 Every hard technology passes through a phase where it is too proven for a research grant and too risky for growth capital. People call it the valley of death, and the name has been around long enough that we treat it as geography: a permanent feature of the landscape that companies must simply survive.
 
-It is not geography. It is a market failure with a known shape. The technical risk at that stage is real but tractable; what is missing is an institution willing to retire it. Venture investors are increasingly unwilling. They now ask early-stage founders for signed offtakes and proven unit economics, which is to say they ask companies to arrive already de-risked. That is a rational response to a difficult decade. It is also an abdication of the one job venture capital exists to do.
+In fact, it is a market failure with a known shape. The technical risk at that stage is real but tractable; what is missing is an institution willing to retire it. Venture investors are increasingly unwilling. They now ask early-stage founders for signed offtakes and proven unit economics, which is to say they ask companies to arrive already de-risked. That is a rational response to a difficult decade. It is also an abdication of the one job venture capital exists to do.
 
 So if equity will not retire early technical risk, something else has to. This is where I stop being a commentator and start being a witness.
 

@@ -22,7 +22,7 @@ Here is the short version of what works.
 
 ## What stops faculty from adopting open materials
 
-The unspoken reason is not that the materials are bad. It is that adopting any new course material, open or not, is real work. The work falls into three buckets:
+The unspoken reason is that adopting any new course material, open or not, is real work. The work falls into three buckets:
 
 1. **Reading the material to see if it fits.** Time cost: hours per chapter.
 2. **Adapting the material to your course's context.** Time cost: weeks across a semester.
@@ -68,7 +68,7 @@ If student evaluations or learning outcome data tell you the current material is
 
 ### You have a course coordinator role
 
-If you coordinate a multi-section course, the question is not just whether the material works for you. It is whether the material can be used by colleagues with different teaching styles. Open materials are easier to coordinate around than commercial textbooks because everyone can modify them.
+If you coordinate a multi-section course, the question extends beyond whether the material works for you to whether colleagues with different teaching styles can use it. Open materials are easier to coordinate around than commercial textbooks because everyone can modify them.
 
 This was my situation as MEGN 300 Course Coordinator in Spring 2025. Mentoring new instructors Elijah Kuska and Siby Thomas was easier because we could agree on a baseline reference document and let each instructor decide how to use it in their section.
 

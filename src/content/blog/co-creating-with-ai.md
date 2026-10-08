@@ -40,7 +40,7 @@ The risk is that students learn to "use AI" in the same way they learn to use MA
 
 The framing I have landed on is to treat AI as a junior collaborator in the engineering work itself. The student is the senior engineer. The AI is the junior engineer who can produce a lot of plausible-looking work very fast, sometimes correctly, sometimes not. The student's job is to direct the work, evaluate the output, integrate it with the rest of the engineering project, and accept full responsibility for the result.
 
-This framing is not a metaphor. It is operationally how I want students to use AI in my courses, and it is how I think most professional engineering AI use actually functions.
+I mean this framing literally: it is how I want students to use AI in my courses, and it is how I think most professional engineering AI use actually functions.
 
 ## What this looks like in practice
 

@@ -22,7 +22,7 @@ This sequencing matters because new programs trigger institutional immune respon
 
 ### 2. We made the competition teams the front door
 
-The Mines Battery Workforce Challenge team, Formula SAE, and Shell Eco-marathon are not extracurriculars in our model. They are recruiting funnels and curricular anchors. A first-year student who joins FSAE in October has, by January, met every track instructor and seen the kind of work upper-division automotive students do. We did not have to convince anyone to declare the track. The teams did the convincing.
+The Mines Battery Workforce Challenge team, Formula SAE, and Shell Eco-marathon serve as recruiting funnels and curricular anchors in our model. A first-year student who joins FSAE in October has, by January, met every track instructor and seen the kind of work upper-division automotive students do. We did not have to convince anyone to declare the track. The teams did the convincing.
 
 The lesson generalizes: if your program has a high-visibility student artifact, that artifact will recruit better than any brochure.
 
@@ -64,6 +64,6 @@ If you are trying to build a similar track at your institution, the order matter
 4. **Plan for the third faculty member from day one.** You will need them.
 5. **Document as you go.** Future you will thank present you.
 
-The Mines automotive track was not built through any single insight. It was built by refusing to ask permission for things that were obviously right and refusing to skip the unglamorous operational work that makes the visible parts function. Three years in, that has translated to a large declared cohort, eight courses, a growing federal grant portfolio anchored by BWC, and a program ranked second in the department by enrollment.
+What built the Mines automotive track was a refusal to ask permission for things that were obviously right, and a refusal to skip the unglamorous operational work that makes the visible parts function. Three years in, that has translated to a large declared cohort, eight courses, a growing federal grant portfolio anchored by BWC, and a program ranked second in the department by enrollment.
 
 Anyone building something like this is welcome to email me. The model travels.

@@ -2,7 +2,7 @@
 title: Method & Muse Spirits
 description: Co-founder of an award-winning craft distillery in Golden, CO, applying engineering discipline to artisan spirits production.
 role: Co-Founder
-dates: "2023 — Present"
+dates: "2023 – Present"
 tags: [entrepreneurship, craft spirits, operations]
 order: 4
 heroImage: /images/method-muse-interior.jpg

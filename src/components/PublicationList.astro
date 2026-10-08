@@ -45,7 +45,7 @@ const scholarlySchemas = publications
   <hr class="w-12 h-[3px] bg-gold border-none mb-8" />
 
   <p class="max-w-[760px] text-base mb-10">
-    My work sits at the intersection of vehicle electrification, advanced battery systems,
+    My research spans vehicle electrification, advanced battery systems,
     and the workforce and pedagogy questions that determine whether we can train the
     engineers to deploy them. I contribute vehicle-systems and fleet-data expertise to
     multi-institution collaborations on the hard technical problems of the energy
@@ -149,7 +149,7 @@ const scholarlySchemas = publications
   <div>
     {publications.map(pub => (
       <div class="py-3 border-b border-mist dark:border-steel/30 last:border-b-0 text-sm leading-relaxed">
-        <span class="text-gold font-semibold text-xs">{pub.year}</span> &mdash;
+        <span class="text-gold font-semibold text-xs">{pub.year}</span> &middot;
         <span set:html={pub.authors.replace(/Duran, A\b\.?/g, '<strong>Duran, A.</strong>')} />
         &ldquo;{pub.title}&rdquo;
         <span class="text-caption italic">{pub.venue}</span>

@@ -4,13 +4,13 @@ import { getCollection } from 'astro:content';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
-<BaseLayout title="Projects -- Adam Duran" activePage="projects">
+<BaseLayout title="Projects | Adam Duran" activePage="projects">
   <div class="pt-28 pb-20 px-8">
     <div class="max-w-[1100px] mx-auto">
       <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">Projects</h1>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
       <p class="max-w-[720px] text-base mb-12">
-        Programs, ventures, and initiatives I've built or led -- from academic programs and DOE competitions to clean energy accelerators and craft spirits.
+        Programs, ventures, and initiatives I've built or led, from academic programs and DOE competitions to clean energy accelerators and craft spirits.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

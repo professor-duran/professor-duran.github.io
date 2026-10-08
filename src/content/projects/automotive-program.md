@@ -2,7 +2,7 @@
 title: Automotive Engineering Program
 description: Launched Colorado School of Mines' automotive engineering track in Fall 2022 with Prof. P. Brodsky, now serving 252 declared students and ranked second in ME by elective-track enrollment.
 role: Co-Founder & Co-Director
-dates: "2022 — Present"
+dates: "2022 – Present"
 tags: [engineering education, curriculum design, industry partnership]
 order: 1
 heroImage: /images/fsae-track.jpg

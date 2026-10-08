@@ -2,7 +2,7 @@
 title: Senior Capstone Design Program
 description: Member of the Mines Capstone Leadership Team for annual cohorts of 700+ engineering students, with 30+ teams advised across 8 semesters.
 role: Leadership Team & Project Advisor
-dates: "2022 — Present"
+dates: "2022 – Present"
 tags: [engineering education, capstone, industry partnership, design]
 order: 5
 heroImage: /images/capstone-hot-swap.jpg
@@ -36,9 +36,9 @@ Member of the Mines Capstone Leadership Team as ME co-representative (Fall 2025-
 
 ## Notable Project Outcomes
 
-- **1st place** -- EV Powertrain Swap (Fall 2023)
-- **2nd place** -- EV Powertrain Swap (Fall 2024)
-- **2nd place** -- NASA Lunabotics (Fall 2023)
+- **1st place**: EV Powertrain Swap (Fall 2023)
+- **2nd place**: EV Powertrain Swap (Fall 2024)
+- **2nd place**: NASA Lunabotics (Fall 2023)
 - Successfully secured **$17.5K in external funding** for four additional Fall 2024 projects (Amphibious and Arctic Vehicle, Analog Drone, 24 Hours of Lemons, Fluid Powered Vehicle)
 
 ## Program-Level Contributions
