@@ -20,9 +20,9 @@ I left the program in 2020 to take other work. The fact that the numbers are lar
 
 GCxN gave selected startups up to $250,000 worth of access to NREL technical experts and facilities. We did not take equity. We did not write checks. The companies kept all of their cap table to themselves.
 
-This sounds like leaving money on the table. It is not. By removing the equity question, we removed the entire negotiation that consumes most accelerator-startup interactions. The first conversation was not about valuation. It was about the technical work. Companies self-selected for those who actually wanted national lab capabilities, not those chasing the next round.
+This sounds like leaving money on the table. It is not. By removing the equity question, we removed the entire negotiation that consumes most accelerator-startup interactions. The first conversation was not about valuation. It was about the technical work. Companies self-selected for those who wanted national lab capabilities, not those chasing the next round.
 
-If you are designing a program inside a public institution, do not try to invent an equity structure. The institution cannot move at venture speed and will get the structure wrong. Give your participants the most valuable thing the institution actually has (in our case, scientific instrumentation and PhD-level expertise) and let them keep their equity.
+If you are designing a program inside a public institution, do not try to invent an equity structure. The institution cannot move at venture speed and will get the structure wrong. Give your participants the most valuable thing the institution has (in our case, scientific instrumentation and PhD-level expertise) and let them keep their equity.
 
 ### 2. We built an ecosystem of Channel Partners, not a brand
 
@@ -62,7 +62,7 @@ The current GCxN team has built more of this infrastructure since I left, and th
 
 ## What I would tell anyone starting an accelerator inside a public institution
 
-1. **Find the most valuable thing your institution actually has.** Not the thing you want it to have. The actual rare resource. Then give that to participants.
+1. **Find the most valuable thing your institution has.** Not the thing you want it to have. The actual rare resource. Then give that to participants.
 2. **Do not take equity.** It will misalign incentives and slow every conversation.
 3. **Build with Channel Partners, not against them.** You are a layer, not a brand.
 4. **Pair commercial reality with technical reality from day one.** Either alone produces unhelpful artifacts.

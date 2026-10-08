@@ -24,7 +24,7 @@ Students choose a real published federal SBIR or government research solicitatio
 4. A high-level technical concept that responds to the stated need
 5. A notional team and qualifications statement
 
-The page limit is real. The structure is real. The solicitation deadlines are real. Students can choose to actually submit if they want, though most do not.
+The page limit is real. The structure is real. The solicitation deadlines are real. Students can choose to submit if they want, though most do not.
 
 Underneath the white paper is a substantial body of intermediate work that students produce as part of the course's MBSE workflow:
 
@@ -47,7 +47,7 @@ This forces a real writing skill that engineering students rarely develop: choos
 
 ### 2. The structure mirrors how engineering work actually gets justified
 
-Students learn that the technical concept does not stand alone. It has to be tied to a problem the funder actually cares about, with stakeholders identified, with risks named explicitly, with a credible team behind it. Most engineering courses teach the technical concept in isolation. The SBIR format teaches the technical concept embedded in the institutional context where it would actually be funded.
+Students learn that the technical concept does not stand alone. It has to be tied to a problem the funder cares about, with stakeholders identified, with risks named explicitly, with a credible team behind it. Most engineering courses teach the technical concept in isolation. The SBIR format teaches the technical concept embedded in the institutional context where it would be funded.
 
 By the end of the semester, a student who has written three or four iterations of an SBIR-format white paper has internalized a question that they will use for the rest of their career: "What does this funder actually need to see to write a check?"
 
@@ -87,6 +87,6 @@ The total grading load is comparable to a normal report, because the page limit 
 
 ## A note for federal program offices
 
-If you work in a federal SBIR program office and are reading this: I would love to send a few of these student white papers your way for informal feedback. Students improve dramatically when they hear from the kind of person who actually reviews proposals. Email me.
+If you work in a federal SBIR program office and are reading this: I would love to send a few of these student white papers your way for informal feedback. Students improve dramatically when they hear from the kind of person who reviews proposals. Email me.
 
 The MEGN 455 syllabus and assignment templates are available through the course materials I am working to publish on GitHub. If you want them sooner, reach out directly.

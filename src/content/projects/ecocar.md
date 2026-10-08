@@ -40,4 +40,4 @@ Prof. P. Brodsky and I are co-leading the DOE EcoCAR Innovation Challenge at Min
 
 ## Impact
 
-The program provides students with authentic engineering experience in battery technology, vehicle electrification, and systems integration. Students gain hands-on experience with industry-standard tools and processes through partnership with Stellantis and DOE national laboratories.
+Students on these teams design, build, and test battery and vehicle systems with industry-standard tools, mentored by engineers from Stellantis and the DOE national laboratories.

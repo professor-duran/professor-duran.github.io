@@ -1,6 +1,6 @@
 ---
 title: "How We Built the Mines Automotive Track from Zero"
-description: "A practical playbook for launching an experiential, industry-connected engineering track inside a university with no dedicated department, no new faculty lines, and no permission-asking culture."
+description: "A practical playbook for launching a project-based, industry-connected engineering track inside a university with no dedicated department, no new faculty lines, and no permission-asking culture."
 pubDate: 2025-11-03
 tags: [program-building, engineering-education, automotive, capstone, mines]
 readingTime: "10 min read"
@@ -16,7 +16,7 @@ I get asked often how we did it, and especially what other faculty trying to bui
 
 ### 1. We built a course portfolio before we asked for a program
 
-The temptation when you want to start a new program is to write a proposal, gather signatures, and try to formalize before you have anything to show. We did the opposite. We put the two required track courses (MEGN 391 Introduction to Automotive Design, MEGN 417/527 Vehicle Dynamics) on a stable footing first, rebuilding both around experiential integration projects. We then curated the track's elective slate from existing ME and EE offerings so that students could specialize toward a focus area: vibrations, controls, electric vehicle powertrains, fuel cells, combustion, aerodynamics, or CFD. By the time anyone needed to evaluate the program institutionally, the course portfolio already existed. Curriculum committees reviewed individual courses, not a contested new track.
+The temptation when you want to start a new program is to write a proposal, gather signatures, and try to formalize before you have anything to show. We did the opposite. We put the two required track courses (MEGN 391 Introduction to Automotive Design, MEGN 417/527 Vehicle Dynamics) on a stable footing first, rebuilding both around integration projects. We then curated the track's elective slate from existing ME and EE offerings so that students could specialize toward a focus area: vibrations, controls, electric vehicle powertrains, fuel cells, combustion, aerodynamics, or CFD. By the time anyone needed to evaluate the program institutionally, the course portfolio already existed. Curriculum committees reviewed individual courses, not a contested new track.
 
 This sequencing matters because new programs trigger institutional immune responses. A coherent set of already-running courses with enrollment data does not.
 
@@ -32,7 +32,7 @@ When we secured the DOE Battery Workforce Challenge with Stellantis (1st place n
 
 ### 4. We refused to wait for permission to do hard things
 
-Two examples. We rebuilt MEGN 391 (Introduction to Automotive Design) around student-built RC cars as the semester integration project, turning a lecture course into a hands-on design-build-test loop with no precedent in the department. We then rebuilt MEGN 417/527 (Vehicle Dynamics) around an integrated electric go-kart platform and a multiaxis driving simulator, so that suspension, tire, and powertrain theory is verified on a vehicle students can instrument and tune. Both were structurally weird relative to the rest of the curriculum. Both are now flagship courses.
+Two examples. We rebuilt MEGN 391 (Introduction to Automotive Design) around student-built RC cars as the semester integration project, turning a lecture course into a design-build-test loop with no precedent in the department. We then rebuilt MEGN 417/527 (Vehicle Dynamics) around an integrated electric go-kart platform and a multiaxis driving simulator, so that suspension, tire, and powertrain theory is verified on a vehicle students can instrument and tune. Both were structurally weird relative to the rest of the curriculum. Both are now flagship courses.
 
 The institution will eventually accommodate what works. It will not initiate it.
 

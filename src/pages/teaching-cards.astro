@@ -2,12 +2,47 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { keenCards, PROFILE_URL, CARD_URL_PREFIX } from '../data/keen-cards';
 
-// Unique tag set for display as a summary band
-const tagCounts = new Map<string, number>();
+// Card tags are specific and mostly unique, so the filter band groups them into
+// a handful of broader topics. Every tag must map to a topic (checked at build).
+const TOPIC_OF: Record<string, string> = {
+  'Entrepreneurial Mindset': 'Entrepreneurial Mindset', 'Tech-to-Market': 'Entrepreneurial Mindset',
+  'IP': 'Entrepreneurial Mindset', 'Business Case': 'Entrepreneurial Mindset',
+  'Customer Discovery': 'Entrepreneurial Mindset', 'Value Proposition': 'Entrepreneurial Mindset',
+  'Value Creation': 'Entrepreneurial Mindset', 'Communication': 'Entrepreneurial Mindset',
+  'Design Process': 'Design Process', 'Prototyping': 'Design Process', 'Concept Generation': 'Design Process',
+  'Trade Studies': 'Design Process', 'Problem Definition': 'Design Process', 'Stakeholders': 'Design Process',
+  'Requirements': 'Design Process', 'Reverse Engineering': 'Design Process',
+  'Test & Verification': 'Systems & Verification', 'Integration': 'Systems & Verification',
+  'Systems Thinking': 'Systems & Verification', 'Lifecycle': 'Systems & Verification',
+  'Operations': 'Systems & Verification', 'Sustainability': 'Systems & Verification',
+  'Vehicle Systems': 'Systems & Verification', 'Fuel Economy': 'Systems & Verification',
+  'Case Study': 'Systems & Verification',
+  'AI Pedagogy': 'AI in Engineering Education', 'Engineering Thinking': 'AI in Engineering Education',
+  'Authentic Assessment': 'Assessment', 'Mastery-Based Assessment': 'Assessment',
+  'Project Management': 'Project Management & Teams', 'Agile': 'Project Management & Teams',
+  'Teaming': 'Project Management & Teams', 'Design Reviews': 'Project Management & Teams',
+  'Curiosity': 'Curiosity & Character', 'Root-Cause Analysis': 'Curiosity & Character',
+  'Engineering Character': 'Curiosity & Character', 'Ethics': 'Curiosity & Character',
+  'Broader Impact': 'Curiosity & Character',
+  'Experiential Learning': 'Program Design', 'Program Design': 'Program Design',
+  'Undergraduate Research': 'Program Design',
+  'Co-authored': '',  // authorship note, not a topic
+};
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const topicsOf = (tags: string[]) => {
+  const out = new Set<string>();
+  for (const tag of tags) {
+    if (!(tag in TOPIC_OF)) throw new Error(`teaching-cards: tag "${tag}" has no topic in TOPIC_OF`);
+    if (TOPIC_OF[tag]) out.add(TOPIC_OF[tag]);
+  }
+  return [...out];
+};
+const topicCounts = new Map<string, number>();
 for (const card of keenCards) {
-  for (const tag of card.tags) tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  for (const t of topicsOf(card.tags)) topicCounts.set(t, (topicCounts.get(t) ?? 0) + 1);
 }
-const sortedTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+const sortedTopics = [...topicCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+const chip = 'inline-flex items-center text-xs font-medium px-3 py-1 rounded-full border border-mist dark:border-steel/30 text-steel dark:text-mist/80 cursor-pointer hover:border-gold aria-pressed:border-gold aria-pressed:text-gold';
 ---
 <BaseLayout
   title="Teaching Cards | Adam W. Duran"
@@ -25,12 +60,15 @@ const sortedTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
       Cards are licensed through the KEEN network. Click any card to open it on engineeringunleashed.com.
     </p>
 
-    <!-- Topic summary band -->
-    <div class="flex flex-wrap gap-2 mb-12">
-      {sortedTags.map(([tag, count]) => (
-        <span class="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full border border-mist dark:border-steel/30 text-steel dark:text-mist/80">
-          {tag} <span class="ml-1.5 text-caption">({count})</span>
-        </span>
+    <!-- Topic filter band (all cards show without JavaScript) -->
+    <div class="flex flex-wrap gap-2 mb-12" role="group" aria-label="Filter cards by topic" data-topic-filters>
+      <button type="button" class={chip} data-topic="all" aria-pressed="true">
+        All <span class="ml-1.5 text-caption">({keenCards.length})</span>
+      </button>
+      {sortedTopics.map(([topic, count]) => (
+        <button type="button" class={chip} data-topic={slug(topic)} aria-pressed="false">
+          {topic} <span class="ml-1.5 text-caption">({count})</span>
+        </button>
       ))}
     </div>
 
@@ -38,6 +76,7 @@ const sortedTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {keenCards.map(card => (
         <a
+          data-topics={topicsOf(card.tags).map(slug).join(' ')}
           href={`${CARD_URL_PREFIX}${card.id}`}
           target="_blank"
           rel="noopener"
@@ -73,3 +112,18 @@ const sortedTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const band = document.querySelector<HTMLElement>('[data-topic-filters]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-topics]');
+  band?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-topic]');
+    if (!btn) return;
+    const topic = btn.dataset.topic!;
+    band.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+    cards.forEach((c) => {
+      const show = topic === 'all' || (c.dataset.topics ?? '').split(' ').includes(topic);
+      c.style.display = show ? '' : 'none';
+    });
+  });
+</script>

@@ -40,7 +40,7 @@ The risk is that students learn to "use AI" in the same way they learn to use MA
 
 The framing I have landed on is to treat AI as a junior collaborator in the engineering work itself. The student is the senior engineer. The AI is the junior engineer who can produce a lot of plausible-looking work very fast, sometimes correctly, sometimes not. The student's job is to direct the work, evaluate the output, integrate it with the rest of the engineering project, and accept full responsibility for the result.
 
-I mean this framing literally: it is how I want students to use AI in my courses, and it is how I think most professional engineering AI use actually functions.
+I mean this framing literally: it is how I want students to use AI in my courses, and it is how I think most professional engineering AI use functions.
 
 ## What this looks like in practice
 
@@ -88,6 +88,6 @@ If a student spends four years offloading routine calculations to AI, does their
 
 If you teach engineering and have evolved your AI policy thoughtfully, I want to hear from you. The KERN EMxAI Working Group I am part of is collecting practitioner accounts of what is working and what is not. Email me at aduran@mines.edu with what you have learned, including what failed.
 
-If you are an industry engineer using AI in real work and want to talk to a class about what it actually looks like in your day-to-day, I would love to schedule you as a guest speaker in MEGN 200, 300, 301, 417, or 455. The student-facing benefit of hearing from someone who is not an academic about how this actually works is significant.
+If you are an industry engineer using AI in real work and want to talk to a class about what it actually looks like in your day-to-day, I would love to schedule you as a guest speaker in MEGN 200, 300, 301, 417, or 455. The student-facing benefit of hearing from someone who is not an academic about how this works is significant.
 
 The framing I am committed to: AI is a co-creator, students are the senior engineers, and our job as faculty is to teach the judgment that lets them work effectively with a powerful but unreliable collaborator. Everything else is detail.

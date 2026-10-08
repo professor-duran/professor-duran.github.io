@@ -52,7 +52,7 @@ This is a low-stakes experiment. If the chapter helps, you have evidence to use 
 
 The hardest mistake faculty make when adopting any new material is throwing out their problem sets, exam questions, and rubrics in favor of starting fresh. Do not do this. Your operational scaffolding is the result of years of iteration. Use the new material as content; keep your scaffolding.
 
-The course materials I publish are designed to be used this way. The Master Reference Documents are content-heavy. They do not include exam questions or graded assignments. That is intentional. Your assignments and exams should reflect your context, your students, and what you actually want them to be able to do.
+The course materials I publish are designed to be used this way. The Master Reference Documents are content-heavy. They do not include exam questions or graded assignments. That is intentional. Your assignments and exams should reflect your context, your students, and what you want them to be able to do.
 
 ## When to adopt more aggressively
 
@@ -80,7 +80,7 @@ First, the NC restriction (non-commercial) creates more friction than it removes
 
 Second, the SA restriction (share-alike, requiring derivative works to use the same license) discourages adoption by faculty who are not sure how their version will eventually be used.
 
-CC BY 4.0 just requires attribution. That is the only thing I actually care about: that adopters cite the source.
+CC BY 4.0 just requires attribution. That is the only thing I care about: that adopters cite the source.
 
 ## What I ask from adopters
 
@@ -90,7 +90,7 @@ If you adopt any of the materials, I have three small asks:
 
 2. **Cite the source.** A line in your syllabus that says "Portions of this course use materials by Adam W. Duran, Colorado School of Mines, used under CC BY 4.0" is sufficient.
 
-3. **Send back changes that helped.** If you modified a chapter and the modified version worked better, send the modification back. Other adopters benefit. This is how open materials actually compound in value.
+3. **Send back changes that helped.** If you modified a chapter and the modified version worked better, send the modification back. Other adopters benefit. This is how open materials compound in value.
 
 ## What is coming
 

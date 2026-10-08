@@ -42,9 +42,9 @@ Cross-institutional teams are usually weaker than single-institution teams becau
 
 ### 4. We mentored hard and held the bar high
 
-A piece of conventional faculty wisdom is to step back and let student teams find their own pace, up to and including missing intermediate gates. We did not do that. When a deliverable looked at risk, we stepped in early with hands-on mentorship, honest feedback, and coaching, and we worked with the team to make sure each milestone landed on time and at the expected quality level. Nothing slipped.
+A piece of conventional faculty wisdom is to step back and let student teams find their own pace, up to and including missing intermediate gates. We did not do that. When a deliverable looked at risk, we stepped in early with close mentorship, honest feedback, and coaching, and we worked with the team to make sure each milestone landed on time and at the expected quality level. Nothing slipped.
 
-The result was exceptional student performance. The team learned fast because the expectations were clear, the feedback was immediate, and the support was there when they needed it. High expectations coupled with high support is not a soft version of faculty mentoring; it is the version that actually produces winning competition teams.
+The result was exceptional student performance. The team learned fast because the expectations were clear, the feedback was immediate, and the support was there when they needed it. High expectations coupled with high support is not a soft version of faculty mentoring; it is the version that produces winning competition teams.
 
 ## What was different in Year 2
 

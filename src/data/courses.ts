@@ -34,7 +34,7 @@ export const courses: Course[] = [
   {
     code: 'MEGN 301',
     name: 'Mechanical Integration & Design',
-    description: 'Mechanical-electrical integration for design. Teams translate subsystem concepts into working prototypes, pairing thermodynamics, fluids, and mechanics of materials with sensors and actuators in hands-on builds.',
+    description: 'Mechanical-electrical integration for design. Teams translate subsystem concepts into working prototypes, pairing thermodynamics, fluids, and mechanics of materials with sensors and actuators.',
     developed: true,
   },
   {
@@ -45,7 +45,7 @@ export const courses: Course[] = [
   {
     code: 'MEGN 200',
     name: 'Intro to ME: Programming & Hardware Interface',
-    description: 'Introductory programming in C with hands-on hardware troubleshooting for mechanical engineers. Covers low-level embedded systems work, sensor integration, and the diagnostic skills that bridge code and physical systems.',
+    description: 'Introductory programming in C with bench-level hardware troubleshooting for mechanical engineers. Covers low-level embedded systems work, sensor integration, and the diagnostic skills that bridge code and physical systems.',
   },
   {
     code: 'EBGN 599',

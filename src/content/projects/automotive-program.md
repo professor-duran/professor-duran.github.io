@@ -19,8 +19,8 @@ gallery:
     alt: Formula SAE car on tilt test platform
     caption: Formula SAE tilt testing during competition
   - src: /images/rc-car-workshop.jpg
-    alt: Students assembling an RC car at a hands-on workshop
-    caption: Hands-on RC vehicle workshop (MEGN 391)
+    alt: Students assembling an RC car at a build workshop
+    caption: RC vehicle build workshop (MEGN 391)
   - src: /images/capstone-simulator.jpg
     alt: Students operating the multiaxis driving simulator built for MEGN 417/527 Vehicle Dynamics
     caption: Multiaxis driving simulator (MEGN 417/527 Vehicle Dynamics)
@@ -46,20 +46,20 @@ gallery:
 
 ## Overview
 
-Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception in Fall 2022 to 252 declared students today. Developed MEGN 417/527 Vehicle Dynamics as a core track course, established industry partnerships, and created the experiential curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment (behind only Aerospace) with a 126:1 student-to-faculty ratio and only two core faculty.
+Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception in Fall 2022 to 252 declared students today. Developed MEGN 417/527 Vehicle Dynamics as a core track course, established industry partnerships, and created the curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment (behind only Aerospace) with a 126:1 student-to-faculty ratio and only two core faculty.
 
 ## Key Accomplishments
 
 - **252 declared students** in the automotive engineering track launched in Fall 2022 (17% of ME track-declared students)
 - **Developed MEGN 417/527 Vehicle Dynamics** and stabilized MEGN 391 Introduction to Automotive Design as the track's required courses, with curated electives covering vibrations, controls, EVs, fuel cells, combustion, and CFD
 - Established partnerships with OEMs, Tier 1 suppliers, and DOE national laboratories
-- Created experiential curriculum framework connecting coursework to real-world projects
+- Built a curriculum framework that ties coursework to competition and sponsor projects
 - Designed the program to be self-sustaining through industry sponsorship and competition funding
 
 ## Approach
 
-The program was designed around three pillars: technical depth through rigorous coursework, hands-on experience through competition teams and industry projects, and professional development through mentorship and career preparation. Every course in the track includes an experiential component where students work on real systems with real constraints.
+We built the track so that coursework, competition teams, and industry projects reinforce one another. Students learn vehicle dynamics and powertrain fundamentals in class, apply them on the Formula SAE, Shell Eco-marathon, and DOE competition teams, and carry both into sponsored capstone projects. Every course in the track includes a project built around a physical system.
 
 ## Competition Teams
 
-The program supports flagship student competition teams including Formula SAE, Shell Eco-marathon, the DOE Battery Workforce Challenge, and the DOE EcoCAR Innovation Challenge. These teams give students authentic end-to-end engineering experience from requirements through design, build, test, and competition.
+The program supports flagship student competition teams including Formula SAE, Shell Eco-marathon, the DOE Battery Workforce Challenge, and the DOE EcoCAR Innovation Challenge. These teams take students through the full engineering cycle, from requirements through design, build, test, and competition.
