@@ -26,9 +26,9 @@ export const news: NewsItem[] = [
   {
     date: 'Summer 2026',
     sortDate: '2026-06-15',
-    headline: 'Selected as a KEEN Engineering Unleashed Fellow (Fall 2026 cohort)',
-    url: 'https://circle.engineeringunleashed.com/fellows',
-    html: 'Selected as a <a href="https://circle.engineeringunleashed.com/fellows" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN Engineering Unleashed Fellow</a>, an annual competitive award supporting Fellows as advocates for the entrepreneurial mindset through funded project work. Fellowship begins Fall 2026.',
+    headline: 'Named a 2026 KEEN Engineering Unleashed Fellow, one of 30 nationally',
+    url: 'https://www.mines.edu/news/all-news/2026/three-mines-professors-named-2026-engineering-unleashed-fellows.html',
+    html: 'Named a 2026 <a href="https://circle.engineeringunleashed.com/fellows" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">KEEN Engineering Unleashed Fellow</a>, one of 30 faculty selected nationally. The Kern Family Foundation-funded project, <em>Fail Faster, Build Better</em>, is a class activity in which students use generative AI to draft and refine test plans against user-defined requirements, then critically evaluate and defend the results. Fellowship begins Fall 2026. Read the <a href="https://www.mines.edu/news/all-news/2026/three-mines-professors-named-2026-engineering-unleashed-fellows.html" target="_blank" rel="noopener" class="text-gold no-underline hover:underline">Mines announcement</a>.',
   },
   {
     date: 'Spring 2026',

@@ -16,9 +16,9 @@ export const outlets: PressOutlet[] = [
   },
   {
     name: 'Mines Newsroom',
-    url: 'https://www.minesnewsroom.com/news/mines-acc-team-named-first-year-champions-battery-workforce-challenge',
-    sortDate: '2024-06-15',
-    headline: 'Mines, ACC team named first-year champions of Battery Workforce Challenge',
+    url: 'https://www.mines.edu/news/all-news/2026/three-mines-professors-named-2026-engineering-unleashed-fellows.html',
+    sortDate: '2026-10-07',
+    headline: 'Three Mines professors named 2026 Engineering Unleashed Fellows',
   },
   {
     name: 'PR Newswire',
