@@ -3,45 +3,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const topics = [
   {
-    title: 'Building Engineering Programs from Zero',
-    blurb: 'How to design, fund, and scale new engineering education programs in three years or less. Lessons from the Mines Automotive Engineering Program (0 to 252 students) and the Shell GameChanger Accelerator at NREL (multimillion-dollar, 30 portfolio companies).',
-    audience: 'Department heads, deans, program directors, foundation officers',
+    title: 'Building Programs from Zero',
+    blurb: 'What it takes to launch a program, fund it, and keep it running once the launch energy fades. Drawn from the Mines automotive track (zero to 252 declared students since 2022) and the Shell GameChanger Accelerator at NREL (30 portfolio companies, $1.048B raised).',
+    audience: 'Deans, program directors, corporate innovation leads, foundation officers',
   },
   {
-    title: 'Mastery at Scale',
-    blurb: 'Designing experiential, mastery-based engineering courses that work for hundreds of students and are sustainable for faculty. Drawn from MEGN 417/527 and MEGN 456 redesigns.',
-    audience: 'Engineering faculty, instructional designers, faculty developers',
+    title: 'Lab to Market: What Early-Stage Climate Tech Needs Now',
+    blurb: 'Why early-stage climate capital thinned while overall funding held up, and how lab-embedded accelerators such as GCxN and IN2 fill the gap between a research grant and growth capital.',
+    audience: 'Climate investors, national lab tech-transfer offices, corporate venture teams',
+  },
+  {
+    title: 'Electrifying Off-Road and Mining Equipment',
+    blurb: 'What real duty cycles say about electrifying off-road vehicles, drawing on two ACS Energy Letters papers and commercial fleet data from NREL\'s Fleet DNA database.',
+    audience: 'OEM and fleet engineers, mining operators, energy researchers',
+  },
+  {
+    title: 'Entrepreneurial Mindset in Practice',
+    blurb: 'Lessons from co-founding Method & Muse Spirits and directing the GCxN accelerator on turning engineering work into ventures. Part case study, part workshop on spotting opportunities and testing value.',
+    audience: 'KEEN schools, entrepreneurship programs, student innovators',
+  },
+  {
+    title: 'Designing for Value: A Two-Part Faculty Workshop',
+    blurb: 'Built on KEEN Card 6017 (FDVSE and triple-bottom-line value propositions). Part 1 takes faculty through the activity as learners; Part 2 adapts it to their own course and campus. First delivered at the KEEN Crescendo "Accelerating EM" Deep Dive, Milwaukee, September 2026.',
+    audience: 'Engineering faculty, faculty developers',
   },
   {
     title: 'Co-Creating with AI in Engineering Education',
-    blurb: 'How AI tools can amplify (not replace) engineering pedagogy. Frameworks for AI as a learning partner, integration patterns for project-based courses, and what changes in classroom assessment when AI is in the room. (Flash talk delivered at Mines Generative AI Summit, Fall 2025.)',
-    audience: 'KEEN community, engineering faculty, ed-tech leaders',
+    blurb: 'How I use AI as a team member in project courses, where it confidently gets things wrong, and what that changes about assessment. Includes Fail Faster, Build Better, my 2026 Engineering Unleashed Fellowship project.',
+    audience: 'Engineering faculty, ed-tech leaders',
+  },
+  {
+    title: 'Mastery at Scale',
+    blurb: 'Running mastery-based, project-heavy courses at large enrollment without burning out the instructor. Drawn from redesigns of MEGN 417/527 and MEGN 456.',
+    audience: 'Engineering faculty, instructional designers',
   },
   {
     title: 'Industry-Connected Capstone Design',
-    blurb: 'Lessons from advising 30+ Capstone teams over 8 semesters and serving on the Mines Capstone Leadership Team and Industry Partnership Board. How to source, scope, and run capstone projects that produce real outcomes for both students and industry sponsors.',
-    audience: 'Capstone coordinators, industry partnership offices, deans',
-  },
-  {
-    title: 'From National Lab to Tenure Track',
-    blurb: 'Translating industry and federal R&D experience into engineering faculty practice. Building scholarly identity around applied work, leveraging industry relationships for funding and student opportunities, and navigating P&T as a teaching-track faculty member.',
-    audience: 'New faculty, postdocs considering teaching positions, faculty mentors',
-  },
-  {
-    title: 'Entrepreneurial Mindset in Action',
-    blurb: 'Co-founder of Method & Muse Spirits and director of the GCxN cleantech accelerator on what it actually takes to translate engineering work into ventures. Part case study, part practical workshop on opportunity recognition and value creation.',
-    audience: 'KEEN, KERN, engineering entrepreneurship programs, student innovators',
+    blurb: 'How to source, scope, and run capstone projects that sponsors want to repeat, from 30+ teams advised and service on the Mines Capstone Leadership Team.',
+    audience: 'Capstone coordinators, industry partnership offices',
   },
 ];
 
-const recentVenues = [
-  { date: 'March 2026', venue: 'KEEN Crescendo Program', role: 'Selected national member' },
-  { date: 'February 2025', venue: 'KERN/KEEN EMxAI Summit', role: 'Participant' },
-  { date: 'January 2026', venue: 'KEEN National Conference', role: 'Participant and contributor' },
-  { date: 'Fall 2025', venue: 'Generative AI and Human Futures Summit, Colorado School of Mines', role: 'Flash Talk: "Co-Creating with AI: New Frontiers in Teaching and Design"' },
-  { date: 'September 2023', venue: 'AIAA Pathfinder Conference', role: 'ME department representative' },
+// Talks and workshops Adam delivered, newest first.
+const talks = [
+  { date: 'September 2026', venue: 'KEEN Crescendo "Accelerating EM on Your Campus" Deep Dive, Milwaukee, Wisconsin', role: 'Faculty workshop: FDVSE and triple-bottom-line value propositions (KEEN Card 6017)' },
+  { date: 'Fall 2025', venue: 'Generative AI and Human Futures Summit, Colorado School of Mines', role: 'Flash talk: "Co-Creating with AI: New Frontiers in Teaching and Design"' },
   { date: '2018', venue: 'SAE World Congress', role: 'Two technical papers presented' },
   { date: '2017', venue: 'DOE Annual Merit Review', role: 'Multi-modal intra-city freight presentation' },
+];
+
+// Programs and conferences attended or joined (not talks), newest first.
+const programs = [
+  { date: 'September 2026', venue: 'KEEN Crescendo Program', role: 'Named member (Spring 2026 cohort)' },
+  { date: 'January 2026', venue: 'KEEN National Conference, Oklahoma City, Oklahoma', role: 'Participant and contributor' },
+  { date: 'February 2025', venue: 'KERN/KEEN EMxAI Summit', role: 'Participant' },
+  { date: 'September 2023', venue: 'AIAA Pathfinder Conference', role: 'ME department representative' },
 ];
 
 const guestLectures = [
@@ -53,14 +69,14 @@ const guestLectures = [
 ];
 ---
 <BaseLayout title="Speaking & Workshops | Adam Duran"
-  description="Adam Duran: speaking topics, workshops, and guest lectures on engineering education, program design, AI in the classroom, and entrepreneurial mindset.">
+  description="Adam Duran: speaking topics and workshops on building programs from zero, lab-to-market climate tech, off-road vehicle electrification, AI in engineering education, and the entrepreneurial mindset.">
 
   <div class="pt-28 pb-20 px-8">
     <div class="max-w-[900px] mx-auto">
       <h1 class="font-serif text-4xl font-bold text-navy dark:text-white mb-2">Speaking & Workshops</h1>
       <hr class="w-12 h-[3px] bg-gold border-none my-4" />
       <p class="text-base mb-12 max-w-[720px]">
-        I speak at conferences, faculty workshops, and industry events on engineering education, program design, AI in the classroom, and the practical work of building project-based programs that last. If you're organizing an event and one of these topics fits, get in touch.
+        I speak at conferences, faculty workshops, and industry events on building programs from zero, moving climate technology from lab to market, vehicle electrification, and AI in engineering education. If you're organizing an event and one of these topics fits, get in touch.
       </p>
 
       <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Speaking Topics</h2>
@@ -74,9 +90,22 @@ const guestLectures = [
         ))}
       </div>
 
-      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Recent Venues & Conferences</h2>
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Talks & Workshops</h2>
       <div class="mb-16">
-        {recentVenues.map(v => (
+        {talks.map(v => (
+          <div class="flex gap-4 py-3 border-b border-mist dark:border-steel/30 text-sm leading-relaxed">
+            <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap min-w-[140px] pt-0.5">{v.date}</span>
+            <div>
+              <div class="font-medium text-navy dark:text-white">{v.venue}</div>
+              <div class="text-xs text-caption">{v.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="font-serif text-2xl font-bold text-navy dark:text-white mb-6">Conferences & Programs</h2>
+      <div class="mb-16">
+        {programs.map(v => (
           <div class="flex gap-4 py-3 border-b border-mist dark:border-steel/30 text-sm leading-relaxed">
             <span class="text-gold font-semibold text-xs uppercase tracking-wider whitespace-nowrap min-w-[140px] pt-0.5">{v.date}</span>
             <div>
