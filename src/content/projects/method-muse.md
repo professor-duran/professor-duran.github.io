@@ -1,6 +1,6 @@
 ---
 title: Method & Muse Spirits
-description: Co-founder of an award-winning craft distillery in Golden, CO, applying engineering discipline to artisan spirits production.
+description: Co-founder of an award-winning Colorado craft distillery, applying engineering discipline to artisan spirits production.
 role: Co-Founder
 dates: "2023 – Present"
 tags: [entrepreneurship, craft spirits, operations]
@@ -22,15 +22,13 @@ gallery:
 
 ## Overview
 
-Co-founded with Prof. Aubrey Wigner (Mines) and four Mines alumni, Method & Muse Spirits is an award-winning craft distillery operating on Mines' 45th Drive campus in Golden, Colorado, with a tasting room in downtown Arvada. The venture applies engineering discipline, process optimization, quality control, and data-driven decision making, to artisan spirits production.
+I co-founded Method & Muse Spirits, an award-winning Colorado craft distillery, with Prof. Aubrey Wigner and four fellow Mines alumni. Our tasting room is in downtown Arvada. My side of the business is the engineering one: process optimization, quality control, and production decisions grounded in data.
 
 ## Innovation
 
 - **Patent-pending non-alcoholic spirit concentrate** (filed 2024)
-- Submitted institutional partnership proposal to Mines (March 2026) scoped across professional education programming
-- Credit-bearing distilling science course targeting Fall 2026 pilot enrollment
 - Activity conducted in accordance with Mines outside employment and conflict-of-interest policies
 
 ## Philosophy
 
-Method & Muse bridges technical rigor with creative craft. The name reflects the dual nature of the enterprise: systematic methodology paired with artistic inspiration. Every product is developed through iterative testing and refinement, the same approach that drives effective engineering education.
+The name describes how we work: a systematic method, paired with the creative judgment that decides what is worth making. Every product goes through rounds of testing and refinement before release, the same way I ask students to work in design courses.

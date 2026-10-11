@@ -25,7 +25,7 @@ gallery:
 
 ## Overview
 
-Member of the Mines Capstone Leadership Team as ME co-representative (Fall 2025-Present), contributing to program-level planning, delivery standards, and coordination with the Industry Partnership Board Steering Committee for annual cohorts of 700+ engineering students. Also a member of the Industry Partnership Board Steering Committee.
+Since Fall 2025 I have served on the Mines Capstone Leadership Team as the Mechanical Engineering co-representative, working on program-level planning and delivery standards for annual cohorts of 700+ engineering students. I also serve on the Industry Partnership Board Steering Committee.
 
 ## Engagement (Fall 2022 - Spring 2026, 8 semesters)
 
@@ -43,4 +43,4 @@ Member of the Mines Capstone Leadership Team as ME co-representative (Fall 2025-
 
 ## Program-Level Contributions
 
-Currently working with the Capstone Leadership Team on redesigning the capstone experience to emphasize authentic assessment, deeper industry connection, and engineering character development. Supports approximately 200+ student capstone teams per semester across all engineering departments.
+With the Capstone Leadership Team, I am helping redesign the capstone experience around authentic assessment, closer industry connection, and engineering character. The program runs more than 200 teams per semester across every engineering department.

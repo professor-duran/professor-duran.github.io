@@ -22,7 +22,7 @@ gallery:
 
 ## Overview
 
-Launched the Shell GameChanger Accelerator Powered by NREL (GCxN) from the ground up, in collaboration with my counterpart at Shell and the NREL technical team. Directed the program from 2018 to 2020 with full responsibility for founding vision, strategy, annual targets, P&L, partner agreements, and participant mentorship across the multimillion-dollar cleantech startup accelerator. Managed the contractual relationship between Shell International and NREL, assembled startup cohorts through rigorous down-selection, and led a team of technical, project management, and communications professionals.
+I launched the Shell GameChanger Accelerator Powered by NREL (GCxN) with my counterpart at Shell and the NREL technical team, then directed it from 2018 to 2020. I was responsible for the founding vision, strategy, annual targets, P&L, partner agreements, and mentorship of the participating companies across a multimillion-dollar portfolio. I managed the contract between Shell International and NREL, ran the down-selection that built each startup cohort, and led a team of technical, project management, and communications staff.
 
 ## Portfolio Outcomes (as of 2025 Annual Report)
 

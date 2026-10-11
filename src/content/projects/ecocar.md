@@ -1,6 +1,6 @@
 ---
 title: DOE EcoCAR & Battery Workforce Challenge
-description: Co-leading Mines' teams in DOE's EcoCAR Innovation Challenge and Battery Workforce Challenge with Prof. P. Brodsky.
+description: Co-leading Mines' DOE EcoCAR Innovation Challenge team with Prof. P. Brodsky, after co-leading the Battery Workforce Challenge team from 2023 to 2026.
 role: Co-Lead with Prof. P. Brodsky
 dates: "2023 – Present"
 tags: [DOE, battery technology, competition, workforce development, Stellantis, EcoCAR]
@@ -22,13 +22,14 @@ gallery:
 
 ## Overview
 
-Prof. P. Brodsky and I are co-leading the DOE EcoCAR Innovation Challenge at Mines (Spring 2026-Present) and the DOE Battery Workforce Challenge (Summer 2023-Present).
+Prof. P. Brodsky and I co-lead Mines' teams in DOE Advanced Vehicle Technology Competitions as faculty advisors. We ran the Battery Workforce Challenge team from Summer 2023 through the competition's conclusion in 2026, and Mines was selected for the EcoCAR Innovation Challenge in Spring 2026.
 
-## Battery Workforce Challenge (2023-Present)
+## Battery Workforce Challenge (2023-2026)
 
 - **1st place nationally** in the inaugural Year 1 competition (2023-24)
 - **4th place nationally** in Year 2 (2024-25)
-- More than a dozen technical and project management awards across both years
+- Finished just outside the podium in Year 3 (2025-26)
+- More than a dozen technical and project management awards in Years 1 and 2
 - Total BWC program value: **$258,100** (DOE/Stellantis base grant $147K, additional DOE/Stellantis program support $20K, Chevron sponsorship $20K, student travel stipends $35.6K, competition prizes $32.5K, Gene Haas Foundation competition award $3K)
 - Additional significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and vehicle donation (Dodge RAM ProMaster Van)
 

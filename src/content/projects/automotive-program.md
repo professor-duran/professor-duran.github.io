@@ -46,7 +46,7 @@ gallery:
 
 ## Overview
 
-Worked closely with key collaborator Prof. P. Brodsky to build Colorado School of Mines' automotive engineering track from inception in Fall 2022 to 252 declared students today. Developed MEGN 417/527 Vehicle Dynamics as a core track course, established industry partnerships, and created the curriculum framework connecting classroom instruction to competition-based and employer-sponsored projects. The program ranks 2nd within ME by enrollment (behind only Aerospace) with a 126:1 student-to-faculty ratio and only two core faculty.
+Prof. P. Brodsky and I built the automotive engineering track at Colorado School of Mines, from its launch in Fall 2022 to 252 declared students today. I developed MEGN 417/527 Vehicle Dynamics as a core course, brought in industry partners, and set up the curriculum framework that connects classroom work to competition teams and employer-sponsored projects. With only two core faculty, the track now ranks second in Mechanical Engineering by enrollment, behind only Aerospace, at a 126:1 student-to-faculty ratio.
 
 ## Key Accomplishments
 
@@ -62,4 +62,4 @@ We built the track so that coursework, competition teams, and industry projects 
 
 ## Competition Teams
 
-The program supports flagship student competition teams including Formula SAE, Shell Eco-marathon, the DOE Battery Workforce Challenge, and the DOE EcoCAR Innovation Challenge. These teams take students through the full engineering cycle, from requirements through design, build, test, and competition.
+The program supports flagship student competition teams including Formula SAE, Shell Eco-marathon, and the DOE EcoCAR Innovation Challenge, and from 2023 to 2026 it fielded a DOE Battery Workforce Challenge team. These teams take students through the full engineering cycle, from requirements through design, build, test, and competition.

@@ -74,6 +74,6 @@ If you are thinking about taking on a multi-year DOE Advanced Vehicle Technology
 4. **Mentor hard and hold the bar high.** Hands-on mentorship, clear high expectations, and immediate feedback produce exceptional student performance. Do not step back and assume the team will calibrate on its own.
 5. **Plan for relative ranking to drop in Year 2.** Other teams learn. Be prepared for stakeholders who treat 1st place as the floor.
 
-The full BWC program value at Mines was $255,100 across three years, plus significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and a vehicle donation from Stellantis (Dodge RAM ProMaster Van). As we head into BWC Year 3, we are looking at what comes next. The same lessons will apply.
+The full BWC program value at Mines was $258,100 across three years, plus significant in-kind value from software (GT-Suite, Siemens), hardware (Analog Devices, Dana), and a vehicle donation from Stellantis (Dodge RAM ProMaster Van). As we head into BWC Year 3, we are looking at what comes next. The same lessons will apply.
 
 If you are running or considering an AVTC program, reach out. I am happy to share the project plans, gate review templates, and budget structures we use.
